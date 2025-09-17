@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ['python311', 'pip']
+
+[phases.install]
+cmds = ['pip install -r requirements.txt']
+
+[phases.build]
+cmds = ['chmod +x jpk2json-convert']
+
+[start]
+cmd = 'gunicorn --bind 0.0.0.0:$PORT --workers 4 --threads 2 --timeout 120 wsgi:application'

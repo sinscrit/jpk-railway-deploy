@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPK to JSON Converter - Async</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .async-badge {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .queue-status {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .queue-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .upload-area {
+            border: 3px dashed #ddd;
+            border-radius: 15px;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area:hover {
+            border-color: #667eea;
+            background-color: #f8f9ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #667eea;
+            background-color: #f0f4ff;
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .upload-area:hover .upload-icon {
+            color: #667eea;
+        }
+
+        .upload-text {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px;
+            min-width: 150px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-batch {
+            background: linear-gradient(135deg, #fd7e14 0%, #e63946 100%);
+        }
+
+        .btn-batch:hover {
+            box-shadow: 0 10px 20px rgba(253, 126, 20, 0.3);
+        }
+
+        .progress-container {
+            display: none;
+            margin: 30px 0;
+        }
+
+        .progress-bar {
+            background: #f0f0f0;
+            border-radius: 25px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 25px;
+        }
+
+        .progress-text {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .status-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .file-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .file-info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .file-info p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .download-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+
+        .download-btn:hover {
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
+
+        .reset-btn {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+
+        .reset-btn:hover {
+            box-shadow: 0 10px 20px rgba(108, 117, 125, 0.3);
+        }
+
+        .batch-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .batch-jobs {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .job-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .job-status {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .job-status.queued { background: #fff3cd; color: #856404; }
+        .job-status.processing { background: #d1ecf1; color: #0c5460; }
+        .job-status.completed { background: #d4edda; color: #155724; }
+        .job-status.error { background: #f8d7da; color: #721c24; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .processing {
+            animation: pulse 2s infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="async-badge">⚡ Asynchronous</div>
+            <h1>JPK to JSON Converter</h1>
+            <p>High-performance asynchronous converter with concurrent processing and batch support</p>
+        </div>
+
+        <div class="queue-status" id="queueStatus">
+            <h3>Queue Status</h3>
+            <div class="queue-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalJobs">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="queuedJobs">0</div>
+                    <div class="stat-label">Queued</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="processingJobs">0</div>
+                    <div class="stat-label">Processing</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="completedJobs">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="activeWorkers">0</div>
+                    <div class="stat-label">Workers</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">Drop your JPK file here or click to browse</div>
+            <div class="upload-subtext">Supports JPK files up to 100MB • Asynchronous processing</div>
+            <input type="file" id="fileInput" class="file-input" accept=".jpk">
+        </div>
+
+        <div class="file-info" id="fileInfo" style="display: none;">
+            <h3>Selected File</h3>
+            <p id="fileName"></p>
+            <p id="fileSize"></p>
+        </div>
+
+        <button class="btn" id="convertBtn" onclick="startConversion()" disabled>Convert to JSON</button>
+
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-text" id="progressText">Preparing conversion...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div id="statusMessage"></div>
+
+        <div class="download-section" id="downloadSection">
+            <button class="btn download-btn" id="downloadBtn" onclick="downloadFile()">Download JSON File</button>
+            <button class="btn reset-btn" onclick="resetForm()">Convert Another File</button>
+        </div>
+
+        <div class="batch-section">
+            <h3>Batch Processing</h3>
+            <p>Upload multiple JPK files for concurrent processing</p>
+            <input type="file" id="batchInput" multiple accept=".jpk" style="display: none;">
+            <button class="btn btn-batch" onclick="document.getElementById('batchInput').click()">Select Multiple Files</button>
+            <button class="btn btn-batch" id="batchConvertBtn" onclick="startBatchConversion()" disabled>Process Batch</button>
+            
+            <div class="batch-jobs" id="batchJobs">
+                <h4>Batch Jobs</h4>
+                <div id="batchJobsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentJobId = null;
+        let selectedFile = null;
+        let selectedBatchFiles = [];
+        let batchJobIds = [];
+        let statusCheckInterval = null;
+        let queueStatusInterval = null;
+
+        // DOM elements
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const batchInput = document.getElementById('batchInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const convertBtn = document.getElementById('convertBtn');
+        const batchConvertBtn = document.getElementById('batchConvertBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const statusMessage = document.getElementById('statusMessage');
+        const downloadSection = document.getElementById('downloadSection');
+        const queueStatus = document.getElementById('queueStatus');
+        const batchJobs = document.getElementById('batchJobs');
+        const batchJobsList = document.getElementById('batchJobsList');
+
+        // Start queue status monitoring
+        startQueueMonitoring();
+
+        // File upload handling
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('dragleave', handleDragLeave);
+        uploadArea.addEventListener('drop', handleDrop);
+        fileInput.addEventListener('change', handleFileSelect);
+        batchInput.addEventListener('change', handleBatchFileSelect);
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                if (files.length === 1) {
+                    handleFile(files[0]);
+                } else {
+                    handleBatchFiles(Array.from(files));
+                }
+            }
+        }
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleBatchFileSelect(e) {
+            const files = Array.from(e.target.files);
+            if (files.length > 0) {
+                handleBatchFiles(files);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.name.toLowerCase().endsWith('.jpk')) {
+                showStatus('Only JPK files are allowed', 'error');
+                return;
+            }
+
+            if (file.size > 100 * 1024 * 1024) {
+                showStatus('File size must be less than 100MB', 'error');
+                return;
+            }
+
+            selectedFile = file;
+            fileName.textContent = `Name: ${file.name}`;
+            fileSize.textContent = `Size: ${formatFileSize(file.size)}`;
+            fileInfo.style.display = 'block';
+            fileInfo.classList.add('fade-in');
+            convertBtn.disabled = false;
+            
+            // Update upload area
+            uploadArea.querySelector('.upload-text').textContent = 'File selected successfully!';
+            uploadArea.querySelector('.upload-icon').textContent = '✅';
+        }
+
+        function handleBatchFiles(files) {
+            const validFiles = files.filter(file => {
+                if (!file.name.toLowerCase().endsWith('.jpk')) {
+                    showStatus(`Skipping ${file.name}: Only JPK files are allowed`, 'error');
+                    return false;
+                }
+                if (file.size > 100 * 1024 * 1024) {
+                    showStatus(`Skipping ${file.name}: File too large`, 'error');
+                    return false;
+                }
+                return true;
+            });
+
+            if (validFiles.length === 0) {
+                return;
+            }
+
+            selectedBatchFiles = validFiles;
+            batchConvertBtn.disabled = false;
+            showStatus(`${validFiles.length} files selected for batch processing`, 'info');
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        async function startConversion() {
+            if (!selectedFile) return;
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+
+            try {
+                convertBtn.disabled = true;
+                progressContainer.style.display = 'block';
+                progressContainer.classList.add('fade-in');
+                uploadArea.classList.add('processing');
+
+                const response = await fetch('/api/converter/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Upload failed');
+                }
+
+                currentJobId = result.job_id;
+                showStatus(result.message, 'info');
+                
+                // Start polling for status
+                statusCheckInterval = setInterval(checkStatus, 1000);
+
+            } catch (error) {
+                showStatus(`Error: ${error.message}`, 'error');
+                resetProgress();
+            }
+        }
+
+        async function startBatchConversion() {
+            if (selectedBatchFiles.length === 0) return;
+
+            const formData = new FormData();
+            selectedBatchFiles.forEach(file => {
+                formData.append('files', file);
+            });
+
+            try {
+                batchConvertBtn.disabled = true;
+                showStatus('Starting batch conversion...', 'info');
+
+                const response = await fetch('/api/converter/batch/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Batch upload failed');
+                }
+
+                batchJobIds = result.job_ids;
+                showStatus(result.message, 'success');
+                displayBatchJobs(result.results);
+                
+                // Start monitoring batch jobs
+                startBatchMonitoring();
+
+            } catch (error) {
+                showStatus(`Batch Error: ${error.message}`, 'error');
+                batchConvertBtn.disabled = false;
+            }
+        }
+
+        function displayBatchJobs(jobs) {
+            batchJobs.style.display = 'block';
+            batchJobsList.innerHTML = '';
+            
+            jobs.forEach(job => {
+                const jobElement = document.createElement('div');
+                jobElement.className = 'job-item';
+                jobElement.innerHTML = `
+                    <div>
+                        <strong>${job.filename}</strong>
+                        <div style="font-size: 0.9rem; color: #666;">${job.job_id}</div>
+                    </div>
+                    <div class="job-status ${job.status}" id="status-${job.job_id}">${job.status}</div>
+                `;
+                batchJobsList.appendChild(jobElement);
+            });
+        }
+
+        function startBatchMonitoring() {
+            const batchInterval = setInterval(async () => {
+                let allCompleted = true;
+                
+                for (const jobId of batchJobIds) {
+                    try {
+                        const response = await fetch(`/api/converter/status/${jobId}`);
+                        const status = await response.json();
+                        
+                        const statusElement = document.getElementById(`status-${jobId}`);
+                        if (statusElement) {
+                            statusElement.textContent = status.status;
+                            statusElement.className = `job-status ${status.status}`;
+                        }
+                        
+                        if (status.status !== 'completed' && status.status !== 'error') {
+                            allCompleted = false;
+                        }
+                    } catch (error) {
+                        console.error(`Error checking status for ${jobId}:`, error);
+                    }
+                }
+                
+                if (allCompleted) {
+                    clearInterval(batchInterval);
+                    showStatus('Batch processing completed!', 'success');
+                    batchConvertBtn.disabled = false;
+                }
+            }, 2000);
+        }
+
+        async function checkStatus() {
+            if (!currentJobId) return;
+
+            try {
+                const response = await fetch(`/api/converter/status/${currentJobId}`);
+                const status = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(status.error || 'Status check failed');
+                }
+
+                updateProgress(status.progress || 0, status.message || 'Processing...');
+
+                if (status.status === 'completed') {
+                    clearInterval(statusCheckInterval);
+                    showStatus(status.message, 'success');
+                    showDownloadSection();
+                    resetProgress();
+                } else if (status.status === 'error') {
+                    clearInterval(statusCheckInterval);
+                    showStatus(status.message, 'error');
+                    resetProgress();
+                }
+
+            } catch (error) {
+                clearInterval(statusCheckInterval);
+                showStatus(`Error checking status: ${error.message}`, 'error');
+                resetProgress();
+            }
+        }
+
+        function startQueueMonitoring() {
+            queueStatus.style.display = 'block';
+            
+            queueStatusInterval = setInterval(async () => {
+                try {
+                    const response = await fetch('/api/converter/queue/status');
+                    const stats = await response.json();
+                    
+                    document.getElementById('totalJobs').textContent = stats.total_jobs;
+                    document.getElementById('queuedJobs').textContent = stats.queued;
+                    document.getElementById('processingJobs').textContent = stats.processing;
+                    document.getElementById('completedJobs').textContent = stats.completed;
+                    document.getElementById('activeWorkers').textContent = stats.active_workers;
+                    
+                } catch (error) {
+                    console.error('Error fetching queue status:', error);
+                }
+            }, 3000);
+        }
+
+        function updateProgress(percent, message) {
+            progressFill.style.width = `${percent}%`;
+            progressText.textContent = message;
+        }
+
+        function resetProgress() {
+            uploadArea.classList.remove('processing');
+            convertBtn.disabled = false;
+            progressContainer.style.display = 'none';
+            updateProgress(0, 'Preparing conversion...');
+        }
+
+        function showStatus(message, type) {
+            statusMessage.innerHTML = `<div class="status-message status-${type} fade-in">${message}</div>`;
+            setTimeout(() => {
+                if (type !== 'success') {
+                    statusMessage.innerHTML = '';
+                }
+            }, 5000);
+        }
+
+        function showDownloadSection() {
+            downloadSection.style.display = 'block';
+            downloadSection.classList.add('fade-in');
+        }
+
+        async function downloadFile() {
+            if (!currentJobId) return;
+
+            try {
+                const response = await fetch(`/api/converter/download/${currentJobId}`);
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Download failed');
+                }
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = selectedFile.name.replace('.jpk', '.json');
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+
+                showStatus('File downloaded successfully!', 'success');
+
+            } catch (error) {
+                showStatus(`Download error: ${error.message}`, 'error');
+            }
+        }
+
+        function resetForm() {
+            // Clean up current job
+            if (currentJobId) {
+                fetch(`/api/converter/cleanup/${currentJobId}`, { method: 'DELETE' });
+                currentJobId = null;
+            }
+
+            // Clear intervals
+            if (statusCheckInterval) {
+                clearInterval(statusCheckInterval);
+                statusCheckInterval = null;
+            }
+
+            // Reset UI
+            selectedFile = null;
+            selectedBatchFiles = [];
+            batchJobIds = [];
+            fileInput.value = '';
+            batchInput.value = '';
+            fileInfo.style.display = 'none';
+            downloadSection.style.display = 'none';
+            batchJobs.style.display = 'none';
+            statusMessage.innerHTML = '';
+            convertBtn.disabled = true;
+            batchConvertBtn.disabled = true;
+            resetProgress();
+
+            // Reset upload area
+            uploadArea.querySelector('.upload-text').textContent = 'Drop your JPK file here or click to browse';
+            uploadArea.querySelector('.upload-icon').textContent = '📁';
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (currentJobId) {
+                navigator.sendBeacon(`/api/converter/cleanup/${currentJobId}`, JSON.stringify({}));
+            }
+            if (queueStatusInterval) {
+                clearInterval(queueStatusInterval);
+            }
+        });
+    </script>
+</body>
+</html>
