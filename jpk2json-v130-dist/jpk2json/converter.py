@@ -100,7 +100,6 @@ def timeout_handler(signum, frame):
 def with_timeout(seconds: float):
     """
     Decorator to add timeout to functions.
-    Threading-safe version that skips signal handling in web environments.
 
     Args:
         seconds: Timeout in seconds
@@ -108,12 +107,21 @@ def with_timeout(seconds: float):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            # Skip signal handling in threads - just run the function
+            # Set up the timeout handler
+            old_handler = signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(int(seconds))
+
             try:
                 result = func(*args, **kwargs)
+                signal.alarm(0)  # Cancel the alarm
+                signal.signal(signal.SIGALRM, old_handler)  # Restore old handler
                 return result
+            except TimeoutError:
+                print(f"   Timeout: {func.__name__} exceeded {seconds} seconds")
+                raise TimeoutError(f"Operation {func.__name__} timed out after {seconds} seconds")
             except Exception as e:
-                print(f"   Error in {func.__name__}: {str(e)}")
+                signal.alarm(0)  # Cancel the alarm
+                signal.signal(signal.SIGALRM, old_handler)  # Restore old handler
                 raise e
 
         return wrapper

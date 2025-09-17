@@ -1,0 +1,35 @@
+# JPK2JSON Converter v130 - Distribution Package Dependencies
+# 
+# This is a standalone distribution package that includes all necessary component files.
+# The package is functionally equivalent to the original j2j_v130.py script.
+#
+# BUNDLED COMPONENT FILES (included in jpk2json/lib/):
+# - type500_components.json (20 target-specific Type 500 components)
+# - type600_components.json (3 Type 600 endpoint components)  
+# - type900_components.json (6 Type 900 schema components)
+# - type1000_components.json (33 Type 1000 variable components)
+# - type1200_components.json (3 Type 1200 notification components)
+# - type1300_components.json (18 Type 1300 global variable components)
+# - generate_type500_from_jpk.py (JPK-based Type 500 generator for fallback)
+#
+# PYTHON STANDARD LIBRARY MODULES USED:
+# - zipfile (JPK file extraction)
+# - xml.etree.ElementTree (XML parsing)
+# - json (JSON generation and component loading)
+# - argparse (CLI interface)
+# - base64 (encoding)
+# - zlib (compression)
+# - uuid (ID generation)
+# - time (timestamps)
+# - hashlib (checksums)
+# - tempfile (temporary directories)
+# - os, sys (system operations and file paths)
+# - typing (type hints)
+# - functools (decorators)
+# - signal (signal handling)
+# - re (regular expressions)
+#
+# EXTERNAL DEPENDENCIES:
+# Only psutil is required for enhanced system monitoring
+
+psutil>=5.0.0

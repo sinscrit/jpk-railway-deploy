@@ -1,0 +1,1552 @@
+{
+  "apis": [],
+  "assets": [
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.52b4a924b166c6ff64c41dd33aefbe0e.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:common_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "768"
+        }
+      ],
+      "compressedContent": "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"
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.7552470ba96f842965d60fc354f29fab.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.faults_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "13468"
+        }
+      ],
+      "compressedContent": "eNrtWm1vozgQ/t5fEfG9gbw0DVHS1ba9SnvqXqWkJ903ZPDQeg8wi02T7q+/4SUJEAIkadp0df2wasF+/MwzM/Yw3vGXheu0XiAQjHsTpdPWlBZ4FqfMe5oofz/enQ+VlpDEo8ThHkwUjytfrs7GwnoGl7RwsicmyrOU/khV5/N5e95r8+BJ7WpaR/3n+/0sHqckA0e+Q6TNA/eGBwgVBt7Iwt+MrtYZGt328m17DqaA4IVZINoeSBEyCW2Lu2Uwj69+giRffRx+EN4dCR1ZALSjZ2JnyLmgzkqXRCzRxleCEz8WKBqgLkcvBG0iIpEyYGYo4Q4p3EJMDbl6P0PiMJsBRd854IIncwMyryUJnkD+RVwQPrH28sHVWas1RsIj5vo8kC0vDxYAImAsiWfmr2RzmJCiQrNEoHtuxVMnyg8mJQQmk+tx/d7wUu906Dnt653zvkWG53qn3z+34UKzCAx6tq23Qx8XkMYN9ySxZJuaNiW6Ri1dt61+T+t3Lc0EW7Mt6NiU2m00Q1Exmrebs1dUHckc6PZAI+TS7OjaAEdD19ahPyBd3dYvh0Aam7NzTB/JoMuLi27/UjOJPrCH/a4+uKADdE7vom+jTcTMGYREfAcWmJ4QWzVRromAKdhxRKYxaT1zpJ88SB+lGdFymfdgWWGA2xXucQnCN49JhsnxC76GiwiqFQk0UbIbzGhjkLoHfj34bsg3oZDcnQJGJt2GXRzTHL0ad/XW+PN6Z8rsVxxD1Zwzg3bFfwyIJzC4atcoDEzXGav5MEr/XsceRmNJJHLuAPES4DsGDl3HZYyaTokCH+mvX8QvYYEPo/O3ZWJEl5ItwVxNF/AzxCMbNl8l6KlkCdMX4oSwVCUyzUyor3XOTFXLocfqinHGRLXMxtXTrdJl7LvHUyIr2pbVVzFAFssYCD2Thx6NTriyyLDWa1QExEpjNWtVnkSVPcQUMsCAmigyiDTesK8QE6vTPB3JULfAI843mvUPYmIpluNUnCisgPmyalpTN6zzPp1XdMG4KgGjf6s4FKTcx/6NSVEk7jwpGrjThDqFm+pb2HP+F/kYImcOjw8QuGhFjdHv64+y3Q/1S0/0SMmmUt8SCZ/xuKPI+5G58GHn3S0PTedzShcz/zDhNsrwD0juqhwq8ltn0/ul/S4qnrSEJ6tfVKM+BMU6qVG5urOWy5+zqjx7uzKyyamy30lfryr3nj7jlujwTW+924b4PXQkmyFDS560duXfaSWK5pYvJtr7qFzeaEpYZPtMGztmtjmR9HSjnucUnAO6oqVNjqR1tpQsXWS0fJzrYmRJNutjHPP7r2byQd2hE/vsebsyO9dq++0/F99Ot0+wLZ7mBlgipSQyFEfpy4kY+hYkYU6pBrPsgIq2XHnsillo4a4qKtqdTc1PKRxW7Vmcbrh6eeWYM/UGB2bL30boLlpKnhqUk5UoxMbcnYWmy+QdMgFa0yuu8QRd3kH+MZ0+TJWKXC8VIvcN0MBVkbmfsY4sd9SRUjzPJcnBiuyLL+Bq+/ZfKQ2iVKvNkKat9bW/ti+6rHoOS8tZ6Ef1l0CT624HMotGdwqIyOSrIVYARlKPxdVis7LnnghpfOc0vp83rl8Nw+H839A39qLSGeqHU9hPhB+m4SCQm+KYr6VE3tLttR5IFyhP+5JIOfxo3szWzF5oswXQ5DJqg7bSqHtcBlda6SyLv/RzIrvfbvk0z6jzFh4pBOKpewLp/m4eqE7Ik0+NDfYn7J9x+h+8rs7+Az9bvdU="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.7835cdad547d2a930a00698252622ad2.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.common_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "2644"
+        }
+      ],
+      "compressedContent": "eNqtVF1vm0AQfPevQLybD5ukgGxHaio/Oa2UpmrfrONuca6CO3K3BOff9wATQ2wlxS1P6HaZnZmdY3GzzzPrGZTmUixt3/FsCwSVjIvd0v7xsJ6GtqWRCEYyKWBpC2nfrCYLTR8hJ5b5WOil/YhYxK5bVZVTzR2pdu7M83z3193me9Nnt41xkRFMpcpvpTJQpRIxNW/bmeeH25nTVZ0KEg3qmVPQjgDUJUdwqMzfwqxJmeHDS9FC4Uth+tP6TF8Mead3uoXLQWuyg/FQlWbZqyWtT9oxJS1J0XhTN7hd916zv/GPICqelAhrQ+ELNCoNT/FUkoynHJhZWwY5CBw09MpI1A7wKzG6CkLhUpGriWUtDOmY54VUaIkh4Mh9tvZsJCXY5O83RwSVcDz2BfPwU+T7bMqCyJ8GlITTyA+CaQpXHiVwPU/TyCkLMwC3t1IgoegwloQsCiFIAo/QGQ0j8y1L54R41+Qq8h0jwHZNjA2JIoO9yRA0SkzkG6QN13gPTyVobBS3z0LXR4LC8ag5Pjhv5WT/jdJS1QkSiSwFq43PuehOffswRYExql6KGby0+9civm9Lbm+sO5y7cHu0PxShCyk0jFChID1Squ9DXCmziA6pRv03dj/7cJcSa7wyPyYsdZ/NcB9H573O+YRoMzs9a/3nQ+3/qWvMGhGgAeHxes/mr6U12OFb9c2Wh2sZ4UE3vh1Uvmbv7JTT++W+A/Eu4TMpP8U6ze6H2ruELw5/79XkD66wahs="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.dbfda90dc99fc43042c0bef0fce1fddf.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:relationships_2018_2.lists.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "1384"
+        }
+      ],
+      "compressedContent": "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"
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.ddb8d98e4b40ac2c89491df3aa06a591.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "PossibleRootNodes",
+          "value": "status"
+        },
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:core_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "1764"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.e23e0aa7b1906914e2f9e46a29f978ea.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.core_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "2128"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.request.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "PossibleRootNodes",
+          "value": "upsertListResponse,upsertList,writeResponseList"
+        },
+        {
+          "key": "IsTopLevel",
+          "value": "1"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:messages_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "760"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    }
+  ],
+  "project": {
+    "organizationId": "419271",
+    "type": 100,
+    "workflows": [
+      {
+        "name": "sync-salesforce_contacts-to-netsuite_contacts_IS",
+        "operations": [
+          {
+            "id": "785c227c-a749-4a24-a326-4062a9d8cb61",
+            "type": 200
+          },
+          {
+            "id": "bbf37404-bc98-4284-8476-c5b271ffa9c0",
+            "type": 200
+          },
+          {
+            "id": "bae4acba-3b1c-422c-ba69-2480bc38bec5",
+            "type": 200
+          },
+          {
+            "id": "0d419af4-ea37-49f2-ad88-09e354f8a4de",
+            "type": 200
+          },
+          {
+            "id": "0570bd04-5d0d-4f59-a8ad-a652eb114528",
+            "type": 200
+          },
+          {
+            "id": "04e05b74-b0ea-4e07-af60-fd8160db6fae",
+            "type": 200
+          },
+          {
+            "id": "65271b0b-77a8-4711-822b-fa73c7100a6b",
+            "type": 200
+          },
+          {
+            "id": "bbb80224-3c75-4805-af53-f298422f2434",
+            "type": 200
+          }
+        ],
+        "type": 1100,
+        "id": "15e221f0-49c6-4fc3-87bf-a6a57f9ce2ba",
+        "validationState": 100,
+        "requiresDeploy": true,
+        "projectId": "4da0b033-096a-41a2-9258-4af8c12494eb",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "checksum": 735
+      },
+      {
+        "name": "Project Migration Notes",
+        "operations": [
+          {
+            "id": "5fa4bdfa-3464-4877-b79f-c7e199215fb6",
+            "type": 200
+          }
+        ],
+        "type": 1100,
+        "id": "8b5c2d1e-9f3a-4b6c-8d7e-1a2b3c4d5e6f",
+        "validationState": 100,
+        "requiresDeploy": true,
+        "projectId": "4da0b033-096a-41a2-9258-4af8f12494eb",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "checksum": 542
+      }
+    ],
+    "isDeleted": 0,
+    "metadataVersion": "1.0.1",
+    "targetEnvironmentId": "503401",
+    "settings": {
+      "aiMinScore": 0.7,
+      "selectedAiModel": "bert",
+      "aiTopEntries": 3,
+      "aiIncludeType": true,
+      "aiModelDescription": "Automapping 1.0",
+      "enableOperationAutoNumber": true
+    },
+    "requireDeployComment": false,
+    "requireDeployTag": false,
+    "ignoreHTTPTargetTargetValidation": false,
+    "disableScriptParser": false,
+    "name": "sync-salesforce_contacts-to-netsuite_contacts (2)",
+    "description": "sync-salesforce_contacts-to-netsuite_contacts (2).jpk",
+    "checksum": "135",
+    "encryptedAtRest": true,
+    "appliedDataMigrations": [
+      "StandaloneWorkflowMigration",
+      "RepairMigratedProjectMigration",
+      "ConvertStepObjectsToStepReferencesMigration",
+      "AddGlobalVariablesToTransformationScriptsMigration",
+      "DeleteSourcepathsVariablepathsFromRulesMigration",
+      "AddActivityPolarityMigration",
+      "FixApiPolarityMigration",
+      "DeleteLoopSubmappingsMigration",
+      "FilebasedActivityMigration",
+      "GlobalVariableEndpointMigration",
+      "RedoScriptComponentReferencesMigration",
+      "FtpEndpointEncryptChoiceMigration",
+      "ScriptTransMigration",
+      "AddSourceUsersToDocumentsMigration",
+      "GlobalVariableEndpointToEndpointsMigration",
+      "DesignComponentDocumentsMigration",
+      "SFTransformationMappingMigration",
+      "MoveLastDeployedInformationToPrjSummaryMigration",
+      "DesignComponentSplitMigration",
+      "SchemaTypeNodeRenameMigration",
+      "RestoreDeletedTransformationPropertiesMigration",
+      "HttpUrlMigration",
+      "SfdcBulkPatternTypeMigration",
+      "SFManualQueryMigration",
+      "NetsuitePropertiesCleanupMigration",
+      "SaveHarmonyProjectIdMigration",
+      "RemoveEncryptionMigration",
+      "DesignComponentEncryptPasswordMigration",
+      "DesignComponentMigration",
+      "SampleDocumentTypeMigration",
+      "AddTagComponentTypeMigration",
+      "TransformationSourceTargetMigration",
+      "JiraCreateUpdateGenericRootNameMigration",
+      "PatchTransformationSourceTargetMigration",
+      "TransformationAugmentationMigration"
+    ],
+    "appliedPostDataMigrations": [
+      "TransformationRuleMigration",
+      "OperationValidationMigration",
+      "ScriptSyntaxMigration",
+      "EmailContentMigration",
+      "ProjectMetadataMigration",
+      "AdapterValidationMigration"
+    ],
+    "id": "199f3acc-09fe-430d-92bb-4ad8f823e2f7",
+    "createdOn": 1756415614886,
+    "harmonyProjectId": 3211450,
+    "validationState": 400,
+    "adapterIds": [
+      "228",
+      "6601",
+      "8001",
+      "12801",
+      "12901",
+      "ftp",
+      "http",
+      "salesforce",
+      "tempstorage"
+    ],
+    "recentlyDeletedComponents": [],
+    "tags": [],
+    "requiresDeploy": true,
+    "components": [
+      {
+        "name": "jb.netsuite.query.customer",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 500
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 700
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 500
+          },
+          {
+            "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+            "type": 700
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "d622988f-6525-4829-8c96-3d442bcf8991",
+        "checksum": "4",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.update.customer",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 500
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 700
+          },
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 500
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "04e05b74-b0ea-4e07-af60-fd8160db6fae",
+            "id": "f7f37f1c-5010-4162-a299-467bacab38cc"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+        "checksum": "12",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": false,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.create.customer",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "04e05b74-b0ea-4e07-af60-fd8160db6fae",
+            "id": "739b2e00-9a2c-46ce-9f88-35fdba53e1ce"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "bbe41448-8d60-491e-92f4-d1596d786bad",
+        "checksum": "6",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.sync.customer",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 400
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 400
+          },
+          {
+            "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "92edadeb-a37c-410f-82fd-85335151dfd7",
+        "checksum": "7",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.process.customer",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 400
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "04e05b74-b0ea-4e07-af60-fd8160db6fae",
+            "id": "c649e7d8-fcba-4c97-afc2-9ea3add33aec"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "1961d810-78d9-4018-a253-26e78eebb6f0",
+        "checksum": "9",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.transform.customer",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "5fa4bdfa-3464-4877-b79f-c7e199215fb6",
+        "checksum": "3",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.netsuite.validate.customer",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "6f789012-3456-7890-f012-678901234567",
+        "checksum": "2",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true,
+        "parentStepId": null
+      },
+      {
+        "name": "jb.netsuite.cleanup.customer",
+        "steps": [
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "78901234-5678-9012-0123-789012345678",
+        "checksum": "3",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "Run Canonical to Target",
+        "type": 400,
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "scriptBody": "<trans>\n$DataErrorFilename = 'Data_Error_' +GUID();\n$SummaryLogFilename = 'Summary_Log_' + GUID();\n$SuccessesCountFilename = 'Success_Count_' + GUID();\n$FailureCountFilename = 'Failure_Count_' + GUID();\n\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$DataErrorFilename = 'Data_Error_' +GUID();\n$SummaryLogFilename = 'Summary_Log_' + GUID();\n$SuccessesCountFilename = 'Success_Count_' + GUID();\n$FailureCountFilename = 'Failure_Count_' + GUID();\n\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "DataErrorFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "FailureCountFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SuccessesCountFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SummaryLogFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "3",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Format Batch Log Files",
+        "type": 400,
+        "id": "4126c457-d028-4eb8-a59a-a7e70de79c65",
+        "scriptBody": "<trans>\n// Format batch log files for processing\n$logDirectory = \"/var/log/jitterbit/batch/\";\n$currentDate = Now();\n$dateString = FormatDate($currentDate, \"yyyy-MM-dd\");\n\n// Create formatted log file names\n$successLogFile = $logDirectory + \"success_\" + $dateString + \".log\";\n$errorLogFile = $logDirectory + \"error_\" + $dateString + \".log\";\n$summaryLogFile = $logDirectory + \"summary_\" + $dateString + \".log\";\n\n// Initialize log counters\n$successCount = 0;\n$errorCount = 0;\n$totalProcessed = 0;\n\n// Format success log entries\nIf(FileExists($successLogFile),\n    $successEntries = ReadFile($successLogFile);\n    $successLines = Split($successEntries, \"\\n\");\n    $successCount = Length($successLines);\n    WriteToOperationLog(\"Success log formatted: \" + $successCount + \" entries\");\n);\n\n// Format error log entries  \nIf(FileExists($errorLogFile),\n    $errorEntries = ReadFile($errorLogFile);\n    $errorLines = Split($errorEntries, \"\\n\");\n    $errorCount = Length($errorLines);\n    WriteToOperationLog(\"Error log formatted: \" + $errorCount + \" entries\");\n);\n\n// Generate summary report\n$totalProcessed = $successCount + $errorCount;\n$summaryReport = \"=== BATCH LOG SUMMARY ===\" + \"\\n\";\n$summaryReport = $summaryReport + \"Date: \" + $dateString + \"\\n\";\n$summaryReport = $summaryReport + \"Total Processed: \" + $totalProcessed + \"\\n\";\n$summaryReport = $summaryReport + \"Successful: \" + $successCount + \"\\n\";\n$summaryReport = $summaryReport + \"Errors: \" + $errorCount + \"\\n\";\n$summaryReport = $summaryReport + \"Success Rate: \" + ($successCount / Max($totalProcessed, 1) * 100) + \"%\" + \"\\n\";\n$summaryReport = $summaryReport + \"========================\" + \"\\n\";\n\n// Write summary to file\nWriteFile($summaryLogFile, $summaryReport);\nWriteToOperationLog(\"Batch log files formatted successfully\");\nWriteToOperationLog($summaryReport);\n\n$logsWritten = true;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Format batch log files for processing\n$logDirectory = \"/var/log/jitterbit/batch/\";\n$currentDate = Now();\n$dateString = FormatDate($currentDate, \"yyyy-MM-dd\");\n\n// Create formatted log file names\n$successLogFile = $logDirectory + \"success_\" + $dateString + \".log\";\n$errorLogFile = $logDirectory + \"error_\" + $dateString + \".log\";\n$summaryLogFile = $logDirectory + \"summary_\" + $dateString + \".log\";\n\n// Initialize log counters\n$successCount = 0;\n$errorCount = 0;\n$totalProcessed = 0;\n\n// Format success log entries\nIf(FileExists($successLogFile),\n    $successEntries = ReadFile($successLogFile);\n    $successLines = Split($successEntries, \"\\n\");\n    $successCount = Length($successLines);\n    WriteToOperationLog(\"Success log formatted: \" + $successCount + \" entries\");\n);\n\n// Format error log entries  \nIf(FileExists($errorLogFile),\n    $errorEntries = ReadFile($errorLogFile);\n    $errorLines = Split($errorEntries, \"\\n\");\n    $errorCount = Length($errorLines);\n    WriteToOperationLog(\"Error log formatted: \" + $errorCount + \" entries\");\n);\n\n// Generate summary report\n$totalProcessed = $successCount + $errorCount;\n$summaryReport = \"=== BATCH LOG SUMMARY ===\" + \"\\n\";\n$summaryReport = $summaryReport + \"Date: \" + $dateString + \"\\n\";\n$summaryReport = $summaryReport + \"Total Processed: \" + $totalProcessed + \"\\n\";\n$summaryReport = $summaryReport + \"Successful: \" + $successCount + \"\\n\";\n$summaryReport = $summaryReport + \"Errors: \" + $errorCount + \"\\n\";\n$summaryReport = $summaryReport + \"Success Rate: \" + ($successCount / Max($totalProcessed, 1) * 100) + \"%\" + \"\\n\";\n$summaryReport = $summaryReport + \"========================\" + \"\\n\";\n\n// Write summary to file\nWriteFile($summaryLogFile, $summaryReport);\nWriteToOperationLog(\"Batch log files formatted successfully\");\nWriteToOperationLog($summaryReport);\n\n$logsWritten = true;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "logsWritten",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "successCount",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "errorCount",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "totalProcessed",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "7",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": {
+          "line": 47,
+          "ch": 16,
+          "sticky": null
+        },
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Logging and Notification Rollup",
+        "type": 400,
+        "id": "7cc98705-7256-4dcb-b26a-abe7e05bec23",
+        "scriptBody": "<trans>\n// Logging and Notification Rollup Script\n// Consolidate all operation logs and prepare email notifications\n\n$currentTime = Now();\n$operationId = GetOperationId();\n$projectName = GetProjectName();\n\n// Initialize rollup variables\n$totalRecordsProcessed = 0;\n$successfulRecords = 0;\n$errorRecords = 0;\n$warningRecords = 0;\n\n// Collect operation statistics\n$operationStats = GetOperationStats();\nIf(IsValid($operationStats),\n    $totalRecordsProcessed = $operationStats[\"totalProcessed\"];\n    $successfulRecords = $operationStats[\"successful\"];\n    $errorRecords = $operationStats[\"errors\"];\n    $warningRecords = $operationStats[\"warnings\"];\n);\n\n// Build comprehensive email message\n$EmailSubject = $projectName + \" - Operation Summary [\" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm\") + \"]\";\n\n$EmailMessage = \"=== OPERATION SUMMARY ===\" + \"\\n\\n\";\n$EmailMessage = $EmailMessage + \"Project: \" + $projectName + \"\\n\";\n$EmailMessage = $EmailMessage + \"Operation ID: \" + $operationId + \"\\n\";\n$EmailMessage = $EmailMessage + \"Execution Time: \" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$EmailMessage = $EmailMessage + \"Source: \" + $SourceIdentifier + \"\\n\";\n$EmailMessage = $EmailMessage + \"Target: \" + $TargetIdentifier + \"\\n\\n\";\n\n$EmailMessage = $EmailMessage + \"=== PROCESSING RESULTS ===\" + \"\\n\";\n$EmailMessage = $EmailMessage + \"Total Records: \" + $totalRecordsProcessed + \"\\n\";\n$EmailMessage = $EmailMessage + \"Successful: \" + $successfulRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Errors: \" + $errorRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Warnings: \" + $warningRecords + \"\\n\";\n\nIf($totalRecordsProcessed > 0,\n    $successRate = ($successfulRecords / $totalRecordsProcessed) * 100;\n    $EmailMessage = $EmailMessage + \"Success Rate: \" + Round($successRate, 2) + \"%\" + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== LOG DETAILS ===\" + \"\\n\";\nIf(Length($email_summary) > 0,\n    $EmailMessage = $EmailMessage + \"Summary Log: \" + $email_summary + \"\\n\";\n);\nIf(Length($email_dataError) > 0,\n    $EmailMessage = $EmailMessage + \"Error Details: \" + $email_dataError + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== END SUMMARY ===\" + \"\\n\";\n\nWriteToOperationLog(\"Logging and Notification Rollup Complete\");\nWriteToOperationLog(\"Email prepared - Subject: \" + $EmailSubject);\nWriteToOperationLog(\"Total records processed: \" + $totalRecordsProcessed);\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Logging and Notification Rollup Script\n// Consolidate all operation logs and prepare email notifications\n\n$currentTime = Now();\n$operationId = GetOperationId();\n$projectName = GetProjectName();\n\n// Initialize rollup variables\n$totalRecordsProcessed = 0;\n$successfulRecords = 0;\n$errorRecords = 0;\n$warningRecords = 0;\n\n// Collect operation statistics\n$operationStats = GetOperationStats();\nIf(IsValid($operationStats),\n    $totalRecordsProcessed = $operationStats[\"totalProcessed\"];\n    $successfulRecords = $operationStats[\"successful\"];\n    $errorRecords = $operationStats[\"errors\"];\n    $warningRecords = $operationStats[\"warnings\"];\n);\n\n// Build comprehensive email message\n$EmailSubject = $projectName + \" - Operation Summary [\" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm\") + \"]\";\n\n$EmailMessage = \"=== OPERATION SUMMARY ===\" + \"\\n\\n\";\n$EmailMessage = $EmailMessage + \"Project: \" + $projectName + \"\\n\";\n$EmailMessage = $EmailMessage + \"Operation ID: \" + $operationId + \"\\n\";\n$EmailMessage = $EmailMessage + \"Execution Time: \" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$EmailMessage = $EmailMessage + \"Source: \" + $SourceIdentifier + \"\\n\";\n$EmailMessage = $EmailMessage + \"Target: \" + $TargetIdentifier + \"\\n\\n\";\n\n$EmailMessage = $EmailMessage + \"=== PROCESSING RESULTS ===\" + \"\\n\";\n$EmailMessage = $EmailMessage + \"Total Records: \" + $totalRecordsProcessed + \"\\n\";\n$EmailMessage = $EmailMessage + \"Successful: \" + $successfulRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Errors: \" + $errorRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Warnings: \" + $warningRecords + \"\\n\";\n\nIf($totalRecordsProcessed > 0,\n    $successRate = ($successfulRecords / $totalRecordsProcessed) * 100;\n    $EmailMessage = $EmailMessage + \"Success Rate: \" + Round($successRate, 2) + \"%\" + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== LOG DETAILS ===\" + \"\\n\";\nIf(Length($email_summary) > 0,\n    $EmailMessage = $EmailMessage + \"Summary Log: \" + $email_summary + \"\\n\";\n);\nIf(Length($email_dataError) > 0,\n    $EmailMessage = $EmailMessage + \"Error Details: \" + $email_dataError + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== END SUMMARY ===\" + \"\\n\";\n\nWriteToOperationLog(\"Logging and Notification Rollup Complete\");\nWriteToOperationLog(\"Email prepared - Subject: \" + $EmailSubject);\nWriteToOperationLog(\"Total records processed: \" + $totalRecordsProcessed);\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "EmailMessage",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "EmailSubject",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SourceIdentifier",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "TargetIdentifier",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "email_dataError",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "email_summary",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "6",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": {
+          "line": 35,
+          "ch": 0,
+          "sticky": null
+        },
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Send Error Email",
+        "type": 400,
+        "id": "d7ac02bb-f2fa-4059-931b-c9b5226186f8",
+        "scriptBody": "<trans>\nSendEmail(\"Error Notification\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nSendEmail(\"Error Notification\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "email_enabled",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Operation",
+        "type": 400,
+        "id": "956e926b-ec6f-424d-923f-4e3960fb288c",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Salesforce Login Url",
+        "type": 400,
+        "id": "a92e98cc-6794-4f1f-87af-e3c3e5ecb7cf",
+        "scriptBody": "<trans>\n$SalesforceLoginUrl = \"https://login.salesforce.com\";\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$SalesforceLoginUrl = \"https://login.salesforce.com\";\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "sf_loginUrl",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "sf_isSandbox",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Canonical to NetSuite",
+        "type": 400,
+        "id": "3e13e949-d67b-462d-99f5-b181338f93b5",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "5",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Variables",
+        "type": 400,
+        "id": "eba20ede-69c2-47e5-8441-11ec1ecfb885",
+        "scriptBody": "<trans>\n$fileGuid = Guid();\nRunScript(\"<TAG>script:Set Salesforce Login Url</TAG>\");\nRunScript(\"<TAG>script:Set Salesforce Where Clause</TAG>\");\nRunScript(\"<TAG>script:Set Last Modified Date</TAG>\");\n\n\n// set canonical filename for linking to canonical to target half recipe\n$CanonicalFilename = \"canonical_customer_\" + $fileGuid + \".xml\";\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$fileGuid = Guid();\nRunScript(\"<TAG>script:Set Salesforce Login Url</TAG>\");\nRunScript(\"<TAG>script:Set Salesforce Where Clause</TAG>\");\nRunScript(\"<TAG>script:Set Last Modified Date</TAG>\");\n\n\n// set canonical filename for linking to canonical to target half recipe\n$CanonicalFilename = \"canonical_customer_\" + $fileGuid + \".xml\";\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "fileGuid",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "CanonicalFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Query Contacts Log",
+        "type": 400,
+        "id": "0dcbd85b-d8d6-4e0c-8fda-bbd88ba3f2c2",
+        "scriptBody": "<trans>\nWriteToOperationLog(ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Salesforce Query Response</TAG>\"))\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Salesforce Query Response</TAG>\"))\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "3",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "On Failure Email",
+        "type": 400,
+        "id": "2d0148b8-efe9-4890-8acb-f278ab7f654c",
+        "scriptBody": "<trans>\nSendEmail(\"Failure Notification\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nSendEmail(\"Failure Notification\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "email_enabled",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Variables For Upsert",
+        "type": 400,
+        "id": "269bc544-efef-4790-b265-7b65400f3aa9",
+        "scriptBody": "<trans>\nRunScript(\"<TAG>script:NetSuite Country Dict</TAG>\");\nRunScript(\"<TAG>script:Set Logging Variables</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunScript(\"<TAG>script:NetSuite Country Dict</TAG>\");\nRunScript(\"<TAG>script:Set Logging Variables</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Last Modified Date",
+        "type": 400,
+        "id": "8b4a8472-21a4-46f5-84b6-ff10a08684aa",
+        "scriptBody": "<trans>\n$LastModifiedDate = Now();\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$LastModifiedDate = Now();\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "NetSuite Country Dict",
+        "type": 400,
+        "id": "716ff8ec-e77e-4ee5-a6d2-66e2204f1c0e",
+        "scriptBody": "<trans>\n$CountryDict = {};\n$CountryDict[\"US\"] = \"United States\";\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$CountryDict = {};\n$CountryDict[\"US\"] = \"United States\";\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "netsuiteCountryDict",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Notes",
+        "type": 400,
+        "id": "c57c3fc8-44c8-440d-9d7d-ddc0d28d418d",
+        "scriptBody": "<trans>\n// Notes for documentation\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Notes for documentation\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Email Notification",
+        "type": 400,
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "scriptBody": "<trans>\n$EmailNotification = true;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$EmailNotification = true;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Get Last Modified Date",
+        "type": 400,
+        "id": "769dd7e2-5d4c-4553-8f4d-0ba5b3f53fb5",
+        "scriptBody": "<trans>\n$LastModifiedDate = ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Last Modified Date</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$LastModifiedDate = ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Last Modified Date</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Write Batch Log Files",
+        "type": 400,
+        "id": "51cb725b-8c40-47f1-82a7-e7d1807711f7",
+        "scriptBody": "<trans>\nWriteToOperationLog(\"Batch Log Files Written\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(\"Batch Log Files Written\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Initial Data Load",
+        "type": 400,
+        "id": "1e51ae85-ad66-48d4-b235-423eea86da49",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Initial Data Load</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Initial Data Load</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Salesforce Where Clause",
+        "type": 400,
+        "id": "79614cee-3de4-4e94-87d0-8f2bc6f76f96",
+        "scriptBody": "<trans>\n$WhereClause = \"LastModifiedDate > \" + $LastModifiedDate;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$WhereClause = \"LastModifiedDate > \" + $LastModifiedDate;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Logging Variables",
+        "type": 400,
+        "id": "0182f3de-d487-4cc7-a510-94b1526de364",
+        "scriptBody": "<trans>\n$logsWritten = false;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$logsWritten = false;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Print Insert Summary",
+        "type": 400,
+        "id": "f4ac526a-a9ef-434c-8ccd-dcae5fe359f4",
+        "scriptBody": "<trans>\nWriteToOperationLog(\"Insert Summary: \" + $InsertCount + \" records inserted\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(\"Insert Summary: \" + $InsertCount + \" records inserted\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Test Email",
+        "type": 400,
+        "id": "c9c4bfd1-60ac-4c59-a1aa-3a501e1d5777",
+        "scriptBody": "<trans>\nRunScript(\"<TAG>script:Setup Email Notification</TAG>\");\n$EmailSubject = \"Test Jitterbit Email\";\n$EmailMessage = \"Email recipient configure correctly!\";\nemailErrorMessage =  SendEmailMessage(\"<TAG>email:Log Results</TAG>\");\nIf(Bool(Length(emailErrorMessage)),\n emailErrorMessage = \"Failed to send email. Error message: \" + emailErrorMessage;\n RaiseError(emailErrorMessage),\n WriteToOperationLog(\"Test email message attempted. Check if the configured recipients got a test notification.\");\n WriteToOperationLog(\"If so, you're set up properly!\");\n WriteToOperationLog(\"If not, you might want to double check that the email recipient provided is valid.\");\n);\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunScript(\"<TAG>script:Setup Email Notification</TAG>\");\n$EmailSubject = \"Test Jitterbit Email\";\n$EmailMessage = \"Email recipient configure correctly!\";\nemailErrorMessage =  SendEmailMessage(\"<TAG>email:Log Results</TAG>\");\nIf(Bool(Length(emailErrorMessage)),\n emailErrorMessage = \"Failed to send email. Error message: \" + emailErrorMessage;\n RaiseError(emailErrorMessage),\n WriteToOperationLog(\"Test email message attempted. Check if the configured recipients got a test notification.\");\n WriteToOperationLog(\"If so, you're set up properly!\");\n WriteToOperationLog(\"If not, you might want to double check that the email recipient provided is valid.\");\n);\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "Query Contacts Response",
+        "mappingRules": [],
+        "loopMappingRules": [
+          {
+            "srcLoopPath": "root$transaction.response$body$queryResponse$result$records.",
+            "tgtLoopPath": "records$Contact.",
+            "srcPath": "",
+            "tgtPath": ""
+          }
+        ],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+        "checksum": "18",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "salesforce_Query_output_0b0d7bda-a630-4976-81b7-063f57907684",
+          "origin": {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "adapterId": "salesforce",
+            "direction": "output",
+            "functionName": "query"
+          }
+        },
+        "target": {
+          "name": "Salesforce Query Response Schema",
+          "id": "6cc130da-8ccd-48e1-b13b-3dcb7ef4f1a2",
+          "document": {
+            "placeholder": "Large document content (106KB schema)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "106KB",
+            "type": "schema_document"
+          }
+        },
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "NetSuite Upsert Contact - Response",
+        "mappingRules": [
+          {
+            "customValuePaths": [],
+            "globalVariables": [],
+            "isPreconditionScript": false,
+            "targetPath": "success",
+            "targetScript": "success$",
+            "transformScript": "<trans>\nroot$transaction.response$body$upsertResponse$writeResponse$status$isSuccess$\n</trans>",
+            "validationErrors": [],
+            "cursor": {
+              "line": 1,
+              "ch": 0,
+              "sticky": null
+            },
+            "transformScriptError": "",
+            "srcPaths": [
+              "writeResponse/status/isSuccess"
+            ],
+            "transformScriptCleansed": "<trans>\nroot$transaction.response$body$upsertResponse$writeResponse$status$isSuccess$\n</trans>"
+          }
+        ],
+        "loopMappingRules": [],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+        "checksum": "5",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "netsuite_Upsert_output_a07f69ca-fa26-424c-993f-092620b3c94a",
+          "origin": {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "adapterId": "netsuite",
+            "direction": "output",
+            "functionName": "upsert",
+            "isConnectorFunction": true
+          }
+        },
+        "target": {
+          "name": "New Flat Schema",
+          "id": "b1425002-ff7d-433e-b653-8d9594033f52",
+          "document": {
+            "placeholder": "Flat schema document (460 bytes)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "460 bytes",
+            "type": "flat_schema"
+          }
+        },
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "NetSuite Upsert Contact - Request",
+        "mappingRules": [],
+        "loopMappingRules": [
+          {
+            "srcLoopPath": "records$Contact.",
+            "tgtLoopPath": "upsertList$record.",
+            "srcPath": "records/Contact",
+            "tgtPath": "upsertList/record"
+          }
+        ],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "92681677-c51b-4db4-b906-527e117e65d5",
+        "checksum": "17",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "Salesforce Query Response Schema",
+          "id": "6cc130da-8ccd-48e1-b13b-3dcb7ef4f1a2",
+          "document": {
+            "placeholder": "Large source document (106KB schema)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "106KB",
+            "type": "schema_document"
+          }
+        },
+        "target": {
+          "name": "netsuite_Upsert_input_a07f69ca-fa26-424c-993f-092620b3c94a",
+          "origin": {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "adapterId": "netsuite",
+            "direction": "input",
+            "functionName": "upsert",
+            "isConnectorFunction": true
+          }
+        },
+        "partial": false
+      }
+    ],
+    "adapters": [
+      {
+        "id": "WooCommerce",
+        "type": "connectorFunction",
+        "version": "1.0.0",
+        "displayName": "WooCommerce",
+        "agentGroupVersion": "11.48.0.38",
+        "environmentId": 503401,
+        "name": "WooCommerce",
+        "metadata": {
+          "orgId": "419271",
+          "isConnectorFunction": true
+        },
+        "activities": {
+          "query": {
+            "metadata": {
+              "entityTypeId": "12902",
+              "isConnectorFunction": true,
+              "adapterName": "WooCommerce",
+              "adapterVersion": "1.0.0",
+              "activityType": "query"
+            }
+          }
+        },
+        "availability": "PUBLIC",
+        "defaultActivityIcon": "/assets/images/woocommerce-Activity.svg",
+        "defaultActivityIconSvg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgOTAgOTAiPgogIDxkZWZzPgogICAgPHN0eWxlPi5he2ZpbGw6I2ZmZjt9LmJ7ZmlsbDojZmY2O30uY3tmaWxsOiMwMDc4ZGU7fTwvc3R5bGU+CiAgICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjQ1IiByPSI0NSIgZmlsbD0iIzAwNzhkZSIvPgogIDwvZGVmcz4KICA8Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDUiIGN5PSI0NSIgcj0iMjUiLz4KICA8Y2lyY2xlIGNsYXNzPSJiIiBjeD0iNDUiIGN5PSI0NSIgcj0iMzUiLz4KICA8Y2lyY2xlIGNsYXNzPSJjIiBjeD0iNDUiIGN5PSI0NSIgcj0iMTUiLz4KPC9zdmc+",
+        "defaultActivityIconV2Svg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgOTAgOTAiPgogIDxkZWZzPgogICAgPHN0eWxlPi5he2ZpbGw6I2ZmZjt9LmJ7ZmlsbDojZmY2O30uY3tmaWxsOiMwMDc4ZGU7fTwvc3R5bGU+CiAgICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjQ1IiByPSI0NSIgZmlsbD0iIzAwNzhkZSIvPgogIDwvZGVmcz4KICA8Y2lyY2xlIGNsYXNzPSJhIiBjeD0iNDUiIGN5PSI0NSIgcj0iMzUiLz4KICA8Y2lyY2xlIGNsYXNzPSJiIiBjeD0iNDUiIGN5PSI0NSIgcj0iMjUiLz4KICA8Y2lyY2xlIGNsYXNzPSJjIiBjeD0iNDUiIGN5PSI0NSIgcj0iMTUiLz4KPC9zdmc+",
+        "endpoint": {
+          "endpointType": "connectorFunction",
+          "name": "WooCommerce",
+          "displayName": "WooCommerce Endpoint",
+          "metadata": {
+            "entityTypeId": "12901",
+            "isConnectorFunction": true,
+            "adapterName": "WooCommerce",
+            "adapterVersion": "1.0.0"
+          },
+          "icon": "/assets/images/woocommerce-Folder.svg",
+          "iconSvg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MCA5MCI+PC9zdmc+",
+          "properties": [
+            {
+              "type": "string",
+              "resetPasswordsOnChange": true,
+              "use": {
+                "placeholder": "example.host.com"
+              },
+              "defaultValue": null,
+              "validators": [
+                {
+                  "name": "required"
+                }
+              ],
+              "widgetHint": "string",
+              "name": "host",
+              "displayName": "HOST"
+            },
+            {
+              "type": "string",
+              "multiple": false,
+              "name": "connectionType",
+              "displayName": "Connection Type",
+              "widgetHint": "radio-choice",
+              "defaultValue": "https",
+              "enumValues": [
+                {
+                  "realValue": "https",
+                  "enumValue": "HTTPS"
+                },
+                {
+                  "realValue": "http",
+                  "enumValue": "HTTP"
+                }
+              ],
+              "validators": [
+                {
+                  "name": "required"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "multiple": false,
+              "name": "consumer_key",
+              "displayName": "Consumer Key",
+              "widgetHint": "string",
+              "validators": [
+                {
+                  "name": "required"
+                }
+              ]
+            },
+            {
+              "type": "password",
+              "name": "consumer_secret",
+              "displayName": "Consumer Secret",
+              "widgetHint": "password",
+              "validators": [
+                {
+                  "name": "required"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "version": 4
+}
