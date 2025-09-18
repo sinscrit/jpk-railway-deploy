@@ -81,6 +81,7 @@ import zlib
 from typing import Dict, List, Any, Optional, Tuple
 import uuid
 import time
+import logging
 import psutil
 from functools import wraps
 import signal
@@ -179,6 +180,56 @@ def retry_on_transient_errors(max_attempts: int = 3, delay: float = 0.1, backoff
 
         return wrapper
     return decorator
+
+
+def log_file_check(file_path, context=""):
+    """Log file existence check with detailed information"""
+    exists = os.path.exists(file_path)
+    size = os.path.getsize(file_path) if exists else 0
+    print(f"🔍 FILE_CHECK: {file_path} [EXISTS: {exists}, SIZE: {size}B] {context}")
+    return exists
+
+def log_component_loading(component_type, count, duration):
+    """Log component loading statistics"""
+    print(f"📊 COMPONENT_LOAD: {component_type} [COUNT: {count}, TIME: {duration:.3f}s]")
+
+def log_processing_step(step_name, start_time, duration):
+    """Log processing step timing"""
+    print(f"⏱️ PROCESSING_STEP: {step_name} [START: {start_time:.2f}s, DURATION: {duration:.2f}s]")
+
+class ProcessingTimer:
+    def __init__(self):
+        self.start_time = time.time()
+        self.checkpoints = {}
+    
+    def checkpoint(self, name):
+        current_time = time.time()
+        duration = current_time - self.start_time
+        self.checkpoints[name] = duration
+        print(f"⏱️ CHECKPOINT: {name} [ELAPSED: {duration:.2f}s]")
+    
+    def summary(self):
+        total_time = time.time() - self.start_time
+        print(f"📊 PROCESSING_SUMMARY: Total time {total_time:.2f}s")
+        for name, duration in self.checkpoints.items():
+            percentage = (duration / total_time) * 100
+            print(f"   - {name}: {duration:.2f}s ({percentage:.1f}%)")
+
+# Global component statistics tracking
+component_stats = {
+    'type1000': {'expected': 33, 'loaded': 0},
+    'type600': {'expected': 3, 'loaded': 0},
+    'type900': {'expected': 6, 'loaded': 0},
+    'type1200': {'expected': 3, 'loaded': 0},
+    'type1300': {'expected': 18, 'loaded': 0},
+    'type500': {'expected': 20, 'loaded': 0}
+}
+
+def log_component_stats():
+    """Log component loading statistics summary"""
+    for comp_type, stats in component_stats.items():
+        success_rate = (stats['loaded'] / stats['expected']) * 100 if stats['expected'] > 0 else 0
+        print(f"📈 COMPONENT_STATS: {comp_type} [{stats['loaded']}/{stats['expected']} = {success_rate:.1f}%]")
 
 
 @with_timeout(300)  # 5 minute timeout for JPK processing
