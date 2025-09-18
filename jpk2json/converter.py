@@ -5354,6 +5354,10 @@ def main(args=None) -> int:
 
     try:
         print("Starting JPK processing...")
+        
+        # Initialize processing timer
+        timer = ProcessingTimer()
+        timer.checkpoint("Initialization")
 
         # Parse JPK structure
         print("1. Parsing JPK structure...")
@@ -5374,17 +5378,23 @@ def main(args=None) -> int:
         print(f"   Found project: {parsed_data['project_name']}")
         print(f"   Found {len(parsed_data['entities'])} entities")
         print(f"   Found {len(parsed_data['project_variables'])} variables")
+        
+        timer.checkpoint("JPK Parsing")
 
         # Extract connectors
         print("2. Extracting connectors...")
         connectors = extract_connectors(parsed_data['temp_dir'])
         print(f"   Found {len(connectors)} connectors")
+        
+        timer.checkpoint("Connector Extraction")
 
         # Process variables
         print("3. Processing variables...")
         variables = process_variables(parsed_data['temp_dir'])
         variable_categories = categorize_variables(variables)
         print(f"   Processed {len(variables)} variables into {len(variable_categories)} categories")
+        
+        timer.checkpoint("Variable Processing")
 
         # Extract Salesforce queries
         print("4. Extracting Salesforce queries...")
@@ -5411,6 +5421,8 @@ def main(args=None) -> int:
         # RQ-069: Post-process components to replace regular components with script components
         print("   Post-processing script component replacements...")
         components = post_process_script_components(components, jpk_path, parsed_data.get('project_name', 'Unknown'))
+        
+        timer.checkpoint("Component Generation")
 
         # RQ-014: Generate comprehensive adapters from connectors
         print("7. Generating comprehensive adapters from connectors...")
@@ -5427,6 +5439,8 @@ def main(args=None) -> int:
         assets = generate_optimized_assets_array(raw_assets)
         print(f"   Generated {len(assets)} asset definitions")
         print(f"   Applied asset property value optimization for target format alignment")
+        
+        timer.checkpoint("Asset Processing")
 
         # Generate APIs array
         print("10. Generating APIs array...")
@@ -5445,6 +5459,8 @@ def main(args=None) -> int:
             'project': project,
             'version': 4
         }
+        
+        timer.checkpoint("JSON Generation")
 
         # Validate output structure
         print("13. Validating output structure...")
@@ -5482,6 +5498,10 @@ def main(args=None) -> int:
         print(f"   Enhanced 5-property structure for optimal easiness/impact ratio: IMPLEMENTED")
         print(f"   Component steps enhancement for recovery: APPLIED")
         print(f"   Enhanced component steps structure for cycle 13 regression recovery: IMPLEMENTED")
+        
+        # Log processing summary
+        timer.summary()
+        log_component_stats()
 
         return 0
 
