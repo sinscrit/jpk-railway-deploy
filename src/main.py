@@ -13,6 +13,40 @@ from src.routes.user import user_bp
 from src.routes.flask_async_converter import flask_async_converter_bp
 from src.routes.auth import auth_bp
 
+def validate_converter_on_startup():
+    """Validate converter functionality during app startup"""
+    print("🔍 Validating converter on startup...")
+    
+    try:
+        # Import converter
+        converter_path = os.path.join(os.path.dirname(__file__), '..', 'jpk2json')
+        sys.path.insert(0, converter_path)
+        from converter import main as converter_main, detect_environment, get_lib_file_path
+        print("✅ Converter module imported successfully")
+        
+        # Check environment detection
+        env = detect_environment()
+        print(f"✅ Environment detected: {env}")
+        
+        # Check critical library files
+        critical_files = [
+            'type1000_components.json',
+            'type600_components.json'
+        ]
+        
+        for filename in critical_files:
+            file_path = get_lib_file_path(filename)
+            if not os.path.exists(file_path):
+                raise Exception(f"Critical converter file missing: {file_path}")
+        
+        print(f"✅ {len(critical_files)} critical converter files validated")
+        print("✅ Converter validation passed - app ready to start")
+        
+    except Exception as e:
+        print(f"❌ Converter validation failed: {e}")
+        print("❌ App startup aborted due to converter issues")
+        raise SystemExit(1)
+
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 
 # Session configuration
@@ -37,6 +71,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 with app.app_context():
     db.create_all()
+    validate_converter_on_startup()  # Add this line
 
 def get_client_ip():
     """Get client IP address, handling proxies"""

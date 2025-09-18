@@ -237,6 +237,8 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
             # Run the conversion with detailed logging
             print(f"🔄 Starting conversion: {input_path} -> {output_path}")
             print(f"📊 Input file size: {input_file_size} bytes")
+            print(f"👤 User: {user_name} ({user_email})")
+            print(f"🌐 Client IP: {client_ip}")
             
             try:
                 exit_code = converter_main(converter_args)
@@ -251,6 +253,11 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
             if exit_code == 0 and os.path.exists(output_path):
                 file_size = os.path.getsize(output_path)
                 print(f"📁 Output file size: {file_size} bytes ({file_size/1024/1024:.2f} MB)")
+                
+                # Validate output size (should be >= 2MB for typical conversions)
+                if file_size < 1024 * 1024:  # Less than 1MB is suspicious
+                    print(f"⚠️ WARNING: Output file size ({file_size} bytes) is suspiciously small")
+                
                 conversion_status[job_id] = {
                     'status': 'completed',
                     'message': f'Conversion completed successfully! Output size: {file_size / (1024*1024):.1f} MB',
@@ -266,14 +273,16 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                     log_entry.output_file_size = file_size
                     log_entry.processing_time = processing_time
                     db.session.commit()
+                    print(f"📝 Database updated for job {job_id}")
             else:
-                error_msg = f'Conversion failed - exit code: {exit_code}'
-                if not os.path.exists(output_path):
-                    error_msg += ', output file not created'
-                print(f"DEBUG: {error_msg}")
+                error_message = f'Conversion failed with exit code {exit_code}. Output file not created.'
+                if os.path.exists(output_path):
+                    error_message = f'Conversion failed with exit code {exit_code}. Output file size: {os.path.getsize(output_path)} bytes.'
+                
+                print(f"❌ {error_message}")
                 conversion_status[job_id] = {
                     'status': 'error',
-                    'message': error_msg,
+                    'message': error_message,
                     'progress': 0
                 }
                 
@@ -282,7 +291,7 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                 if log_entry:
                     log_entry.status = 'error'
                     log_entry.processing_time = processing_time
-                    log_entry.error_message = error_msg
+                    log_entry.error_message = error_message
                     db.session.commit()
                 
         except Exception as e:
@@ -301,6 +310,11 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                 log_entry.processing_time = processing_time
                 log_entry.error_message = error_message
                 db.session.commit()
+        finally:
+            # Clean up input file
+            if os.path.exists(input_path):
+                os.remove(input_path)
+                print(f"🗑️ Cleaned up input file: {input_path}")
 
 @flask_async_converter_bp.route('/upload', methods=['POST'])
 @require_auth
@@ -542,15 +556,140 @@ def batch_status():
         return jsonify({'error': f'Batch status check failed: {str(e)}'}), 500
 
 @flask_async_converter_bp.route('/health', methods=['GET'])
-def health_check():
-    """Health check endpoint"""
-    return jsonify({
-        'status': 'healthy',
-        'service': 'JPK to JSON Converter',
-        'version': 'async-v1.0',
-        'thread_pool_size': executor._max_workers,
-        'active_jobs': len(conversion_status)
-    })
+def converter_health():
+    """Health check endpoint for converter functionality"""
+    try:
+        health_status = {
+            'status': 'healthy',
+            'timestamp': datetime.utcnow().isoformat(),
+            'service': 'JPK to JSON Converter',
+            'version': 'async-v1.0',
+            'thread_pool_size': executor._max_workers,
+            'active_jobs': len(conversion_status),
+            'checks': {}
+        }
+        
+        # Check converter module import
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'jpk2json'))
+            from converter import main as converter_main
+            health_status['checks']['converter_import'] = {'status': 'pass', 'message': 'Converter module imported successfully'}
+        except Exception as e:
+            health_status['checks']['converter_import'] = {'status': 'fail', 'message': f'Converter import failed: {e}'}
+            health_status['status'] = 'unhealthy'
+        
+        # Check library files using deployment_check
+        import subprocess
+        try:
+            result = subprocess.run(['python', 'deployment_check.py'], capture_output=True, text=True, cwd=os.path.join(os.path.dirname(__file__), '..', '..'))
+            if result.returncode == 0:
+                health_status['checks']['library_files'] = {'status': 'pass', 'message': 'All library files available'}
+            else:
+                health_status['checks']['library_files'] = {'status': 'fail', 'message': f'Library files missing: {result.stdout}'}
+                health_status['status'] = 'unhealthy'
+        except Exception as e:
+            health_status['checks']['library_files'] = {'status': 'fail', 'message': f'Library check failed: {e}'}
+            health_status['status'] = 'unhealthy'
+        
+        # Check system resources
+        try:
+            import psutil
+            memory = psutil.virtual_memory()
+            disk = psutil.disk_usage('/')
+            
+            health_status['checks']['system_resources'] = {
+                'status': 'pass',
+                'memory_available_mb': memory.available / (1024*1024),
+                'disk_free_gb': disk.free / (1024*1024*1024)
+            }
+        except Exception as e:
+            health_status['checks']['system_resources'] = {'status': 'warn', 'message': f'Resource check failed: {e}'}
+        
+        status_code = 200 if health_status['status'] == 'healthy' else 503
+        return jsonify(health_status), status_code
+        
+    except Exception as e:
+        return jsonify({
+            'status': 'unhealthy',
+            'error': f'Health check failed: {str(e)}',
+            'timestamp': datetime.utcnow().isoformat()
+        }), 503
+
+@flask_async_converter_bp.route('/admin/performance', methods=['GET'])
+@require_auth
+def admin_performance():
+    """Performance monitoring dashboard data"""
+    try:
+        # Get recent conversions (last 24 hours)
+        from datetime import datetime, timedelta
+        recent_cutoff = datetime.utcnow() - timedelta(hours=24)
+        
+        recent_conversions = ConversionLog.query.filter(
+            ConversionLog.timestamp >= recent_cutoff
+        ).order_by(ConversionLog.timestamp.desc()).all()
+        
+        # Calculate performance metrics
+        total_conversions = len(recent_conversions)
+        successful_conversions = [c for c in recent_conversions if c.status == 'completed']
+        failed_conversions = [c for c in recent_conversions if c.status == 'error']
+        
+        success_rate = (len(successful_conversions) / total_conversions * 100) if total_conversions > 0 else 0
+        
+        # Size analysis
+        size_stats = {}
+        if successful_conversions:
+            output_sizes = [c.output_file_size for c in successful_conversions if c.output_file_size]
+            if output_sizes:
+                size_stats = {
+                    'min_mb': min(output_sizes) / (1024*1024),
+                    'max_mb': max(output_sizes) / (1024*1024),
+                    'avg_mb': sum(output_sizes) / len(output_sizes) / (1024*1024),
+                    'count': len(output_sizes)
+                }
+        
+        # Processing time analysis
+        time_stats = {}
+        if successful_conversions:
+            processing_times = [c.processing_time for c in successful_conversions if c.processing_time]
+            if processing_times:
+                time_stats = {
+                    'min_seconds': min(processing_times),
+                    'max_seconds': max(processing_times),
+                    'avg_seconds': sum(processing_times) / len(processing_times),
+                    'count': len(processing_times)
+                }
+        
+        # Health indicators
+        health_indicators = {
+            'avg_output_size_mb': size_stats.get('avg_mb', 0),
+            'avg_processing_time_s': time_stats.get('avg_seconds', 0),
+            'success_rate_percent': success_rate,
+            'healthy_size_range': size_stats.get('avg_mb', 0) >= 2.0,  # Should be >= 2MB
+            'healthy_processing_time': time_stats.get('avg_seconds', 0) >= 2.0,  # Should be >= 2 seconds
+            'healthy_success_rate': success_rate >= 95.0  # Should be >= 95%
+        }
+        
+        overall_health = (
+            health_indicators['healthy_size_range'] and
+            health_indicators['healthy_processing_time'] and
+            health_indicators['healthy_success_rate']
+        )
+        
+        return jsonify({
+            'period_hours': 24,
+            'total_conversions': total_conversions,
+            'successful_conversions': len(successful_conversions),
+            'failed_conversions': len(failed_conversions),
+            'success_rate_percent': success_rate,
+            'size_statistics': size_stats,
+            'time_statistics': time_stats,
+            'health_indicators': health_indicators,
+            'overall_healthy': overall_health,
+            'timestamp': datetime.utcnow().isoformat()
+        })
+        
+    except Exception as e:
+        return jsonify({'error': f'Performance monitoring failed: {str(e)}'}), 500
 
 @flask_async_converter_bp.route('/admin/conversions', methods=['GET'])
 @rate_limit(max_requests=30, window_seconds=60)  # 30 requests per minute for admin
