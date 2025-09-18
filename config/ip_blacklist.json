@@ -1,0 +1,10 @@
+{
+  "blacklisted_ips": [],
+  "description": "IP addresses and CIDR ranges to block from accessing the converter",
+  "last_updated": "2025-09-17T23:59:35.687819",
+  "examples": [
+    "192.168.1.100",
+    "10.0.0.0/24",
+    "172.16.0.0/16"
+  ]
+}

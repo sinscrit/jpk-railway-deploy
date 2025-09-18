@@ -1,0 +1,487 @@
+[
+  {
+    "name": "FailureCountFilename",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "6cbb530f-c187-40a2-8dfa-b8bd02cea6b0",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "f1c6c670-58fe-4012-aa44-a89b446706f2",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "d9a5c65d-9157-4056-b772-af874b46d2f2",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "513ba522-92ae-4908-97dc-ae68b138e07a",
+        "type": 500,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "61edbaa4-2ae6-4b62-8c08-e48b37b05b54",
+    "checksum": "5",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false,
+    "hidden": false
+  },
+  {
+    "name": "DataErrorFilename",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "a864d4cd-d311-4c93-8d29-45cb52a02877",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "3f9856f0-f3ba-4948-b0eb-cd34fc6e8179",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "22644f6d-b3fb-43a6-901d-b79fd7c6942a",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "609aaea8-b1b4-4dad-992e-3d2941902c6b",
+        "type": 500,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "eee56c74-0ea6-4c01-a632-977ebe6c783c",
+    "checksum": "5",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false,
+    "hidden": false
+  },
+  {
+    "name": "error.projectName",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "6e6fbf16-d417-4718-b901-8f7cb2ff1210",
+        "type": 1200,
+        "isRead": true
+      },
+      {
+        "id": "2f1e2966-0b2e-4838-9dc9-2587d67fa08d",
+        "type": 1200,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "79b8e299-66ad-4d8d-9262-20848e8921d3",
+    "checksum": "3",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false,
+    "hidden": false
+  },
+  {
+    "name": "netsuiteCountryDict",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "716ff8ec-e77e-4ee5-a6d2-66e2204f1c0e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "84d9f327-2801-46f6-8c5c-b7d0e2591820",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "logsWritten",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "0182f3de-d487-4cc7-a510-94b1526de364",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "4126c457-d028-4eb8-a59a-a7e70de79c65",
+        "type": 400,
+        "isRead": true
+      },
+      {
+        "id": "51cb725b-8c40-47f1-82a7-e7d1807711f7",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "d09561da-6bc4-45b4-88da-18b786ac6088",
+    "checksum": "3",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "hidden": false,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "EmailMessage",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "7cc98705-7256-4dcb-b26a-abe7e05bec23",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "c9c4bfd1-60ac-4c59-a1aa-3a501e1d5777",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "76790ffb-376f-4b98-8be3-d61e2ddcdde0",
+    "checksum": "2",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "hidden": false,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "EmailSubject",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "7cc98705-7256-4dcb-b26a-abe7e05bec23",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "c9c4bfd1-60ac-4c59-a1aa-3a501e1d5777",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "5bfd9a24-6bf2-4af4-a86d-9ad8279e1beb",
+        "type": 1200,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "f89fb618-63b3-4c1c-b0d0-d361b3f0984a",
+    "checksum": "3",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "hidden": false,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "error.errorMessage",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "e9a3257b-b73b-423d-a521-169e11fb45b5",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "error.environmentName",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "5e6e7b0f-e376-499f-aed7-3a7e2d0227ac",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "SuccessesCountFilename",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "ba817589-5187-4b7a-b02e-a17fab4b5b4b",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "e8c52a9e-d6a3-48e6-bcbd-fa74f3bf29dc",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "5868827a-0afe-47f5-9057-dd2d98acc58a",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "7e77ecb4-c941-46ef-84b1-5c9cace2b4eb",
+        "type": 500,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "513d9a26-da5c-4b12-be99-04862faa9a11",
+    "checksum": "5",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false,
+    "hidden": false
+  },
+  {
+    "name": "error.operationName",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "2d2dc215-69c6-414c-8ec6-ba2d34dbb840",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "error.orgName",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "5fed31f0-087b-4c31-8302-d940ca3307b5",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "error.agentName",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "c2200990-f63a-4730-ab77-4dea4c08ee36",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "sf_loginUrl",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "a92e98cc-6794-4f1f-87af-e3c3e5ecb7cf",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "4dd0d139-b3e8-4911-8b90-55260d14ad51",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "error.errorTime",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "3af7f5e9-765d-4493-98b0-bf982ce08e13",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "fileGuid",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "eba20ede-69c2-47e5-8441-11ec1ecfb885",
+        "type": 400,
+        "isRead": true,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "0c905b04-c704-4540-a1bf-a30a5cab6ce9",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "sf_runMigration",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "1e51ae85-ad66-48d4-b235-423eea86da49",
+        "type": 400,
+        "isWrite": true
+      }
+    ],
+    "value": "",
+    "id": "a35b96ba-c341-4fc6-b522-4cbcfca67b6f",
+    "checksum": "3",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "hidden": false,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "SummaryLogFilename",
+    "type": 1300,
+    "endpoints": [],
+    "usages": [
+      {
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "type": 400,
+        "isWrite": true
+      },
+      {
+        "id": "1d13c1ef-00a8-485f-961d-6d1ab5e6c201",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "7b2080ba-4697-4097-b8d3-9669b64af901",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "bc81693c-0d60-46d9-8f01-306d916208ac",
+        "type": 500,
+        "isRead": true
+      },
+      {
+        "id": "5e0a934a-d821-4276-a9ce-836c70f8848f",
+        "type": 500,
+        "isRead": true
+      }
+    ],
+    "value": "",
+    "id": "e54d82c1-e1c7-4f70-b42d-bd7a8fc8f431",
+    "checksum": "5",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false,
+    "hidden": false
+  }
+]

@@ -3927,8 +3927,21 @@ def generate_dynamic_component_name(component_index: int, default_name: str, cas
             technologies = list(jpk_context['technologies'])
             domains = list(jpk_context['business_domain'])
             
-            tech = technologies[0] if technologies else 'system'
-            domain = domains[0] if domains else 'data'
+            # Prioritize netsuite over salesforce to match original j2j_v130.py behavior
+            if 'netsuite' in technologies:
+                tech = 'netsuite'
+            elif 'salesforce' in technologies:
+                tech = 'salesforce'
+            else:
+                tech = technologies[0] if technologies else 'system'
+            
+            # Prioritize crm over erp to match original j2j_v130.py behavior
+            if 'crm' in domains:
+                domain = 'crm'
+            elif 'erp' in domains:
+                domain = 'erp'
+            else:
+                domain = domains[0] if domains else 'data'
             
             # Component type specific naming
             if component_type == 200:  # Operations

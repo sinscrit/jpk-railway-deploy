@@ -30,10 +30,73 @@
             max-width: 700px;
             width: 100%;
             text-align: center;
+            position: relative;
+        }
+
+        .auth-section {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #e9ecef;
+        }
+
+        .login-btn, .logout-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .login-btn:hover, .logout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .logout-btn {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        .logout-btn:hover {
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
         }
 
         .header {
             margin-bottom: 40px;
+            margin-top: 60px;
         }
 
         .header h1 {
@@ -43,18 +106,6 @@
             margin-bottom: 10px;
         }
 
-        .async-badge {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
 
         .header p {
             color: #666;
@@ -114,6 +165,50 @@
             border-color: #667eea;
             background-color: #f0f4ff;
             transform: scale(1.02);
+        }
+
+        .upload-area.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            background: #f5f5f5;
+        }
+
+        .login-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .login-overlay h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .login-overlay p {
+            color: #666;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .login-overlay:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .login-overlay:hover h3 {
+            color: #764ba2;
         }
 
         .upload-icon {
@@ -325,10 +420,22 @@
 </head>
 <body>
     <div class="container">
+        <!-- Authentication Section -->
+        <div class="auth-section" id="authSection">
+            <div id="loginSection" style="display: none;">
+                <a href="/login" class="login-btn">🔐 Login with Google</a>
+            </div>
+            <div id="userSection" style="display: none;">
+                <div class="user-info">
+                    <img id="userAvatar" class="user-avatar" src="" alt="User Avatar">
+                    <span id="userName"></span>
+                </div>
+                <a href="/logout" class="logout-btn">Logout</a>
+            </div>
+        </div>
+
         <div class="header">
-            <div class="async-badge">⚡ Asynchronous</div>
             <h1>JPK to JSON Converter</h1>
-            <p>High-performance asynchronous converter with concurrent processing and batch support</p>
         </div>
 
         <div class="queue-status" id="queueStatus">
@@ -336,7 +443,7 @@
             <div class="queue-stats">
                 <div class="stat-item">
                     <div class="stat-number" id="totalJobs">0</div>
-                    <div class="stat-label">Total</div>
+                    <div class="stat-label">Workers</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number" id="queuedJobs">0</div>
@@ -350,14 +457,14 @@
                     <div class="stat-number" id="completedJobs">0</div>
                     <div class="stat-label">Completed</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="activeWorkers">0</div>
-                    <div class="stat-label">Workers</div>
-                </div>
             </div>
         </div>
 
         <div class="upload-area" id="uploadArea">
+            <div class="login-overlay" id="loginOverlay" style="display: none;">
+                <h3>🔐 Log in first</h3>
+                <p>Please log in with your Google account to use the converter</p>
+            </div>
             <div class="upload-icon">📁</div>
             <div class="upload-text">Drop your JPK file here or click to browse</div>
             <div class="upload-subtext">Supports JPK files up to 100MB • Asynchronous processing</div>
@@ -390,7 +497,7 @@
             <h3>Batch Processing</h3>
             <p>Upload multiple JPK files for concurrent processing</p>
             <input type="file" id="batchInput" multiple accept=".jpk" style="display: none;">
-            <button class="btn btn-batch" onclick="document.getElementById('batchInput').click()">Select Multiple Files</button>
+            <button class="btn btn-batch" id="batchSelectBtn" onclick="document.getElementById('batchInput').click()">Select Multiple Files</button>
             <button class="btn btn-batch" id="batchConvertBtn" onclick="startBatchConversion()" disabled>Process Batch</button>
             
             <div class="batch-jobs" id="batchJobs">
@@ -401,11 +508,72 @@
     </div>
 
     <script>
+        // Authentication state
+        let currentUser = null;
+        let isAuthenticated = false;
+
+        // Existing variables
         let currentJobId = null;
         let selectedFile = null;
         let selectedBatchFiles = [];
         let batchJobIds = [];
         let statusCheckInterval = null;
+
+        // Check authentication status on page load
+        async function checkAuthStatus() {
+            try {
+                const response = await fetch('/auth/status');
+                const data = await response.json();
+                
+                isAuthenticated = data.authenticated;
+                currentUser = data.user;
+                
+                updateAuthUI();
+            } catch (error) {
+                console.error('Error checking auth status:', error);
+                updateAuthUI();
+            }
+        }
+
+        // Update authentication UI
+        function updateAuthUI() {
+            const loginSection = document.getElementById('loginSection');
+            const userSection = document.getElementById('userSection');
+            const userName = document.getElementById('userName');
+            const userAvatar = document.getElementById('userAvatar');
+            const uploadArea = document.getElementById('uploadArea');
+            const loginOverlay = document.getElementById('loginOverlay');
+            const convertBtn = document.getElementById('convertBtn');
+            const batchSelectBtn = document.getElementById('batchSelectBtn');
+            const batchConvertBtn = document.getElementById('batchConvertBtn');
+
+            if (isAuthenticated && currentUser) {
+                // Show user info
+                loginSection.style.display = 'none';
+                userSection.style.display = 'flex';
+                userName.textContent = currentUser.name || currentUser.email;
+                userAvatar.src = currentUser.picture || '/static/default-avatar.png';
+                userAvatar.alt = currentUser.name || 'User';
+                
+                // Enable upload area and buttons
+                uploadArea.classList.remove('disabled');
+                loginOverlay.style.display = 'none';
+                if (convertBtn) convertBtn.disabled = false;
+                if (batchSelectBtn) batchSelectBtn.disabled = false;
+                if (batchConvertBtn) batchConvertBtn.disabled = false;
+            } else {
+                // Show login button
+                loginSection.style.display = 'block';
+                userSection.style.display = 'none';
+                
+                // Disable upload area, show login overlay, and disable buttons
+                uploadArea.classList.add('disabled');
+                loginOverlay.style.display = 'flex';
+                if (convertBtn) convertBtn.disabled = true;
+                if (batchSelectBtn) batchSelectBtn.disabled = true;
+                if (batchConvertBtn) batchConvertBtn.disabled = true;
+            }
+        }
         let queueStatusInterval = null;
 
         // DOM elements
@@ -434,6 +602,7 @@
         uploadArea.addEventListener('dragover', handleDragOver);
         uploadArea.addEventListener('dragleave', handleDragLeave);
         uploadArea.addEventListener('drop', handleDrop);
+
         fileInput.addEventListener('change', handleFileSelect);
         batchInput.addEventListener('change', handleBatchFileSelect);
 
@@ -545,6 +714,15 @@
                 });
 
                 const result = await response.json();
+                
+                // Handle authentication requirement
+                if (response.status === 401) {
+                    showStatus('Please log in to use the converter', 'error');
+                    if (result.redirect) {
+                        window.location.href = result.redirect;
+                    }
+                    return;
+                }
 
                 if (!response.ok) {
                     throw new Error(result.error || 'Upload failed');
@@ -580,6 +758,15 @@
                 });
 
                 const result = await response.json();
+                
+                // Handle authentication requirement
+                if (response.status === 401) {
+                    showStatus('Please log in to use the converter', 'error');
+                    if (result.redirect) {
+                        window.location.href = result.redirect;
+                    }
+                    return;
+                }
 
                 if (!response.ok) {
                     throw new Error(result.error || 'Batch upload failed');
@@ -653,6 +840,16 @@
             try {
                 const response = await fetch(`/api/converter/status/${currentJobId}`);
                 const status = await response.json();
+                
+                // Handle authentication requirement
+                if (response.status === 401) {
+                    clearInterval(statusCheckInterval);
+                    showStatus('Session expired. Please log in again.', 'error');
+                    if (status.redirect) {
+                        setTimeout(() => window.location.href = status.redirect, 2000);
+                    }
+                    return;
+                }
 
                 if (!response.ok) {
                     throw new Error(status.error || 'Status check failed');
@@ -690,7 +887,6 @@
                     document.getElementById('queuedJobs').textContent = stats.queued;
                     document.getElementById('processingJobs').textContent = stats.processing;
                     document.getElementById('completedJobs').textContent = stats.completed;
-                    document.getElementById('activeWorkers').textContent = stats.active_workers;
                     
                 } catch (error) {
                     console.error('Error fetching queue status:', error);
@@ -791,6 +987,20 @@
             }
             if (queueStatusInterval) {
                 clearInterval(queueStatusInterval);
+            }
+        });
+
+        // Initialize authentication on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuthStatus();
+            
+            // Setup login overlay click handler
+            const loginOverlay = document.getElementById('loginOverlay');
+            if (loginOverlay) {
+                loginOverlay.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent triggering the upload area click
+                    window.location.href = '/login';
+                });
             }
         });
     </script>

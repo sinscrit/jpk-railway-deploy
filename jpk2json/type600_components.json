@@ -1,0 +1,507 @@
+[
+  {
+    "name": "NetSuite Endpoint",
+    "metadata": {
+      "isConnectorFunction": true,
+      "adapterName": "NetSuite",
+      "entityTypeId": "228"
+    },
+    "properties": [
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "entityId",
+        "hidden": true,
+        "defaultValue": 228
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "authType",
+        "hidden": true,
+        "defaultValue": "TBA"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "accountName",
+        "displayName": "Account",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "resetPasswordsOnChange": true,
+        "value": "[Netsuite_account]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "wsdldownloadurl",
+        "displayName": "Wsdl Download Url",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "defaultValue": "https://webservices.netsuite.com/wsdl/v2025_1_0/netsuite.wsdl",
+        "value": "[NetSuite_WSDL]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "consumerkey",
+        "displayName": "Consumer Key",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "resetPasswordsOnChange": true,
+        "value": "[NetSuite_Consumer_Key]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "consumersecret",
+        "displayName": "Consumer Secret",
+        "widgetHint": "password",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "value": "[NetSuite_Consumer_Secret]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "tokenkey",
+        "displayName": "Token Key",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "resetPasswordsOnChange": true,
+        "value": "[NetSuite_Token_Key]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "tokensecret",
+        "displayName": "Token Secret",
+        "widgetHint": "password",
+        "validators": [
+          {
+            "name": "required"
+          }
+        ],
+        "value": "[NetSuite_Token_Secret]"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "signalgo",
+        "displayName": "Signature Algorithm",
+        "enumValues": [
+          {
+            "enumValue": "HmacSHA256",
+            "realValue": "HMAC_SHA256"
+          }
+        ],
+        "defaultValue": "HMAC_SHA256",
+        "value": "HMAC_SHA256"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "calltimeout",
+        "displayName": "Call Time Out",
+        "description": "(seconds) Optional, use this setting if it is less than the agent setting"
+      },
+      {
+        "type": "boolean",
+        "multiple": false,
+        "name": "retryOnConcurrentException",
+        "displayName": "Retry on Recoverable Exception",
+        "defaultValue": false,
+        "enabledFor": {
+          "publicAgentGroup": false
+        },
+        "showWarning": true,
+        "value": false
+      },
+      {
+        "name": "retryOnConcurrentException_group",
+        "type": "group",
+        "deps": {
+          "hidden": {
+            "op": "not",
+            "args": {
+              "op": "prop",
+              "args": "retryOnConcurrentException"
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "number",
+            "multiple": false,
+            "name": "maxRetry",
+            "displayName": "Maximum Number of Retries",
+            "validators": [
+              {
+                "name": "required"
+              },
+              {
+                "name": "max",
+                "args": [
+                  5
+                ]
+              },
+              {
+                "name": "min",
+                "args": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "type": "number",
+            "multiple": false,
+            "name": "retryInterval",
+            "displayName": "Retry Interval (seconds)",
+            "validators": [
+              {
+                "name": "required"
+              },
+              {
+                "name": "max",
+                "args": [
+                  5
+                ]
+              },
+              {
+                "name": "min",
+                "args": [
+                  0
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "clearPasswordFields",
+        "hidden": true,
+        "defaultValue": true
+      }
+    ],
+    "type": 600,
+    "adapterId": "netsuite",
+    "availability": "PUBLIC",
+    "endpointType": 600,
+    "id": "d86b9fe1-d7a6-48c4-8a2e-28e579427a98",
+    "checksum": "2",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "passwordEncAtAppLevel": true,
+    "chunks": 1,
+    "partial": false,
+    "validationState": 100,
+    "hidden": false
+  },
+  {
+    "name": "Salesforce Endpoint",
+    "properties": [
+      {
+        "name": "page1",
+        "displayName": "Page One Display Name",
+        "type": "pagination",
+        "children": [
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "entityId",
+            "hidden": true,
+            "defaultValue": 31
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "url",
+            "displayName": "Server host",
+            "deps": {
+              "defaultValue": {
+                "op": "switch",
+                "args": [
+                  {
+                    "op": "prop",
+                    "args": "sandbox"
+                  },
+                  {
+                    "op": "literal",
+                    "args": false
+                  },
+                  {
+                    "op": "literal",
+                    "args": "https://login.salesforce.com"
+                  },
+                  {
+                    "op": "literal",
+                    "args": true
+                  },
+                  {
+                    "op": "literal",
+                    "args": "https://test.salesforce.com"
+                  }
+                ]
+              }
+            },
+            "defaultValue": [
+              "https://login.salesforce.com",
+              "https://test.salesforce.com"
+            ],
+            "resetPasswordsOnChange": true,
+            "validators": [
+              {
+                "name": "required"
+              }
+            ],
+            "value": "https://login.salesforce.com"
+          },
+          {
+            "type": "boolean",
+            "multiple": false,
+            "name": "sandbox",
+            "displayName": "Sandbox",
+            "defaultValue": false,
+            "validators": [
+              {
+                "name": "required"
+              }
+            ],
+            "value": false
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "username",
+            "displayName": "User Name",
+            "resetPasswordsOnChange": true,
+            "validators": [
+              {
+                "name": "required"
+              }
+            ],
+            "value": "[salesforce_username]"
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "api_version",
+            "hidden": "true",
+            "defaultValue": "64.0"
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "password",
+            "displayName": "Password",
+            "widgetHint": "password",
+            "validators": [
+              {
+                "name": "required"
+              }
+            ],
+            "value": "[salesforce_password]"
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "securityToken",
+            "displayName": "Security Token",
+            "widgetHint": "password",
+            "value": "[salesforce_security_token]"
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "status",
+            "displayName": "Status",
+            "hidden": true,
+            "defaultValue": "1"
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "target_encoding",
+            "hidden": true,
+            "defaultValue": ""
+          },
+          {
+            "type": "string",
+            "multiple": false,
+            "name": "clearPasswordFields",
+            "hidden": true,
+            "defaultValue": true
+          }
+        ]
+      }
+    ],
+    "type": 600,
+    "adapterId": "salesforce",
+    "availability": "PUBLIC",
+    "endpointType": 200,
+    "id": "fe9a1849-c636-4b86-b67a-d36056b9ddb3",
+    "checksum": "6",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "passwordEncAtAppLevel": true,
+    "validationState": 100,
+    "chunks": 1,
+    "partial": false
+  },
+  {
+    "name": "Temporary Storage Endpoint",
+    "isFileBased": true,
+    "properties": [
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "entityId",
+        "hidden": true,
+        "defaultValue": 5
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "source_type_id",
+        "hidden": true,
+        "defaultValue": 15
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "encrypt_choice",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "transfer_type",
+        "hidden": true,
+        "defaultValue": "-1"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "passive_mode",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "http_verb",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "document_id",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "timeout",
+        "hidden": true,
+        "defaultValue": "-1"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "http_ssl_version",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "port",
+        "hidden": true,
+        "defaultValue": "-1"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "filterOption.ignoreCase",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "filterOption.regularExpression",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "use_error_folder",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "use_success_folder",
+        "hidden": true,
+        "defaultValue": "0"
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "success_folder",
+        "hidden": true,
+        "defaultValue": ""
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "error_folder",
+        "hidden": true,
+        "defaultValue": ""
+      },
+      {
+        "type": "string",
+        "multiple": false,
+        "name": "file_share_create_directories",
+        "hidden": true,
+        "defaultValue": "1"
+      }
+    ],
+    "type": 600,
+    "adapterId": "tempstorage",
+    "availability": "PUBLIC",
+    "endpointType": 1000,
+    "id": "a4b71617-3648-440c-9020-744057937e53",
+    "checksum": "1",
+    "requiresDeploy": true,
+    "metadataVersion": "3.0.1",
+    "encryptedAtRest": true,
+    "chunks": 1,
+    "partial": false
+  }
+]

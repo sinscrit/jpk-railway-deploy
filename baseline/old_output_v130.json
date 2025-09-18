@@ -322,7 +322,7 @@
     "requiresDeploy": true,
     "components": [
       {
-        "name": "jb.netsuite.query.customer",
+        "name": "jb.salesforce.query.erp",
         "steps": [
           {
             "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
@@ -373,7 +373,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.update.customer",
+        "name": "jb.salesforce.update.erp",
         "steps": [
           {
             "id": "0b0d7bda-a630-4976-81b7-063f57907684",
@@ -430,7 +430,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.create.customer",
+        "name": "jb.salesforce.create.erp",
         "steps": [
           {
             "id": "0b0d7bda-a630-4976-81b7-063f57907684",
@@ -479,7 +479,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.sync.customer",
+        "name": "jb.salesforce.sync.erp",
         "steps": [
           {
             "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
@@ -530,7 +530,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.process.customer",
+        "name": "jb.salesforce.process.erp",
         "steps": [
           {
             "id": "0b0d7bda-a630-4976-81b7-063f57907684",
@@ -583,7 +583,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.transform.customer",
+        "name": "jb.salesforce.transform.erp",
         "steps": [
           {
             "id": "0b0d7bda-a630-4976-81b7-063f57907684",
@@ -622,7 +622,7 @@
         "requiresDeploy": true
       },
       {
-        "name": "jb.netsuite.validate.customer",
+        "name": "jb.salesforce.validate.erp",
         "steps": [
           {
             "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
@@ -662,7 +662,7 @@
         "parentStepId": null
       },
       {
-        "name": "jb.netsuite.cleanup.customer",
+        "name": "jb.salesforce.cleanup.erp",
         "steps": [
           {
             "id": "92681677-c51b-4db4-b906-527e117e65d5",
