@@ -54,3 +54,75 @@ flask_session/
 # Environment variables
 .env
 .env.local
+.env.production
+.env.development
+
+# Configuration files with sensitive data
+config/oauth_config.json
+config/*_config.json
+config/secrets.json
+
+# Test and output files (temporary/generated)
+*output*.json
+*result*.json
+test_*.json
+standalone_test_*.json
+web_conversion_*.json
+fixed_web_*.json
+
+# Backup files
+*.backup
+*.bak
+nixpacks.toml.backup
+
+# Development/testing directories
+jpk2json-v130-dist/
+test_outputs/
+outputs/
+
+# Runtime files
+*.pid
+*.sock
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
