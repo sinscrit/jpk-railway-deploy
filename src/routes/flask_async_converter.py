@@ -816,3 +816,45 @@ def reload_blacklist():
         
     except Exception as e:
         return jsonify({'error': f'Failed to reload blacklist: {str(e)}'}), 500
+
+@flask_async_converter_bp.route('/admin/files', methods=['GET'])
+@require_auth
+def admin_files():
+    """Admin endpoint to verify converter file availability"""
+    try:
+        file_status = {}
+        base_path = os.path.join(os.path.dirname(__file__), '..', '..', 'jpk2json')
+        
+        # Check lib files
+        lib_path = os.path.join(base_path, 'lib')
+        if os.path.exists(lib_path):
+            for file in os.listdir(lib_path):
+                if file.endswith('.json'):
+                    full_path = os.path.join(lib_path, file)
+                    file_status[f'lib/{file}'] = {
+                        'exists': True,
+                        'size': os.path.getsize(full_path),
+                        'modified': os.path.getmtime(full_path)
+                    }
+        
+        # Check tmp files  
+        tmp_path = os.path.join(base_path, 'tmp')
+        if os.path.exists(tmp_path):
+            for file in os.listdir(tmp_path):
+                if file.endswith('.json'):
+                    full_path = os.path.join(tmp_path, file)
+                    file_status[f'tmp/{file}'] = {
+                        'exists': True,
+                        'size': os.path.getsize(full_path),
+                        'modified': os.path.getmtime(full_path)
+                    }
+        
+        return jsonify({
+            'total_files': len(file_status),
+            'files': file_status,
+            'base_path': base_path,
+            'lib_path_exists': os.path.exists(lib_path),
+            'tmp_path_exists': os.path.exists(tmp_path)
+        })
+    except Exception as e:
+        return jsonify({'error': f'File verification failed: {str(e)}'}), 500
