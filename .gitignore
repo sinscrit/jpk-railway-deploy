@@ -48,6 +48,9 @@ temp/
 *.db
 *.sqlite3
 
+# Flask session files (should never be committed)
+flask_session/
+
 # Environment variables
 .env
 .env.local
