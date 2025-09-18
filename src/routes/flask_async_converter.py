@@ -206,7 +206,13 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                 'progress': 10
             }
             
-            # Import the converter
+            # Import the converter with proper path handling
+            import sys
+            import os
+            converter_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'jpk2json')
+            if converter_path not in sys.path:
+                sys.path.insert(0, converter_path)
+            
             from converter import main as converter_main
             
             conversion_status[job_id] = {
@@ -228,12 +234,23 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                 'progress': 60
             }
             
-            # Run the conversion
-            exit_code = converter_main(converter_args)
+            # Run the conversion with detailed logging
+            print(f"🔄 Starting conversion: {input_path} -> {output_path}")
+            print(f"📊 Input file size: {input_file_size} bytes")
+            
+            try:
+                exit_code = converter_main(converter_args)
+                print(f"✅ Converter exit code: {exit_code}")
+            except Exception as conv_error:
+                print(f"❌ Converter exception: {conv_error}")
+                raise conv_error
+            
             processing_time = time.time() - start_time
+            print(f"⏱️ Processing time: {processing_time:.2f} seconds")
             
             if exit_code == 0 and os.path.exists(output_path):
                 file_size = os.path.getsize(output_path)
+                print(f"📁 Output file size: {file_size} bytes ({file_size/1024/1024:.2f} MB)")
                 conversion_status[job_id] = {
                     'status': 'completed',
                     'message': f'Conversion completed successfully! Output size: {file_size / (1024*1024):.1f} MB',
