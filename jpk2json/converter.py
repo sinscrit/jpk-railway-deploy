@@ -231,6 +231,100 @@ def log_component_stats():
         success_rate = (stats['loaded'] / stats['expected']) * 100 if stats['expected'] > 0 else 0
         print(f"📈 COMPONENT_STATS: {comp_type} [{stats['loaded']}/{stats['expected']} = {success_rate:.1f}%]")
 
+def detect_environment():
+    """Detect if running on Railway or locally"""
+    if os.getenv('RAILWAY_ENVIRONMENT'):
+        return 'railway'
+    elif os.getenv('FLASK_ENV') == 'development':
+        return 'development'
+    else:
+        return 'production'
+
+def get_converter_base_path():
+    """Get absolute path to converter directory"""
+    return os.path.dirname(os.path.abspath(__file__))
+
+def get_environment_config():
+    """Get environment-specific configuration"""
+    env = detect_environment()
+    base_path = get_converter_base_path()
+    
+    config = {
+        'railway': {
+            'base_path': base_path,
+            'lib_path': os.path.join(base_path, 'lib'),
+            'tmp_path': os.path.join(base_path, 'tmp')
+        },
+        'development': {
+            'base_path': base_path,
+            'lib_path': os.path.join(base_path, 'lib'),
+            'tmp_path': os.path.join(base_path, 'tmp')
+        },
+        'production': {
+            'base_path': base_path,
+            'lib_path': os.path.join(base_path, 'lib'),
+            'tmp_path': os.path.join(base_path, 'tmp')
+        }
+    }
+    
+    env_config = config.get(env, config['production'])
+    print(f"🌍 ENVIRONMENT: {env}")
+    print(f"📁 BASE_PATH: {env_config['base_path']}")
+    return env_config
+
+def get_lib_file_path(filename):
+    """Get absolute path to library file"""
+    config = get_environment_config()
+    lib_path = os.path.join(config['lib_path'], filename)
+    print(f"🔍 RESOLVING: {filename} -> {lib_path}")
+    return lib_path
+
+def get_tmp_file_path(filename):
+    """Get absolute path to temporary file"""
+    config = get_environment_config()
+    tmp_path = os.path.join(config['tmp_path'], filename)
+    print(f"🔍 RESOLVING: {filename} -> {tmp_path}")
+    return tmp_path
+
+class FileLoadError(Exception):
+    pass
+
+def load_required_file(file_path, description=""):
+    """Load a required file - fail hard if missing"""
+    log_file_check(file_path, f"REQUIRED: {description}")
+    
+    if not os.path.exists(file_path):
+        error_msg = f"CRITICAL: Required file missing: {file_path} ({description})"
+        print(f"❌ {error_msg}")
+        raise FileLoadError(error_msg)
+    
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        print(f"✅ LOADED_REQUIRED: {file_path} [{len(data)} items]")
+        return data
+    except Exception as e:
+        error_msg = f"CRITICAL: Failed to load required file {file_path}: {e}"
+        print(f"❌ {error_msg}")
+        raise FileLoadError(error_msg)
+
+def load_optional_file(file_path, default_value=None, description=""):
+    """Load an optional file - continue with warning if missing"""
+    log_file_check(file_path, f"OPTIONAL: {description}")
+    
+    if not os.path.exists(file_path):
+        print(f"⚠️ OPTIONAL_MISSING: {file_path} ({description}) - using default")
+        return default_value
+    
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        print(f"✅ LOADED_OPTIONAL: {file_path} [{len(data)} items]")
+        return data
+    except Exception as e:
+        print(f"⚠️ OPTIONAL_ERROR: Failed to load {file_path}: {e} - using default")
+        return default_value
+
 
 @with_timeout(300)  # 5 minute timeout for JPK processing
 def parse_jpk_structure(jpk_path: str) -> Dict[str, Any]:
@@ -3323,13 +3417,9 @@ def generate_type700_components() -> List[Dict[str, Any]]:
         global type700_component_mapping
         
         # Load actual document content
-        document_content = {}
-        try:
-            with open('tmp/type700_document_content.json', 'r') as f:
-                document_content = json.load(f)
+        document_content = load_optional_file(get_tmp_file_path('type700_document_content.json'), {}, "Type 700 document content")
+        if document_content:
             print(f"   Loaded {len(document_content)} document elements ({sum(len(json.dumps(doc)) for doc in document_content.values()):,} bytes)")
-        except Exception as e:
-            print(f"   Warning: Could not load document content: {e}")
         
         components = []
         
@@ -3365,15 +3455,10 @@ def generate_type700_components() -> List[Dict[str, Any]]:
                 print(f"   Loaded {len(component['mappingRules'])} mapping rules for {component_data['name']}")
             elif component_data['mappingRules'] == 'LARGE_MAPPING_RULES_PLACEHOLDER':
                 # Fallback to simplified mapping file
-                try:
-                    with open('tmp/type700_simplified_mapping.json', 'r') as f:
-                        full_mapping = json.load(f)
-                        if component_id in full_mapping:
-                            component['mappingRules'] = full_mapping[component_id]['mappingRules']
-                        else:
-                            component['mappingRules'] = []
-                except Exception as e:
-                    print(f"   Warning: Could not load mapping rules for {component_id}: {e}")
+                full_mapping = load_optional_file(get_tmp_file_path('type700_simplified_mapping.json'), {}, "Type 700 simplified mapping")
+                if full_mapping and component_id in full_mapping:
+                    component['mappingRules'] = full_mapping[component_id]['mappingRules']
+                else:
                     component['mappingRules'] = []
             
             # RQ-106: Load actual document content instead of placeholders
@@ -3432,95 +3517,99 @@ def generate_type700_components() -> List[Dict[str, Any]]:
         return []
 
 def generate_type1000_components() -> List[Dict[str, Any]]:
-    """
-    RQ-107: Generate Type 1000 variable components by loading exact target definitions.
-
-    Loads from lib/type1000_components.json (bundled in distribution) and returns
-    the list as-is to maximize structural and content alignment.
-    """
+    """Generate Type 1000 variable components by loading exact target definitions."""
+    start_time = time.time()
     try:
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type1000_components.json')
-        with open(lib_path, 'r') as f:
-            variables = json.load(f)
-        # Sanity: ensure type is 1000 for all
+        lib_path = get_lib_file_path('type1000_components.json')
+        variables = load_required_file(lib_path, "Type 1000 variable components")
+        
         sanitized = []
         for v in variables:
-            v_copy = dict(v)
+            v_copy = v.copy()
             v_copy['type'] = 1000
             sanitized.append(v_copy)
-        print(f"   Loaded {len(sanitized)} Type 1000 components from lib/type1000_components.json")
+        
+        duration = time.time() - start_time
+        log_component_loading("Type 1000", len(sanitized), duration)
+        component_stats['type1000']['loaded'] = len(sanitized)
+        
+        print(f"   Loaded {len(sanitized)} Type 1000 components from {lib_path}")
         return sanitized
     except Exception as e:
-        print(f"Warning: Could not load Type 1000 components: {e}")
+        print(f"❌ Failed to load Type 1000 components: {e}")
+        component_stats['type1000']['loaded'] = 0
         return []
 
 def generate_type600_components() -> List[Dict[str, Any]]:
-    """
-    Generate Type 600 endpoint components from extracted target data.
-
-    Loads from lib/type600_components.json (bundled in distribution) and returns
-    the complete endpoint components with all properties and metadata.
-    """
+    """Generate Type 600 endpoint components from extracted target data."""
+    start_time = time.time()
     try:
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type600_components.json')
-        with open(lib_path, 'r') as f:
-            endpoints = json.load(f)
-        # Sanity: ensure type is 600 for all
+        lib_path = get_lib_file_path('type600_components.json')
+        endpoints = load_required_file(lib_path, "Type 600 endpoint components")
+        
         sanitized = []
         for e in endpoints:
-            e_copy = dict(e)
+            e_copy = e.copy()
             e_copy['type'] = 600
             sanitized.append(e_copy)
-        print(f"   Loaded {len(sanitized)} Type 600 components from lib/type600_components.json")
+        
+        duration = time.time() - start_time
+        log_component_loading("Type 600", len(sanitized), duration)
+        component_stats['type600']['loaded'] = len(sanitized)
+        
+        print(f"   Loaded {len(sanitized)} Type 600 components from {lib_path}")
         return sanitized
     except Exception as e:
-        print(f"Warning: Could not load Type 600 components: {e}")
+        print(f"❌ Failed to load Type 600 components: {e}")
+        component_stats['type600']['loaded'] = 0
         return []
 
 def generate_type900_components() -> List[Dict[str, Any]]:
-    """
-    Generate Type 900 schema components from extracted target data.
-    
-    Loads from tmp/type900_components.json (extracted from target) and returns
-    the complete schema components with all schemaTypeDocument content.
-    """
+    """Generate Type 900 schema components from extracted target data."""
+    start_time = time.time()
     try:
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type900_components.json')
-        with open(lib_path, 'r') as f:
-            schemas = json.load(f)
-        # Sanity: ensure type is 900 for all
+        lib_path = get_lib_file_path('type900_components.json')
+        schemas = load_required_file(lib_path, "Type 900 schema components")
+        
         sanitized = []
         for s in schemas:
-            s_copy = dict(s)
+            s_copy = s.copy()
             s_copy['type'] = 900
             sanitized.append(s_copy)
-        print(f"   Loaded {len(sanitized)} Type 900 components from lib/type900_components.json")
+        
+        duration = time.time() - start_time
+        log_component_loading("Type 900", len(sanitized), duration)
+        component_stats['type900']['loaded'] = len(sanitized)
+        
+        print(f"   Loaded {len(sanitized)} Type 900 components from {lib_path}")
         return sanitized
     except Exception as e:
-        print(f"Warning: Could not load Type 900 components: {e}")
+        print(f"❌ Failed to load Type 900 components: {e}")
+        component_stats['type900']['loaded'] = 0
         return []
 
 def generate_type1200_components() -> List[Dict[str, Any]]:
-    """
-    Generate Type 1200 notification components from extracted target data.
-    
-    Loads from tmp/type1200_components.json (extracted from target) and returns
-    the complete notification components with all email configuration settings.
-    """
+    """Generate Type 1200 notification components from extracted target data."""
+    start_time = time.time()
     try:
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type1200_components.json')
-        with open(lib_path, 'r') as f:
-            notifications = json.load(f)
-        # Sanity: ensure type is 1200 for all
+        lib_path = get_lib_file_path('type1200_components.json')
+        notifications = load_required_file(lib_path, "Type 1200 notification components")
+        
         sanitized = []
         for n in notifications:
-            n_copy = dict(n)
+            n_copy = n.copy()
             n_copy['type'] = 1200
             sanitized.append(n_copy)
-        print(f"   Loaded {len(sanitized)} Type 1200 components from lib/type1200_components.json")
+        
+        duration = time.time() - start_time
+        log_component_loading("Type 1200", len(sanitized), duration)
+        component_stats['type1200']['loaded'] = len(sanitized)
+        
+        print(f"   Loaded {len(sanitized)} Type 1200 components from {lib_path}")
         return sanitized
     except Exception as e:
-        print(f"Warning: Could not load Type 1200 components: {e}")
+        print(f"❌ Failed to load Type 1200 components: {e}")
+        component_stats['type1200']['loaded'] = 0
         return []
 
 def generate_type500_components(jpk_path: str = None) -> List[Dict[str, Any]]:
@@ -3543,11 +3632,10 @@ def generate_type500_components(jpk_path: str = None) -> List[Dict[str, Any]]:
     
     # 1. Try to load target-specific components first (preferred for interface compatibility)
     target_components_loaded = False
+    start_time = time.time()
     try:
-        import os
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type500_components.json')
-        with open(lib_path, 'r') as f:
-            target_components = json.load(f)
+        lib_path = get_lib_file_path('type500_components.json')
+        target_components = load_required_file(lib_path, "Type 500 activity components")
         
         if target_components:  # If we have target-specific components
             # Apply the JSON escaping fix to target components
@@ -3561,10 +3649,16 @@ def generate_type500_components(jpk_path: str = None) -> List[Dict[str, Any]]:
             
             all_components.extend(target_components)
             target_components_loaded = True
+            
+            duration = time.time() - start_time
+            log_component_loading("Type 500", len(target_components), duration)
+            component_stats['type500']['loaded'] = len(target_components)
+            
             print(f"   ✅ Loaded {len(target_components)} target-specific Type 500 components (interface-compatible)")
         
     except Exception as e:
-        print(f"   ⚠️  Could not load target-specific Type 500 components: {e}")
+        print(f"❌ Failed to load Type 500 components: {e}")
+        component_stats['type500']['loaded'] = 0
     
     # 2. If no target-specific components, generate from JPK (generic converter mode)
     if not target_components_loaded and jpk_path:
@@ -3608,27 +3702,27 @@ def fix_json_escaping_in_data(data):
         return data
 
 def generate_type1300_components() -> List[Dict[str, Any]]:
-    """
-    Generate Type 1300 global variable components from extracted target data - FINAL MILESTONE!
-    
-    Loads from tmp/type1300_components.json (extracted from target) and returns
-    the complete global variable components with usage tracking and metadata.
-    This completes ALL component types for 100% coverage!
-    """
+    """Generate Type 1300 global variable components from extracted target data."""
+    start_time = time.time()
     try:
-        lib_path = os.path.join(os.path.dirname(__file__), 'lib', 'type1300_components.json')
-        with open(lib_path, 'r') as f:
-            global_vars = json.load(f)
-        # Sanity: ensure type is 1300 for all
+        lib_path = get_lib_file_path('type1300_components.json')
+        global_vars = load_required_file(lib_path, "Type 1300 global variable components")
+        
         sanitized = []
         for gv in global_vars:
-            gv_copy = dict(gv)
+            gv_copy = gv.copy()
             gv_copy['type'] = 1300
             sanitized.append(gv_copy)
-        print(f"   🎯 Loaded {len(sanitized)} Type 1300 components from lib/type1300_components.json - FINAL COMPONENT TYPE!")
+        
+        duration = time.time() - start_time
+        log_component_loading("Type 1300", len(sanitized), duration)
+        component_stats['type1300']['loaded'] = len(sanitized)
+        
+        print(f"   🎯 Loaded {len(sanitized)} Type 1300 components from {lib_path} - FINAL COMPONENT TYPE!")
         return sanitized
     except Exception as e:
-        print(f"Warning: Could not load Type 1300 components: {e}")
+        print(f"❌ Failed to load Type 1300 components: {e}")
+        component_stats['type1300']['loaded'] = 0
         return []
 
 def reorder_components_to_match_target(processed_components: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
