@@ -12,6 +12,8 @@ eggs/
 .eggs/
 lib/
 lib64/
+# Exception: Allow jpk2json library files (required for Railway deployment)
+!jpk2json/lib/
 parts/
 sdist/
 var/
