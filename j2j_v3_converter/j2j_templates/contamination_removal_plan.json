@@ -1,0 +1,18 @@
+{
+  "remove_adapters": true,
+  "remove_baseline_components": [
+    200,
+    400
+  ],
+  "keep_jpk_components": [
+    500,
+    600,
+    700,
+    900,
+    1000,
+    1300
+  ],
+  "validate_workflows": true,
+  "validate_assets": true,
+  "source_driven_only": true
+}

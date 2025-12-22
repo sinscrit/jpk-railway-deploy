@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "description": "JPK to JSON Converter Configuration",
+  "baseline": {
+    "path": "config/output_v139_woocommerce_free.json",
+    "description": "Path to the baseline JSON file used as template for conversion (WooCommerce-free)",
+    "required": true
+  },
+  "templates": {
+    "directory": "j2j_templates",
+    "description": "Directory containing endpoint and component templates",
+    "required": true
+  },
+  "schema_references": {
+    "directory": "schema_references",
+    "description": "Directory containing schema reference files for transformation mapping",
+    "required": true
+  },
+  "output": {
+    "directory": "../output/",
+    "default_prefix": "output_v325_config_based",
+    "description": "Default prefix for output files when not specified",
+    "include_timestamp": false
+  },
+  "validation": {
+    "enabled": true,
+    "check_baseline_exists": true,
+    "check_templates_exist": true,
+    "check_schema_references_exist": true,
+    "strict_mode": true
+  },
+  "converter": {
+    "version": "327",
+    "features": [
+      "config_based_baseline",
+      "better_transformations",
+      "enhanced_xsd_parsing",
+      "business_endpoints",
+      "variable_dependencies"
+    ]
+  },
+  "trace_log": {
+    "enabled": false,
+    "verbosity": "detailed",
+    "output_directory": "trace_logs",
+    "description": "Trace logging configuration for conversion debugging"
+  }
+}

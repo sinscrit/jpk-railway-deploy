@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(python app.py:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "Bash(/usr/local/bin/python3 -m pip install:*)",
+      "Bash(source:*)",
+      "Bash(curl:*)",
+      "Bash(PORT=8080 python:*)"
+    ]
+  }
+}

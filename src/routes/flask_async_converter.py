@@ -383,6 +383,63 @@ def upload_file():
     except Exception as e:
         return jsonify({'error': f'Upload failed: {str(e)}'}), 500
 
+
+@flask_async_converter_bp.route('/analyze', methods=['POST'])
+@require_auth
+@rate_limit(max_requests=10, window_seconds=60)  # 10 analyses per minute
+def analyze_file():
+    """
+    Analyze a JPK file and return metadata without conversion.
+
+    Returns basic information about the JPK contents:
+    - Filename and file size
+    - Project name (if found)
+    - List of operations and transformations
+    - Component counts
+    """
+    try:
+        if 'file' not in request.files:
+            return jsonify({'error': 'No file provided'}), 400
+
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({'error': 'No file selected'}), 400
+
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'Only JPK files are allowed'}), 400
+
+        # Save file temporarily for analysis
+        temp_id = str(uuid.uuid4())
+        filename = secure_filename(file.filename)
+        temp_path = os.path.join(UPLOAD_FOLDER, f"analyze_{temp_id}_{filename}")
+        file.save(temp_path)
+
+        try:
+            # Import and use the converter's analyze method
+            # Add j2j_v3_converter to path
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+            j2j_path = os.path.join(project_root, 'j2j_v3_converter')
+            if j2j_path not in sys.path:
+                sys.path.insert(0, j2j_path)
+
+            from j2j import JPKConverter
+            converter = JPKConverter()
+            analysis = converter.analyze(temp_path)
+
+            # Override filename with original name
+            analysis['filename'] = filename
+
+            return jsonify(analysis)
+
+        finally:
+            # Clean up temp file
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
+
+    except Exception as e:
+        return jsonify({'error': f'Analysis failed: {str(e)}'}), 500
+
+
 @flask_async_converter_bp.route('/status/<job_id>', methods=['GET'])
 @require_auth
 def get_status(job_id):

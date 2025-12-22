@@ -1,0 +1,217 @@
+{
+  "name": "NetSuite Endpoint",
+  "metadata": {
+    "isConnectorFunction": true,
+    "adapterName": "NetSuite",
+    "entityTypeId": "228"
+  },
+  "properties": [
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "entityId",
+      "hidden": true,
+      "defaultValue": 228
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "authType",
+      "hidden": true,
+      "defaultValue": "TBA"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "accountName",
+      "displayName": "Account",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "resetPasswordsOnChange": true,
+      "value": "[Netsuite_account]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "wsdldownloadurl",
+      "displayName": "Wsdl Download Url",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "defaultValue": "https://webservices.netsuite.com/wsdl/v2025_1_0/netsuite.wsdl",
+      "value": "[NetSuite_WSDL]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "consumerkey",
+      "displayName": "Consumer Key",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "resetPasswordsOnChange": true,
+      "value": "[NetSuite_Consumer_Key]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "consumersecret",
+      "displayName": "Consumer Secret",
+      "widgetHint": "password",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "value": "[NetSuite_Consumer_Secret]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "tokenkey",
+      "displayName": "Token Key",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "resetPasswordsOnChange": true,
+      "value": "[NetSuite_Token_Key]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "tokensecret",
+      "displayName": "Token Secret",
+      "widgetHint": "password",
+      "validators": [
+        {
+          "name": "required"
+        }
+      ],
+      "value": "[NetSuite_Token_Secret]"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "signalgo",
+      "displayName": "Signature Algorithm",
+      "enumValues": [
+        {
+          "enumValue": "HmacSHA256",
+          "realValue": "HMAC_SHA256"
+        }
+      ],
+      "defaultValue": "HMAC_SHA256",
+      "value": "HMAC_SHA256"
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "calltimeout",
+      "displayName": "Call Time Out",
+      "description": "(seconds) Optional, use this setting if it is less than the agent setting"
+    },
+    {
+      "type": "boolean",
+      "multiple": false,
+      "name": "retryOnConcurrentException",
+      "displayName": "Retry on Recoverable Exception",
+      "defaultValue": false,
+      "enabledFor": {
+        "publicAgentGroup": false
+      },
+      "showWarning": true,
+      "value": false
+    },
+    {
+      "name": "retryOnConcurrentException_group",
+      "type": "group",
+      "deps": {
+        "hidden": {
+          "op": "not",
+          "args": {
+            "op": "prop",
+            "args": "retryOnConcurrentException"
+          }
+        }
+      },
+      "children": [
+        {
+          "type": "number",
+          "multiple": false,
+          "name": "maxRetry",
+          "displayName": "Maximum Number of Retries",
+          "validators": [
+            {
+              "name": "required"
+            },
+            {
+              "name": "max",
+              "args": [
+                5
+              ]
+            },
+            {
+              "name": "min",
+              "args": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "multiple": false,
+          "name": "retryInterval",
+          "displayName": "Retry Interval (seconds)",
+          "validators": [
+            {
+              "name": "required"
+            },
+            {
+              "name": "max",
+              "args": [
+                5
+              ]
+            },
+            {
+              "name": "min",
+              "args": [
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "multiple": false,
+      "name": "clearPasswordFields",
+      "hidden": true,
+      "defaultValue": true
+    }
+  ],
+  "type": 600,
+  "adapterId": "netsuite",
+  "availability": "PUBLIC",
+  "endpointType": 600,
+  "id": "d86b9fe1-d7a6-48c4-8a2e-28e579427a98",
+  "checksum": "2",
+  "requiresDeploy": true,
+  "metadataVersion": "3.0.1",
+  "encryptedAtRest": true,
+  "passwordEncAtAppLevel": true,
+  "chunks": 1,
+  "partial": false,
+  "validationState": 100,
+  "hidden": false
+}

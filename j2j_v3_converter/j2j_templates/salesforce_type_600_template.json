@@ -1,0 +1,152 @@
+{
+  "name": "Salesforce Endpoint",
+  "properties": [
+    {
+      "name": "page1",
+      "displayName": "Page One Display Name",
+      "type": "pagination",
+      "children": [
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "entityId",
+          "hidden": true,
+          "defaultValue": 31
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "url",
+          "displayName": "Server host",
+          "deps": {
+            "defaultValue": {
+              "op": "switch",
+              "args": [
+                {
+                  "op": "prop",
+                  "args": "sandbox"
+                },
+                {
+                  "op": "literal",
+                  "args": false
+                },
+                {
+                  "op": "literal",
+                  "args": "https://login.salesforce.com"
+                },
+                {
+                  "op": "literal",
+                  "args": true
+                },
+                {
+                  "op": "literal",
+                  "args": "https://test.salesforce.com"
+                }
+              ]
+            }
+          },
+          "defaultValue": [
+            "https://login.salesforce.com",
+            "https://test.salesforce.com"
+          ],
+          "resetPasswordsOnChange": true,
+          "validators": [
+            {
+              "name": "required"
+            }
+          ],
+          "value": "https://login.salesforce.com"
+        },
+        {
+          "type": "boolean",
+          "multiple": false,
+          "name": "sandbox",
+          "displayName": "Sandbox",
+          "defaultValue": false,
+          "validators": [
+            {
+              "name": "required"
+            }
+          ],
+          "value": false
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "username",
+          "displayName": "User Name",
+          "resetPasswordsOnChange": true,
+          "validators": [
+            {
+              "name": "required"
+            }
+          ],
+          "value": "[salesforce_username]"
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "api_version",
+          "hidden": "true",
+          "defaultValue": "64.0"
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "password",
+          "displayName": "Password",
+          "widgetHint": "password",
+          "validators": [
+            {
+              "name": "required"
+            }
+          ],
+          "value": "[salesforce_password]"
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "securityToken",
+          "displayName": "Security Token",
+          "widgetHint": "password",
+          "value": "[salesforce_security_token]"
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "status",
+          "displayName": "Status",
+          "hidden": true,
+          "defaultValue": "1"
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "target_encoding",
+          "hidden": true,
+          "defaultValue": ""
+        },
+        {
+          "type": "string",
+          "multiple": false,
+          "name": "clearPasswordFields",
+          "hidden": true,
+          "defaultValue": true
+        }
+      ]
+    }
+  ],
+  "type": 600,
+  "adapterId": "salesforce",
+  "availability": "PUBLIC",
+  "endpointType": 200,
+  "id": "fe9a1849-c636-4b86-b67a-d36056b9ddb3",
+  "checksum": "6",
+  "requiresDeploy": true,
+  "metadataVersion": "3.0.1",
+  "encryptedAtRest": true,
+  "passwordEncAtAppLevel": true,
+  "validationState": 100,
+  "chunks": 1,
+  "partial": false
+}

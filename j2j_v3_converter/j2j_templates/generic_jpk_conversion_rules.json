@@ -1,0 +1,28 @@
+{
+  "adapter_filtering": {
+    "enabled": true,
+    "filter_unused_adapters": true,
+    "exclude_builtin_adapters": [
+      "tempstorage",
+      "salesforce",
+      "netsuite"
+    ],
+    "validate_properties": true,
+    "exclude_null_defaultvalue": true
+  },
+  "component_filtering": {
+    "only_include_jpk_generated": true,
+    "preserve_baseline_structure": true,
+    "validate_references": true
+  },
+  "validation": {
+    "check_adapter_references": true,
+    "check_endpoint_references": true,
+    "fail_on_null_properties": true
+  },
+  "logging": {
+    "log_filtered_adapters": true,
+    "log_validation_issues": true,
+    "show_usage_statistics": true
+  }
+}

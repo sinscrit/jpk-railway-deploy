@@ -1,0 +1,51 @@
+{
+  "type": 900,
+  "name": "New Flat Schema",
+  "format": "csv",
+  "schemaTypeDocument": {
+    "name": "New Flat Schema",
+    "root": {
+      "N": "__flat__",
+      "NS": "",
+      "MN": 0,
+      "MX": "unbounded",
+      "T": "complex",
+      "C": [
+        {
+          "NIL": false,
+          "MN": 0,
+          "MX": 1,
+          "N": "field",
+          "T": "string",
+          "DV": "",
+          "DT": "1",
+          "BG": -1,
+          "EN": -1,
+          "I": 1,
+          "L": 1
+        }
+      ],
+      "I": 0,
+      "L": 0
+    },
+    "O": {
+      "customSchemaIsFlat": true,
+      "isCustomSchema": true,
+      "isFixedSchema": false,
+      "delimiter": ",",
+      "text_qualifier": "\"",
+      "qualifier_mode": "WHEN_NEEDED",
+      "use_end_of_line": true,
+      "escape_sequences": true
+    }
+  },
+  "isCustom": true,
+  "id": "b1425002-ff7d-433e-b653-8d9594033f52",
+  "checksum": "1",
+  "validationState": 100,
+  "requiresDeploy": true,
+  "metadataVersion": "3.0.1",
+  "encryptedAtRest": true,
+  "chunks": 1,
+  "partial": false
+}

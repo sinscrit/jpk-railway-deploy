@@ -1,0 +1,10 @@
+{
+  "filter_unused_adapters": true,
+  "exclude_builtin_adapters": [
+    "tempstorage",
+    "salesforce",
+    "netsuite"
+  ],
+  "validate_adapter_properties": true,
+  "exclude_null_defaultvalue_adapters": true
+}

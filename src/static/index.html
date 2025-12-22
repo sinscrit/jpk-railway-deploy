@@ -345,6 +345,111 @@
             margin: 5px 0;
         }
 
+        .jpk-analysis {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        .jpk-analysis h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .jpk-analysis .project-name {
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .jpk-analysis .counts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .jpk-analysis .count-item {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .jpk-analysis .count-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .jpk-analysis .count-label {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .jpk-analysis .components-section {
+            margin-top: 15px;
+        }
+
+        .jpk-analysis .components-section h4 {
+            color: #495057;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .jpk-analysis .component-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .jpk-analysis .component-tag {
+            background: white;
+            color: #495057;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .jpk-analysis .analyzing {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .jpk-analysis .analyzing .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         .download-section {
             display: none;
             margin-top: 30px;
@@ -477,6 +582,15 @@
             <h3>Selected File</h3>
             <p id="fileName"></p>
             <p id="fileSize"></p>
+        </div>
+
+        <div class="jpk-analysis" id="jpkAnalysis" style="display: none;">
+            <h3>📊 JPK Analysis</h3>
+            <div id="analysisContent">
+                <div class="analyzing">
+                    <span class="spinner"></span>Analyzing JPK file...
+                </div>
+            </div>
         </div>
 
         <button class="btn" id="convertBtn" onclick="startConversion()" disabled>Convert to JSON</button>
@@ -662,10 +776,91 @@
             fileInfo.style.display = 'block';
             fileInfo.classList.add('fade-in');
             convertBtn.disabled = false;
-            
+
             // Update upload area
             uploadArea.querySelector('.upload-text').textContent = 'File selected successfully!';
             uploadArea.querySelector('.upload-icon').textContent = '✅';
+
+            // Analyze the JPK file to show metadata
+            analyzeFile(file);
+        }
+
+        async function analyzeFile(file) {
+            const jpkAnalysis = document.getElementById('jpkAnalysis');
+            const analysisContent = document.getElementById('analysisContent');
+
+            // Show analysis section with loading state
+            jpkAnalysis.style.display = 'block';
+            jpkAnalysis.classList.add('fade-in');
+            analysisContent.innerHTML = '<div class="analyzing"><span class="spinner"></span>Analyzing JPK file...</div>';
+
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const response = await fetch('/api/converter/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Analysis failed');
+                }
+
+                const analysis = await response.json();
+                displayAnalysis(analysis);
+
+            } catch (error) {
+                analysisContent.innerHTML = `<div class="analyzing" style="color: #dc3545;">Analysis failed: ${error.message}</div>`;
+            }
+        }
+
+        function displayAnalysis(analysis) {
+            const analysisContent = document.getElementById('analysisContent');
+            const counts = analysis.counts;
+            const totalComponents = Object.values(counts).reduce((a, b) => a + b, 0);
+
+            let html = '';
+
+            // Project name
+            if (analysis.project_name) {
+                html += `<div class="project-name">Project: ${analysis.project_name}</div>`;
+            }
+
+            // Component counts grid
+            html += '<div class="counts-grid">';
+            html += `<div class="count-item"><div class="count-number">${counts.operations}</div><div class="count-label">Operations</div></div>`;
+            html += `<div class="count-item"><div class="count-number">${counts.transformations}</div><div class="count-label">Transforms</div></div>`;
+            html += `<div class="count-item"><div class="count-number">${counts.scripts}</div><div class="count-label">Scripts</div></div>`;
+            html += `<div class="count-item"><div class="count-number">${counts.endpoints}</div><div class="count-label">Endpoints</div></div>`;
+            html += `<div class="count-item"><div class="count-number">${counts.project_variables + counts.global_variables}</div><div class="count-label">Variables</div></div>`;
+            html += `<div class="count-item"><div class="count-number">${totalComponents}</div><div class="count-label">Total</div></div>`;
+            html += '</div>';
+
+            // Operations list
+            if (analysis.operations && analysis.operations.length > 0) {
+                html += '<div class="components-section">';
+                html += '<h4>Operations</h4>';
+                html += '<div class="component-list">';
+                analysis.operations.forEach(op => {
+                    html += `<span class="component-tag">${op.name}</span>`;
+                });
+                html += '</div></div>';
+            }
+
+            // Transformations list
+            if (analysis.transformations && analysis.transformations.length > 0) {
+                html += '<div class="components-section">';
+                html += '<h4>Transformations</h4>';
+                html += '<div class="component-list">';
+                analysis.transformations.forEach(tf => {
+                    html += `<span class="component-tag">${tf.name}</span>`;
+                });
+                html += '</div></div>';
+            }
+
+            analysisContent.innerHTML = html;
         }
 
         function handleBatchFiles(files) {
@@ -970,6 +1165,7 @@
             fileInput.value = '';
             batchInput.value = '';
             fileInfo.style.display = 'none';
+            document.getElementById('jpkAnalysis').style.display = 'none';
             downloadSection.style.display = 'none';
             batchJobs.style.display = 'none';
             statusMessage.innerHTML = '';

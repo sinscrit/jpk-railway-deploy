@@ -1,0 +1,7141 @@
+{
+  "name": "Salesforce Query Response Schema",
+  "root": {
+    "N": "records",
+    "MN": 1,
+    "MX": 1,
+    "C": [
+      {
+        "NIL": false,
+        "MN": 1,
+        "MX": "unbounded",
+        "N": "Contact",
+        "O": {
+          "label": "Contact",
+          "labelPlural": "Contacts",
+          "creatable": true,
+          "custom": false,
+          "deletable": true,
+          "populated": true,
+          "queryable": true,
+          "updatable": true,
+          "expandedName": {
+            "localName": "Contact",
+            "namespace": "urn:sobject.partner.soap.sforce.com"
+          },
+          "parents": [
+            {
+              "name": "Account",
+              "objectTypeInQuery": "Account",
+              "types": [
+                "Account"
+              ]
+            },
+            {
+              "name": "CreatedBy",
+              "objectTypeInQuery": "User",
+              "types": [
+                "User"
+              ]
+            },
+            {
+              "name": "Individual",
+              "objectTypeInQuery": "Individual",
+              "types": [
+                "Individual"
+              ]
+            },
+            {
+              "name": "LastModifiedBy",
+              "objectTypeInQuery": "User",
+              "types": [
+                "User"
+              ]
+            },
+            {
+              "name": "MasterRecord",
+              "objectTypeInQuery": "Contact",
+              "types": [
+                "Contact"
+              ]
+            },
+            {
+              "name": "Owner",
+              "objectTypeInQuery": "User",
+              "types": [
+                "User"
+              ]
+            },
+            {
+              "name": "ReportsTo",
+              "objectTypeInQuery": "Contact",
+              "types": [
+                "Contact"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "name": "AcceptedEventRelations",
+              "objectTypeInQuery": "AcceptedEventRelation"
+            },
+            {
+              "name": "AccountContactRoles",
+              "objectTypeInQuery": "AccountContactRole"
+            },
+            {
+              "name": "ActivityHistories",
+              "objectTypeInQuery": "ActivityHistory"
+            },
+            {
+              "name": "ApprovalSubmissions",
+              "objectTypeInQuery": "ApprovalSubmission"
+            },
+            {
+              "name": "ApprovalWorkItems",
+              "objectTypeInQuery": "ApprovalWorkItem"
+            },
+            {
+              "name": "Assets",
+              "objectTypeInQuery": "Asset"
+            },
+            {
+              "name": "AttachedContentDocuments",
+              "objectTypeInQuery": "AttachedContentDocument"
+            },
+            {
+              "name": "Attachments",
+              "objectTypeInQuery": "Attachment"
+            },
+            {
+              "name": "AuthorizationFormConsents",
+              "objectTypeInQuery": "AuthorizationFormConsent"
+            },
+            {
+              "name": "CampaignMembers",
+              "objectTypeInQuery": "CampaignMember"
+            },
+            {
+              "name": "CaseContactRoles",
+              "objectTypeInQuery": "CaseContactRole"
+            },
+            {
+              "name": "Cases",
+              "objectTypeInQuery": "Case"
+            },
+            {
+              "name": "CombinedAttachments",
+              "objectTypeInQuery": "CombinedAttachment"
+            },
+            {
+              "name": "CommSubscriptionConsents",
+              "objectTypeInQuery": "CommSubscriptionConsent"
+            },
+            {
+              "name": "ContactCleanInfos",
+              "objectTypeInQuery": "ContactCleanInfo"
+            },
+            {
+              "name": "ContactRequests",
+              "objectTypeInQuery": "ContactRequest"
+            },
+            {
+              "name": "ContentDocumentLinks",
+              "objectTypeInQuery": "ContentDocumentLink"
+            },
+            {
+              "name": "ContractContactRoles",
+              "objectTypeInQuery": "ContractContactRole"
+            },
+            {
+              "name": "ContractsSigned",
+              "objectTypeInQuery": "Contract"
+            },
+            {
+              "name": "ConversationParticipants",
+              "objectTypeInQuery": "ConversationParticipant"
+            },
+            {
+              "name": "CreditMemos",
+              "objectTypeInQuery": "CreditMemo"
+            },
+            {
+              "name": "DeclinedEventRelations",
+              "objectTypeInQuery": "DeclinedEventRelation"
+            },
+            {
+              "name": "DuplicateRecordItems",
+              "objectTypeInQuery": "DuplicateRecordItem"
+            },
+            {
+              "name": "EmailMessageRelations",
+              "objectTypeInQuery": "EmailMessageRelation"
+            },
+            {
+              "name": "EmailStatuses",
+              "objectTypeInQuery": "EmailStatus"
+            },
+            {
+              "name": "EventRelations",
+              "objectTypeInQuery": "EventRelation"
+            },
+            {
+              "name": "Events",
+              "objectTypeInQuery": "Event"
+            },
+            {
+              "name": "Feeds",
+              "objectTypeInQuery": "ContactFeed"
+            },
+            {
+              "name": "FeedSubscriptionsForEntity",
+              "objectTypeInQuery": "EntitySubscription"
+            },
+            {
+              "name": "FlowOrchestrationWorkItems",
+              "objectTypeInQuery": "FlowOrchestrationWorkItem"
+            },
+            {
+              "name": "Histories",
+              "objectTypeInQuery": "ContactHistory"
+            },
+            {
+              "name": "Invoices",
+              "objectTypeInQuery": "Invoice"
+            },
+            {
+              "name": "ListEmailIndividualRecipients",
+              "objectTypeInQuery": "ListEmailIndividualRecipient"
+            },
+            {
+              "name": "ListEmails",
+              "objectTypeInQuery": "ListEmail"
+            },
+            {
+              "name": "MessagingEndUsers",
+              "objectTypeInQuery": "MessagingEndUser"
+            },
+            {
+              "name": "MessagingSessions",
+              "objectTypeInQuery": "MessagingSession"
+            },
+            {
+              "name": "Notes",
+              "objectTypeInQuery": "Note"
+            },
+            {
+              "name": "NotesAndAttachments",
+              "objectTypeInQuery": "NoteAndAttachment"
+            },
+            {
+              "name": "OpenActivities",
+              "objectTypeInQuery": "OpenActivity"
+            },
+            {
+              "name": "Opportunities",
+              "objectTypeInQuery": "Opportunity"
+            },
+            {
+              "name": "OpportunityContactRoles",
+              "objectTypeInQuery": "OpportunityContactRole"
+            },
+            {
+              "name": "OutgoingEmailRelations",
+              "objectTypeInQuery": "OutgoingEmailRelation"
+            },
+            {
+              "name": "PersonRecord",
+              "objectTypeInQuery": "UserEmailPreferredPerson"
+            },
+            {
+              "name": "ProcessInstances",
+              "objectTypeInQuery": "ProcessInstance"
+            },
+            {
+              "name": "ProcessSteps",
+              "objectTypeInQuery": "ProcessInstanceHistory"
+            },
+            {
+              "name": "RecordActionHistories",
+              "objectTypeInQuery": "RecordActionHistory"
+            },
+            {
+              "name": "RecordActions",
+              "objectTypeInQuery": "RecordAction"
+            },
+            {
+              "name": "RecordAssociatedGroups",
+              "objectTypeInQuery": "CollaborationGroupRecord"
+            },
+            {
+              "name": "Shares",
+              "objectTypeInQuery": "ContactShare"
+            },
+            {
+              "name": "Tasks",
+              "objectTypeInQuery": "Task"
+            },
+            {
+              "name": "TopicAssignments",
+              "objectTypeInQuery": "TopicAssignment"
+            },
+            {
+              "name": "UndecidedEventRelations",
+              "objectTypeInQuery": "UndecidedEventRelation"
+            },
+            {
+              "name": "UserDefinedLabelAssignments",
+              "objectTypeInQuery": "UserDefinedLabelAssignment"
+            },
+            {
+              "name": "Users",
+              "objectTypeInQuery": "User"
+            }
+          ],
+          "relationships": [
+            {
+              "name": "Account",
+              "fieldName": "AccountId",
+              "objectName": "Account"
+            },
+            {
+              "name": "Individual",
+              "fieldName": "IndividualId",
+              "objectName": "Individual"
+            },
+            {
+              "name": "Owner",
+              "fieldName": "OwnerId",
+              "objectName": "User"
+            },
+            {
+              "name": "ReportsTo",
+              "fieldName": "ReportsToId",
+              "objectName": "Contact"
+            }
+          ],
+          "rootName": "root",
+          "generatedAsInode": true
+        },
+        "C": [
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Id",
+            "T": "string",
+            "O": {
+              "label": "Contact ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": true,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "ID",
+              "soapType": "ID"
+            },
+            "I": 2,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "AccountId",
+            "T": "string",
+            "O": {
+              "label": "Account ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [
+                "Account"
+              ],
+              "relationshipName": "Account",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 3,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "AssistantName",
+            "T": "string",
+            "O": {
+              "label": "Assistant's Name",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 4,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "AssistantPhone",
+            "T": "string",
+            "O": {
+              "label": "Asst. Phone",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 5,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Birthdate",
+            "T": "date",
+            "O": {
+              "label": "Birthdate",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DATE",
+              "soapType": "DATE"
+            },
+            "I": 6,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "CleanStatus",
+            "T": "string",
+            "O": {
+              "label": "Clean Status",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "In Sync",
+                "value": "Matched"
+              },
+              {
+                "label": "Different",
+                "value": "Different"
+              },
+              {
+                "label": "Reviewed",
+                "value": "Acknowledged"
+              },
+              {
+                "label": "Not Found",
+                "value": "NotFound"
+              },
+              {
+                "label": "Inactive",
+                "value": "Inactive"
+              },
+              {
+                "label": "Not Compared",
+                "value": "Pending"
+              },
+              {
+                "label": "Select Match",
+                "value": "SelectMatch"
+              },
+              {
+                "label": "Skipped",
+                "value": "Skipped"
+              }
+            ],
+            "I": 7,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "ContactSource",
+            "T": "string",
+            "O": {
+              "label": "Creation Source",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "Auto Create",
+                "value": "Auto Create"
+              }
+            ],
+            "I": 8,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "CreatedById",
+            "T": "string",
+            "O": {
+              "label": "Created By ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [
+                "User"
+              ],
+              "relationshipName": "CreatedBy",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 9,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "CreatedDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Created Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 10,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Department",
+            "T": "string",
+            "O": {
+              "label": "Department",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 11,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Description",
+            "T": "string",
+            "O": {
+              "label": "Contact Description",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": false,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "TEXTAREA",
+              "soapType": "STRING"
+            },
+            "I": 12,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Email",
+            "T": "string",
+            "O": {
+              "label": "Email",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": true,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "EMAIL",
+              "soapType": "STRING"
+            },
+            "I": 13,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "EmailBouncedDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Email Bounced Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 14,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "EmailBouncedReason",
+            "T": "string",
+            "O": {
+              "label": "Email Bounced Reason",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 15,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "External_ID__c",
+            "T": "string",
+            "O": {
+              "label": "External_ID",
+              "cardinality": "SINGLE",
+              "externalId": true,
+              "idLookup": true,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 16,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Fax",
+            "T": "string",
+            "O": {
+              "label": "Business Fax",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 17,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "FirstName",
+            "T": "string",
+            "O": {
+              "label": "First Name",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 18,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "HomePhone",
+            "T": "string",
+            "O": {
+              "label": "Home Phone",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 19,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "IndividualId",
+            "T": "string",
+            "O": {
+              "label": "Individual ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [
+                "Individual"
+              ],
+              "relationshipName": "Individual",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 20,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "IsDeleted",
+            "T": "boolean",
+            "O": {
+              "label": "Deleted",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "BOOLEAN",
+              "soapType": "BOOLEAN"
+            },
+            "I": 21,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "IsEmailBounced",
+            "T": "boolean",
+            "O": {
+              "label": "Is Email Bounced",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "BOOLEAN",
+              "soapType": "BOOLEAN"
+            },
+            "I": 22,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "IsPriorityRecord",
+            "T": "boolean",
+            "O": {
+              "label": "Important",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": false,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "BOOLEAN",
+              "soapType": "BOOLEAN"
+            },
+            "I": 23,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Jigsaw",
+            "T": "string",
+            "O": {
+              "label": "Data.com Key",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 24,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "JigsawContactId",
+            "T": "string",
+            "O": {
+              "label": "Jigsaw Contact ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "relationshipName": "JigsawContact",
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 25,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Languages__c",
+            "T": "string",
+            "O": {
+              "label": "Languages__c",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 26,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastActivityDate",
+            "T": "date",
+            "O": {
+              "label": "Last Activity",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATE",
+              "soapType": "DATE"
+            },
+            "I": 27,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastActivityDate__c",
+            "T": "date",
+            "O": {
+              "label": "LastActivityDate",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DATE",
+              "soapType": "DATE"
+            },
+            "I": 28,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastCURequestDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Last Stay-in-Touch Request Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 29,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastCUUpdateDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Last Stay-in-Touch Save Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 30,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastModifiedById",
+            "T": "string",
+            "O": {
+              "label": "Last Modified By ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [
+                "User"
+              ],
+              "relationshipName": "LastModifiedBy",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 31,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastModifiedDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Last Modified Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 32,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastName",
+            "T": "string",
+            "O": {
+              "label": "Last Name",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 33,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastReferencedDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Last Referenced Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 34,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LastViewedDate",
+            "T": "dateTime",
+            "O": {
+              "label": "Last Viewed Date",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 35,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "LeadSource",
+            "T": "string",
+            "O": {
+              "label": "Lead Source",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "Web",
+                "value": "Web"
+              },
+              {
+                "label": "Phone Inquiry",
+                "value": "Phone Inquiry"
+              },
+              {
+                "label": "Partner Referral",
+                "value": "Partner Referral"
+              },
+              {
+                "label": "Purchased List",
+                "value": "Purchased List"
+              },
+              {
+                "label": "Other",
+                "value": "Other"
+              }
+            ],
+            "I": 36,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Location__Latitude__s",
+            "T": "double",
+            "O": {
+              "label": "Location (Latitude)",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 37,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Location__Longitude__s",
+            "T": "double",
+            "O": {
+              "label": "Location (Longitude)",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 38,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingCity",
+            "T": "string",
+            "O": {
+              "label": "Mailing City",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 39,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingCountry",
+            "T": "string",
+            "O": {
+              "label": "Mailing Country",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 40,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingGeocodeAccuracy",
+            "T": "string",
+            "O": {
+              "label": "Mailing Geocode Accuracy",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "Address",
+                "value": "Address"
+              },
+              {
+                "label": "Near Address",
+                "value": "NearAddress"
+              },
+              {
+                "label": "Block",
+                "value": "Block"
+              },
+              {
+                "label": "Street",
+                "value": "Street"
+              },
+              {
+                "label": "Extended Zip",
+                "value": "ExtendedZip"
+              },
+              {
+                "label": "Zip",
+                "value": "Zip"
+              },
+              {
+                "label": "Neighborhood",
+                "value": "Neighborhood"
+              },
+              {
+                "label": "City",
+                "value": "City"
+              },
+              {
+                "label": "County",
+                "value": "County"
+              },
+              {
+                "label": "State",
+                "value": "State"
+              },
+              {
+                "label": "Unknown",
+                "value": "Unknown"
+              }
+            ],
+            "I": 41,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingLatitude",
+            "T": "double",
+            "O": {
+              "label": "Mailing Latitude",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 42,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingLongitude",
+            "T": "double",
+            "O": {
+              "label": "Mailing Longitude",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 43,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingPostalCode",
+            "T": "string",
+            "O": {
+              "label": "Mailing Zip/Postal Code",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 44,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingState",
+            "T": "string",
+            "O": {
+              "label": "Mailing State/Province",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 45,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MailingStreet",
+            "T": "string",
+            "O": {
+              "label": "Mailing Street",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "TEXTAREA",
+              "soapType": "STRING"
+            },
+            "I": 46,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MasterRecordId",
+            "T": "string",
+            "O": {
+              "label": "Master Record ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [
+                "Contact"
+              ],
+              "relationshipName": "MasterRecord",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 47,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "MobilePhone",
+            "T": "string",
+            "O": {
+              "label": "Mobile Phone",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 48,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Name",
+            "T": "string",
+            "O": {
+              "label": "Full Name",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 49,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherCity",
+            "T": "string",
+            "O": {
+              "label": "Other City",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 50,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherCountry",
+            "T": "string",
+            "O": {
+              "label": "Other Country",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 51,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherGeocodeAccuracy",
+            "T": "string",
+            "O": {
+              "label": "Other Geocode Accuracy",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "Address",
+                "value": "Address"
+              },
+              {
+                "label": "Near Address",
+                "value": "NearAddress"
+              },
+              {
+                "label": "Block",
+                "value": "Block"
+              },
+              {
+                "label": "Street",
+                "value": "Street"
+              },
+              {
+                "label": "Extended Zip",
+                "value": "ExtendedZip"
+              },
+              {
+                "label": "Zip",
+                "value": "Zip"
+              },
+              {
+                "label": "Neighborhood",
+                "value": "Neighborhood"
+              },
+              {
+                "label": "City",
+                "value": "City"
+              },
+              {
+                "label": "County",
+                "value": "County"
+              },
+              {
+                "label": "State",
+                "value": "State"
+              },
+              {
+                "label": "Unknown",
+                "value": "Unknown"
+              }
+            ],
+            "I": 52,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherLatitude",
+            "T": "double",
+            "O": {
+              "label": "Other Latitude",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 53,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherLongitude",
+            "T": "double",
+            "O": {
+              "label": "Other Longitude",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "DOUBLE",
+              "soapType": "DOUBLE"
+            },
+            "I": 54,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherPhone",
+            "T": "string",
+            "O": {
+              "label": "Other Phone",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 55,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherPostalCode",
+            "T": "string",
+            "O": {
+              "label": "Other Zip/Postal Code",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 56,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherState",
+            "T": "string",
+            "O": {
+              "label": "Other State/Province",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 57,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OtherStreet",
+            "T": "string",
+            "O": {
+              "label": "Other Street",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "TEXTAREA",
+              "soapType": "STRING"
+            },
+            "I": 58,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "OwnerId",
+            "T": "string",
+            "O": {
+              "label": "Owner ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [
+                "User"
+              ],
+              "relationshipName": "Owner",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 59,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Phone",
+            "T": "string",
+            "O": {
+              "label": "Business Phone",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PHONE",
+              "soapType": "STRING"
+            },
+            "I": 60,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "PhotoUrl",
+            "T": "string",
+            "O": {
+              "label": "Photo URL",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "URL",
+              "soapType": "STRING"
+            },
+            "I": 61,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "ReportsToId",
+            "T": "string",
+            "O": {
+              "label": "Reports To ID",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [
+                "Contact"
+              ],
+              "relationshipName": "ReportsTo",
+              "domainType": "REFERENCE",
+              "soapType": "ID"
+            },
+            "I": 62,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Salutation",
+            "T": "string",
+            "O": {
+              "label": "Salutation",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "PICKLIST",
+              "soapType": "STRING"
+            },
+            "EV": [
+              {
+                "label": "Mr.",
+                "value": "Mr."
+              },
+              {
+                "label": "Ms.",
+                "value": "Ms."
+              },
+              {
+                "label": "Mrs.",
+                "value": "Mrs."
+              },
+              {
+                "label": "Dr.",
+                "value": "Dr."
+              },
+              {
+                "label": "Prof.",
+                "value": "Prof."
+              }
+            ],
+            "I": 63,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "SystemModstamp",
+            "T": "dateTime",
+            "O": {
+              "label": "System Modstamp",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": false,
+              "filterable": true,
+              "updatable": false,
+              "referenceTo": [],
+              "domainType": "DATETIME",
+              "soapType": "DATETIME"
+            },
+            "I": 64,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "Title",
+            "T": "string",
+            "O": {
+              "label": "Title",
+              "cardinality": "SINGLE",
+              "externalId": false,
+              "idLookup": false,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 65,
+            "L": 2
+          },
+          {
+            "NIL": true,
+            "MN": 0,
+            "MX": 1,
+            "N": "WorkdayID__c",
+            "T": "string",
+            "O": {
+              "label": "WorkdayID",
+              "cardinality": "SINGLE",
+              "externalId": true,
+              "idLookup": true,
+              "createable": true,
+              "filterable": true,
+              "updatable": true,
+              "referenceTo": [],
+              "domainType": "STRING",
+              "soapType": "STRING"
+            },
+            "I": 66,
+            "L": 2
+          }
+        ],
+        "I": 1,
+        "L": 1
+      }
+    ],
+    "I": 0,
+    "L": 0,
+    "O": {
+      "generatedAsInode": true
+    }
+  },
+  "types": [
+    {
+      "NIL": false,
+      "MN": 1,
+      "MX": 1,
+      "N": "Contact",
+      "O": {
+        "label": "Contact",
+        "labelPlural": "Contacts",
+        "creatable": true,
+        "custom": false,
+        "deletable": true,
+        "populated": true,
+        "queryable": true,
+        "updatable": true,
+        "expandedName": {
+          "localName": "Contact",
+          "namespace": "urn:sobject.partner.soap.sforce.com"
+        },
+        "parents": [
+          {
+            "name": "Account",
+            "objectTypeInQuery": "Account",
+            "types": [
+              "Account"
+            ]
+          },
+          {
+            "name": "CreatedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "Individual",
+            "objectTypeInQuery": "Individual",
+            "types": [
+              "Individual"
+            ]
+          },
+          {
+            "name": "LastModifiedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "MasterRecord",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          },
+          {
+            "name": "Owner",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "ReportsTo",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "AcceptedEventRelations",
+            "objectTypeInQuery": "AcceptedEventRelation"
+          },
+          {
+            "name": "AccountContactRoles",
+            "objectTypeInQuery": "AccountContactRole"
+          },
+          {
+            "name": "ActivityHistories",
+            "objectTypeInQuery": "ActivityHistory"
+          },
+          {
+            "name": "ApprovalSubmissions",
+            "objectTypeInQuery": "ApprovalSubmission"
+          },
+          {
+            "name": "ApprovalWorkItems",
+            "objectTypeInQuery": "ApprovalWorkItem"
+          },
+          {
+            "name": "Assets",
+            "objectTypeInQuery": "Asset"
+          },
+          {
+            "name": "AttachedContentDocuments",
+            "objectTypeInQuery": "AttachedContentDocument"
+          },
+          {
+            "name": "Attachments",
+            "objectTypeInQuery": "Attachment"
+          },
+          {
+            "name": "AuthorizationFormConsents",
+            "objectTypeInQuery": "AuthorizationFormConsent"
+          },
+          {
+            "name": "CampaignMembers",
+            "objectTypeInQuery": "CampaignMember"
+          },
+          {
+            "name": "CaseContactRoles",
+            "objectTypeInQuery": "CaseContactRole"
+          },
+          {
+            "name": "Cases",
+            "objectTypeInQuery": "Case"
+          },
+          {
+            "name": "CombinedAttachments",
+            "objectTypeInQuery": "CombinedAttachment"
+          },
+          {
+            "name": "CommSubscriptionConsents",
+            "objectTypeInQuery": "CommSubscriptionConsent"
+          },
+          {
+            "name": "ContactCleanInfos",
+            "objectTypeInQuery": "ContactCleanInfo"
+          },
+          {
+            "name": "ContactRequests",
+            "objectTypeInQuery": "ContactRequest"
+          },
+          {
+            "name": "ContentDocumentLinks",
+            "objectTypeInQuery": "ContentDocumentLink"
+          },
+          {
+            "name": "ContractContactRoles",
+            "objectTypeInQuery": "ContractContactRole"
+          },
+          {
+            "name": "ContractsSigned",
+            "objectTypeInQuery": "Contract"
+          },
+          {
+            "name": "ConversationParticipants",
+            "objectTypeInQuery": "ConversationParticipant"
+          },
+          {
+            "name": "CreditMemos",
+            "objectTypeInQuery": "CreditMemo"
+          },
+          {
+            "name": "DeclinedEventRelations",
+            "objectTypeInQuery": "DeclinedEventRelation"
+          },
+          {
+            "name": "DuplicateRecordItems",
+            "objectTypeInQuery": "DuplicateRecordItem"
+          },
+          {
+            "name": "EmailMessageRelations",
+            "objectTypeInQuery": "EmailMessageRelation"
+          },
+          {
+            "name": "EmailStatuses",
+            "objectTypeInQuery": "EmailStatus"
+          },
+          {
+            "name": "EventRelations",
+            "objectTypeInQuery": "EventRelation"
+          },
+          {
+            "name": "Events",
+            "objectTypeInQuery": "Event"
+          },
+          {
+            "name": "Feeds",
+            "objectTypeInQuery": "ContactFeed"
+          },
+          {
+            "name": "FeedSubscriptionsForEntity",
+            "objectTypeInQuery": "EntitySubscription"
+          },
+          {
+            "name": "FlowOrchestrationWorkItems",
+            "objectTypeInQuery": "FlowOrchestrationWorkItem"
+          },
+          {
+            "name": "Histories",
+            "objectTypeInQuery": "ContactHistory"
+          },
+          {
+            "name": "Invoices",
+            "objectTypeInQuery": "Invoice"
+          },
+          {
+            "name": "ListEmailIndividualRecipients",
+            "objectTypeInQuery": "ListEmailIndividualRecipient"
+          },
+          {
+            "name": "ListEmails",
+            "objectTypeInQuery": "ListEmail"
+          },
+          {
+            "name": "MessagingEndUsers",
+            "objectTypeInQuery": "MessagingEndUser"
+          },
+          {
+            "name": "MessagingSessions",
+            "objectTypeInQuery": "MessagingSession"
+          },
+          {
+            "name": "Notes",
+            "objectTypeInQuery": "Note"
+          },
+          {
+            "name": "NotesAndAttachments",
+            "objectTypeInQuery": "NoteAndAttachment"
+          },
+          {
+            "name": "OpenActivities",
+            "objectTypeInQuery": "OpenActivity"
+          },
+          {
+            "name": "Opportunities",
+            "objectTypeInQuery": "Opportunity"
+          },
+          {
+            "name": "OpportunityContactRoles",
+            "objectTypeInQuery": "OpportunityContactRole"
+          },
+          {
+            "name": "OutgoingEmailRelations",
+            "objectTypeInQuery": "OutgoingEmailRelation"
+          },
+          {
+            "name": "PersonRecord",
+            "objectTypeInQuery": "UserEmailPreferredPerson"
+          },
+          {
+            "name": "ProcessInstances",
+            "objectTypeInQuery": "ProcessInstance"
+          },
+          {
+            "name": "ProcessSteps",
+            "objectTypeInQuery": "ProcessInstanceHistory"
+          },
+          {
+            "name": "RecordActionHistories",
+            "objectTypeInQuery": "RecordActionHistory"
+          },
+          {
+            "name": "RecordActions",
+            "objectTypeInQuery": "RecordAction"
+          },
+          {
+            "name": "RecordAssociatedGroups",
+            "objectTypeInQuery": "CollaborationGroupRecord"
+          },
+          {
+            "name": "Shares",
+            "objectTypeInQuery": "ContactShare"
+          },
+          {
+            "name": "Tasks",
+            "objectTypeInQuery": "Task"
+          },
+          {
+            "name": "TopicAssignments",
+            "objectTypeInQuery": "TopicAssignment"
+          },
+          {
+            "name": "UndecidedEventRelations",
+            "objectTypeInQuery": "UndecidedEventRelation"
+          },
+          {
+            "name": "UserDefinedLabelAssignments",
+            "objectTypeInQuery": "UserDefinedLabelAssignment"
+          },
+          {
+            "name": "Users",
+            "objectTypeInQuery": "User"
+          }
+        ],
+        "relationships": [
+          {
+            "name": "Account",
+            "fieldName": "AccountId",
+            "objectName": "Account"
+          },
+          {
+            "name": "Individual",
+            "fieldName": "IndividualId",
+            "objectName": "Individual"
+          },
+          {
+            "name": "Owner",
+            "fieldName": "OwnerId",
+            "objectName": "User"
+          },
+          {
+            "name": "ReportsTo",
+            "fieldName": "ReportsToId",
+            "objectName": "Contact"
+          }
+        ]
+      },
+      "C": [
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Id",
+          "T": "string",
+          "O": {
+            "label": "Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "ID",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AccountId",
+          "T": "string",
+          "O": {
+            "label": "Account ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Account"
+            ],
+            "relationshipName": "Account",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantName",
+          "T": "string",
+          "O": {
+            "label": "Assistant's Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantPhone",
+          "T": "string",
+          "O": {
+            "label": "Asst. Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Birthdate",
+          "T": "date",
+          "O": {
+            "label": "Birthdate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CleanStatus",
+          "T": "string",
+          "O": {
+            "label": "Clean Status",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "In Sync",
+              "value": "Matched"
+            },
+            {
+              "label": "Different",
+              "value": "Different"
+            },
+            {
+              "label": "Reviewed",
+              "value": "Acknowledged"
+            },
+            {
+              "label": "Not Found",
+              "value": "NotFound"
+            },
+            {
+              "label": "Inactive",
+              "value": "Inactive"
+            },
+            {
+              "label": "Not Compared",
+              "value": "Pending"
+            },
+            {
+              "label": "Select Match",
+              "value": "SelectMatch"
+            },
+            {
+              "label": "Skipped",
+              "value": "Skipped"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ContactSource",
+          "T": "string",
+          "O": {
+            "label": "Creation Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Auto Create",
+              "value": "Auto Create"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedById",
+          "T": "string",
+          "O": {
+            "label": "Created By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "CreatedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Created Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Department",
+          "T": "string",
+          "O": {
+            "label": "Department",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Description",
+          "T": "string",
+          "O": {
+            "label": "Contact Description",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": false,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Email",
+          "T": "string",
+          "O": {
+            "label": "Email",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "EMAIL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Email Bounced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedReason",
+          "T": "string",
+          "O": {
+            "label": "Email Bounced Reason",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "External_ID__c",
+          "T": "string",
+          "O": {
+            "label": "External_ID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Fax",
+          "T": "string",
+          "O": {
+            "label": "Business Fax",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "FirstName",
+          "T": "string",
+          "O": {
+            "label": "First Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "HomePhone",
+          "T": "string",
+          "O": {
+            "label": "Home Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IndividualId",
+          "T": "string",
+          "O": {
+            "label": "Individual ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Individual"
+            ],
+            "relationshipName": "Individual",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsDeleted",
+          "T": "boolean",
+          "O": {
+            "label": "Deleted",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsEmailBounced",
+          "T": "boolean",
+          "O": {
+            "label": "Is Email Bounced",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsPriorityRecord",
+          "T": "boolean",
+          "O": {
+            "label": "Important",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": false,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Jigsaw",
+          "T": "string",
+          "O": {
+            "label": "Data.com Key",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "JigsawContactId",
+          "T": "string",
+          "O": {
+            "label": "Jigsaw Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "relationshipName": "JigsawContact",
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Languages__c",
+          "T": "string",
+          "O": {
+            "label": "Languages__c",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate",
+          "T": "date",
+          "O": {
+            "label": "Last Activity",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate__c",
+          "T": "date",
+          "O": {
+            "label": "LastActivityDate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCURequestDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Request Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCUUpdateDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Save Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedById",
+          "T": "string",
+          "O": {
+            "label": "Last Modified By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "LastModifiedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Modified Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastName",
+          "T": "string",
+          "O": {
+            "label": "Last Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastReferencedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Referenced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastViewedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Viewed Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LeadSource",
+          "T": "string",
+          "O": {
+            "label": "Lead Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Web",
+              "value": "Web"
+            },
+            {
+              "label": "Phone Inquiry",
+              "value": "Phone Inquiry"
+            },
+            {
+              "label": "Partner Referral",
+              "value": "Partner Referral"
+            },
+            {
+              "label": "Purchased List",
+              "value": "Purchased List"
+            },
+            {
+              "label": "Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Latitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Latitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Longitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Longitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCity",
+          "T": "string",
+          "O": {
+            "label": "Mailing City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCountry",
+          "T": "string",
+          "O": {
+            "label": "Mailing Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Mailing Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLatitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLongitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Mailing Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingState",
+          "T": "string",
+          "O": {
+            "label": "Mailing State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingStreet",
+          "T": "string",
+          "O": {
+            "label": "Mailing Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MasterRecordId",
+          "T": "string",
+          "O": {
+            "label": "Master Record ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "MasterRecord",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MobilePhone",
+          "T": "string",
+          "O": {
+            "label": "Mobile Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Name",
+          "T": "string",
+          "O": {
+            "label": "Full Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCity",
+          "T": "string",
+          "O": {
+            "label": "Other City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCountry",
+          "T": "string",
+          "O": {
+            "label": "Other Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Other Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLatitude",
+          "T": "double",
+          "O": {
+            "label": "Other Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLongitude",
+          "T": "double",
+          "O": {
+            "label": "Other Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPhone",
+          "T": "string",
+          "O": {
+            "label": "Other Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Other Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherState",
+          "T": "string",
+          "O": {
+            "label": "Other State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherStreet",
+          "T": "string",
+          "O": {
+            "label": "Other Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OwnerId",
+          "T": "string",
+          "O": {
+            "label": "Owner ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "Owner",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Phone",
+          "T": "string",
+          "O": {
+            "label": "Business Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "PhotoUrl",
+          "T": "string",
+          "O": {
+            "label": "Photo URL",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "URL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ReportsToId",
+          "T": "string",
+          "O": {
+            "label": "Reports To ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "ReportsTo",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Salutation",
+          "T": "string",
+          "O": {
+            "label": "Salutation",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Mr.",
+              "value": "Mr."
+            },
+            {
+              "label": "Ms.",
+              "value": "Ms."
+            },
+            {
+              "label": "Mrs.",
+              "value": "Mrs."
+            },
+            {
+              "label": "Dr.",
+              "value": "Dr."
+            },
+            {
+              "label": "Prof.",
+              "value": "Prof."
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "SystemModstamp",
+          "T": "dateTime",
+          "O": {
+            "label": "System Modstamp",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Title",
+          "T": "string",
+          "O": {
+            "label": "Title",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "WorkdayID__c",
+          "T": "string",
+          "O": {
+            "label": "WorkdayID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "NIL": false,
+      "MN": 1,
+      "MX": 1,
+      "N": "Contact",
+      "O": {
+        "label": "Contact",
+        "labelPlural": "Contacts",
+        "creatable": true,
+        "custom": false,
+        "deletable": true,
+        "populated": true,
+        "queryable": true,
+        "updatable": true,
+        "expandedName": {
+          "localName": "Contact",
+          "namespace": "urn:sobject.partner.soap.sforce.com"
+        },
+        "parents": [
+          {
+            "name": "Account",
+            "objectTypeInQuery": "Account",
+            "types": [
+              "Account"
+            ]
+          },
+          {
+            "name": "CreatedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "Individual",
+            "objectTypeInQuery": "Individual",
+            "types": [
+              "Individual"
+            ]
+          },
+          {
+            "name": "LastModifiedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "MasterRecord",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          },
+          {
+            "name": "Owner",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "ReportsTo",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "AcceptedEventRelations",
+            "objectTypeInQuery": "AcceptedEventRelation"
+          },
+          {
+            "name": "AccountContactRoles",
+            "objectTypeInQuery": "AccountContactRole"
+          },
+          {
+            "name": "ActivityHistories",
+            "objectTypeInQuery": "ActivityHistory"
+          },
+          {
+            "name": "ApprovalSubmissions",
+            "objectTypeInQuery": "ApprovalSubmission"
+          },
+          {
+            "name": "ApprovalWorkItems",
+            "objectTypeInQuery": "ApprovalWorkItem"
+          },
+          {
+            "name": "Assets",
+            "objectTypeInQuery": "Asset"
+          },
+          {
+            "name": "AttachedContentDocuments",
+            "objectTypeInQuery": "AttachedContentDocument"
+          },
+          {
+            "name": "Attachments",
+            "objectTypeInQuery": "Attachment"
+          },
+          {
+            "name": "AuthorizationFormConsents",
+            "objectTypeInQuery": "AuthorizationFormConsent"
+          },
+          {
+            "name": "CampaignMembers",
+            "objectTypeInQuery": "CampaignMember"
+          },
+          {
+            "name": "CaseContactRoles",
+            "objectTypeInQuery": "CaseContactRole"
+          },
+          {
+            "name": "Cases",
+            "objectTypeInQuery": "Case"
+          },
+          {
+            "name": "CombinedAttachments",
+            "objectTypeInQuery": "CombinedAttachment"
+          },
+          {
+            "name": "CommSubscriptionConsents",
+            "objectTypeInQuery": "CommSubscriptionConsent"
+          },
+          {
+            "name": "ContactCleanInfos",
+            "objectTypeInQuery": "ContactCleanInfo"
+          },
+          {
+            "name": "ContactRequests",
+            "objectTypeInQuery": "ContactRequest"
+          },
+          {
+            "name": "ContentDocumentLinks",
+            "objectTypeInQuery": "ContentDocumentLink"
+          },
+          {
+            "name": "ContractContactRoles",
+            "objectTypeInQuery": "ContractContactRole"
+          },
+          {
+            "name": "ContractsSigned",
+            "objectTypeInQuery": "Contract"
+          },
+          {
+            "name": "ConversationParticipants",
+            "objectTypeInQuery": "ConversationParticipant"
+          },
+          {
+            "name": "CreditMemos",
+            "objectTypeInQuery": "CreditMemo"
+          },
+          {
+            "name": "DeclinedEventRelations",
+            "objectTypeInQuery": "DeclinedEventRelation"
+          },
+          {
+            "name": "DuplicateRecordItems",
+            "objectTypeInQuery": "DuplicateRecordItem"
+          },
+          {
+            "name": "EmailMessageRelations",
+            "objectTypeInQuery": "EmailMessageRelation"
+          },
+          {
+            "name": "EmailStatuses",
+            "objectTypeInQuery": "EmailStatus"
+          },
+          {
+            "name": "EventRelations",
+            "objectTypeInQuery": "EventRelation"
+          },
+          {
+            "name": "Events",
+            "objectTypeInQuery": "Event"
+          },
+          {
+            "name": "Feeds",
+            "objectTypeInQuery": "ContactFeed"
+          },
+          {
+            "name": "FeedSubscriptionsForEntity",
+            "objectTypeInQuery": "EntitySubscription"
+          },
+          {
+            "name": "FlowOrchestrationWorkItems",
+            "objectTypeInQuery": "FlowOrchestrationWorkItem"
+          },
+          {
+            "name": "Histories",
+            "objectTypeInQuery": "ContactHistory"
+          },
+          {
+            "name": "Invoices",
+            "objectTypeInQuery": "Invoice"
+          },
+          {
+            "name": "ListEmailIndividualRecipients",
+            "objectTypeInQuery": "ListEmailIndividualRecipient"
+          },
+          {
+            "name": "ListEmails",
+            "objectTypeInQuery": "ListEmail"
+          },
+          {
+            "name": "MessagingEndUsers",
+            "objectTypeInQuery": "MessagingEndUser"
+          },
+          {
+            "name": "MessagingSessions",
+            "objectTypeInQuery": "MessagingSession"
+          },
+          {
+            "name": "Notes",
+            "objectTypeInQuery": "Note"
+          },
+          {
+            "name": "NotesAndAttachments",
+            "objectTypeInQuery": "NoteAndAttachment"
+          },
+          {
+            "name": "OpenActivities",
+            "objectTypeInQuery": "OpenActivity"
+          },
+          {
+            "name": "Opportunities",
+            "objectTypeInQuery": "Opportunity"
+          },
+          {
+            "name": "OpportunityContactRoles",
+            "objectTypeInQuery": "OpportunityContactRole"
+          },
+          {
+            "name": "OutgoingEmailRelations",
+            "objectTypeInQuery": "OutgoingEmailRelation"
+          },
+          {
+            "name": "PersonRecord",
+            "objectTypeInQuery": "UserEmailPreferredPerson"
+          },
+          {
+            "name": "ProcessInstances",
+            "objectTypeInQuery": "ProcessInstance"
+          },
+          {
+            "name": "ProcessSteps",
+            "objectTypeInQuery": "ProcessInstanceHistory"
+          },
+          {
+            "name": "RecordActionHistories",
+            "objectTypeInQuery": "RecordActionHistory"
+          },
+          {
+            "name": "RecordActions",
+            "objectTypeInQuery": "RecordAction"
+          },
+          {
+            "name": "RecordAssociatedGroups",
+            "objectTypeInQuery": "CollaborationGroupRecord"
+          },
+          {
+            "name": "Shares",
+            "objectTypeInQuery": "ContactShare"
+          },
+          {
+            "name": "Tasks",
+            "objectTypeInQuery": "Task"
+          },
+          {
+            "name": "TopicAssignments",
+            "objectTypeInQuery": "TopicAssignment"
+          },
+          {
+            "name": "UndecidedEventRelations",
+            "objectTypeInQuery": "UndecidedEventRelation"
+          },
+          {
+            "name": "UserDefinedLabelAssignments",
+            "objectTypeInQuery": "UserDefinedLabelAssignment"
+          },
+          {
+            "name": "Users",
+            "objectTypeInQuery": "User"
+          }
+        ],
+        "relationships": [
+          {
+            "name": "Account",
+            "fieldName": "AccountId",
+            "objectName": "Account"
+          },
+          {
+            "name": "Individual",
+            "fieldName": "IndividualId",
+            "objectName": "Individual"
+          },
+          {
+            "name": "Owner",
+            "fieldName": "OwnerId",
+            "objectName": "User"
+          },
+          {
+            "name": "ReportsTo",
+            "fieldName": "ReportsToId",
+            "objectName": "Contact"
+          }
+        ]
+      },
+      "C": [
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Id",
+          "T": "string",
+          "O": {
+            "label": "Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "ID",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AccountId",
+          "T": "string",
+          "O": {
+            "label": "Account ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Account"
+            ],
+            "relationshipName": "Account",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantName",
+          "T": "string",
+          "O": {
+            "label": "Assistant's Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantPhone",
+          "T": "string",
+          "O": {
+            "label": "Asst. Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Birthdate",
+          "T": "date",
+          "O": {
+            "label": "Birthdate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CleanStatus",
+          "T": "string",
+          "O": {
+            "label": "Clean Status",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "In Sync",
+              "value": "Matched"
+            },
+            {
+              "label": "Different",
+              "value": "Different"
+            },
+            {
+              "label": "Reviewed",
+              "value": "Acknowledged"
+            },
+            {
+              "label": "Not Found",
+              "value": "NotFound"
+            },
+            {
+              "label": "Inactive",
+              "value": "Inactive"
+            },
+            {
+              "label": "Not Compared",
+              "value": "Pending"
+            },
+            {
+              "label": "Select Match",
+              "value": "SelectMatch"
+            },
+            {
+              "label": "Skipped",
+              "value": "Skipped"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ContactSource",
+          "T": "string",
+          "O": {
+            "label": "Creation Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Auto Create",
+              "value": "Auto Create"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedById",
+          "T": "string",
+          "O": {
+            "label": "Created By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "CreatedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Created Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Department",
+          "T": "string",
+          "O": {
+            "label": "Department",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Description",
+          "T": "string",
+          "O": {
+            "label": "Contact Description",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": false,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Email",
+          "T": "string",
+          "O": {
+            "label": "Email",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "EMAIL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Email Bounced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedReason",
+          "T": "string",
+          "O": {
+            "label": "Email Bounced Reason",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "External_ID__c",
+          "T": "string",
+          "O": {
+            "label": "External_ID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Fax",
+          "T": "string",
+          "O": {
+            "label": "Business Fax",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "FirstName",
+          "T": "string",
+          "O": {
+            "label": "First Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "HomePhone",
+          "T": "string",
+          "O": {
+            "label": "Home Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IndividualId",
+          "T": "string",
+          "O": {
+            "label": "Individual ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Individual"
+            ],
+            "relationshipName": "Individual",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsDeleted",
+          "T": "boolean",
+          "O": {
+            "label": "Deleted",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsEmailBounced",
+          "T": "boolean",
+          "O": {
+            "label": "Is Email Bounced",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsPriorityRecord",
+          "T": "boolean",
+          "O": {
+            "label": "Important",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": false,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Jigsaw",
+          "T": "string",
+          "O": {
+            "label": "Data.com Key",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "JigsawContactId",
+          "T": "string",
+          "O": {
+            "label": "Jigsaw Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "relationshipName": "JigsawContact",
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Languages__c",
+          "T": "string",
+          "O": {
+            "label": "Languages__c",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate",
+          "T": "date",
+          "O": {
+            "label": "Last Activity",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate__c",
+          "T": "date",
+          "O": {
+            "label": "LastActivityDate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCURequestDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Request Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCUUpdateDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Save Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedById",
+          "T": "string",
+          "O": {
+            "label": "Last Modified By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "LastModifiedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Modified Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastName",
+          "T": "string",
+          "O": {
+            "label": "Last Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastReferencedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Referenced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastViewedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Viewed Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LeadSource",
+          "T": "string",
+          "O": {
+            "label": "Lead Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Web",
+              "value": "Web"
+            },
+            {
+              "label": "Phone Inquiry",
+              "value": "Phone Inquiry"
+            },
+            {
+              "label": "Partner Referral",
+              "value": "Partner Referral"
+            },
+            {
+              "label": "Purchased List",
+              "value": "Purchased List"
+            },
+            {
+              "label": "Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Latitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Latitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Longitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Longitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCity",
+          "T": "string",
+          "O": {
+            "label": "Mailing City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCountry",
+          "T": "string",
+          "O": {
+            "label": "Mailing Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Mailing Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLatitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLongitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Mailing Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingState",
+          "T": "string",
+          "O": {
+            "label": "Mailing State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingStreet",
+          "T": "string",
+          "O": {
+            "label": "Mailing Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MasterRecordId",
+          "T": "string",
+          "O": {
+            "label": "Master Record ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "MasterRecord",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MobilePhone",
+          "T": "string",
+          "O": {
+            "label": "Mobile Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Name",
+          "T": "string",
+          "O": {
+            "label": "Full Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCity",
+          "T": "string",
+          "O": {
+            "label": "Other City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCountry",
+          "T": "string",
+          "O": {
+            "label": "Other Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Other Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLatitude",
+          "T": "double",
+          "O": {
+            "label": "Other Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLongitude",
+          "T": "double",
+          "O": {
+            "label": "Other Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPhone",
+          "T": "string",
+          "O": {
+            "label": "Other Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Other Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherState",
+          "T": "string",
+          "O": {
+            "label": "Other State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherStreet",
+          "T": "string",
+          "O": {
+            "label": "Other Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OwnerId",
+          "T": "string",
+          "O": {
+            "label": "Owner ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "Owner",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Phone",
+          "T": "string",
+          "O": {
+            "label": "Business Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "PhotoUrl",
+          "T": "string",
+          "O": {
+            "label": "Photo URL",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "URL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ReportsToId",
+          "T": "string",
+          "O": {
+            "label": "Reports To ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "ReportsTo",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Salutation",
+          "T": "string",
+          "O": {
+            "label": "Salutation",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Mr.",
+              "value": "Mr."
+            },
+            {
+              "label": "Ms.",
+              "value": "Ms."
+            },
+            {
+              "label": "Mrs.",
+              "value": "Mrs."
+            },
+            {
+              "label": "Dr.",
+              "value": "Dr."
+            },
+            {
+              "label": "Prof.",
+              "value": "Prof."
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "SystemModstamp",
+          "T": "dateTime",
+          "O": {
+            "label": "System Modstamp",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Title",
+          "T": "string",
+          "O": {
+            "label": "Title",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "WorkdayID__c",
+          "T": "string",
+          "O": {
+            "label": "WorkdayID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        }
+      ]
+    },
+    {
+      "NIL": false,
+      "MN": 1,
+      "MX": 1,
+      "N": "Contact",
+      "O": {
+        "label": "Contact",
+        "labelPlural": "Contacts",
+        "creatable": true,
+        "custom": false,
+        "deletable": true,
+        "populated": true,
+        "queryable": true,
+        "updatable": true,
+        "expandedName": {
+          "localName": "Contact",
+          "namespace": "urn:sobject.partner.soap.sforce.com"
+        },
+        "parents": [
+          {
+            "name": "Account",
+            "objectTypeInQuery": "Account",
+            "types": [
+              "Account"
+            ]
+          },
+          {
+            "name": "CreatedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "Individual",
+            "objectTypeInQuery": "Individual",
+            "types": [
+              "Individual"
+            ]
+          },
+          {
+            "name": "LastModifiedBy",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "MasterRecord",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          },
+          {
+            "name": "Owner",
+            "objectTypeInQuery": "User",
+            "types": [
+              "User"
+            ]
+          },
+          {
+            "name": "ReportsTo",
+            "objectTypeInQuery": "Contact",
+            "types": [
+              "Contact"
+            ]
+          }
+        ],
+        "children": [
+          {
+            "name": "AcceptedEventRelations",
+            "objectTypeInQuery": "AcceptedEventRelation"
+          },
+          {
+            "name": "AccountContactRoles",
+            "objectTypeInQuery": "AccountContactRole"
+          },
+          {
+            "name": "ActivityHistories",
+            "objectTypeInQuery": "ActivityHistory"
+          },
+          {
+            "name": "ApprovalSubmissions",
+            "objectTypeInQuery": "ApprovalSubmission"
+          },
+          {
+            "name": "ApprovalWorkItems",
+            "objectTypeInQuery": "ApprovalWorkItem"
+          },
+          {
+            "name": "Assets",
+            "objectTypeInQuery": "Asset"
+          },
+          {
+            "name": "AttachedContentDocuments",
+            "objectTypeInQuery": "AttachedContentDocument"
+          },
+          {
+            "name": "Attachments",
+            "objectTypeInQuery": "Attachment"
+          },
+          {
+            "name": "AuthorizationFormConsents",
+            "objectTypeInQuery": "AuthorizationFormConsent"
+          },
+          {
+            "name": "CampaignMembers",
+            "objectTypeInQuery": "CampaignMember"
+          },
+          {
+            "name": "CaseContactRoles",
+            "objectTypeInQuery": "CaseContactRole"
+          },
+          {
+            "name": "Cases",
+            "objectTypeInQuery": "Case"
+          },
+          {
+            "name": "CombinedAttachments",
+            "objectTypeInQuery": "CombinedAttachment"
+          },
+          {
+            "name": "CommSubscriptionConsents",
+            "objectTypeInQuery": "CommSubscriptionConsent"
+          },
+          {
+            "name": "ContactCleanInfos",
+            "objectTypeInQuery": "ContactCleanInfo"
+          },
+          {
+            "name": "ContactRequests",
+            "objectTypeInQuery": "ContactRequest"
+          },
+          {
+            "name": "ContentDocumentLinks",
+            "objectTypeInQuery": "ContentDocumentLink"
+          },
+          {
+            "name": "ContractContactRoles",
+            "objectTypeInQuery": "ContractContactRole"
+          },
+          {
+            "name": "ContractsSigned",
+            "objectTypeInQuery": "Contract"
+          },
+          {
+            "name": "ConversationParticipants",
+            "objectTypeInQuery": "ConversationParticipant"
+          },
+          {
+            "name": "CreditMemos",
+            "objectTypeInQuery": "CreditMemo"
+          },
+          {
+            "name": "DeclinedEventRelations",
+            "objectTypeInQuery": "DeclinedEventRelation"
+          },
+          {
+            "name": "DuplicateRecordItems",
+            "objectTypeInQuery": "DuplicateRecordItem"
+          },
+          {
+            "name": "EmailMessageRelations",
+            "objectTypeInQuery": "EmailMessageRelation"
+          },
+          {
+            "name": "EmailStatuses",
+            "objectTypeInQuery": "EmailStatus"
+          },
+          {
+            "name": "EventRelations",
+            "objectTypeInQuery": "EventRelation"
+          },
+          {
+            "name": "Events",
+            "objectTypeInQuery": "Event"
+          },
+          {
+            "name": "Feeds",
+            "objectTypeInQuery": "ContactFeed"
+          },
+          {
+            "name": "FeedSubscriptionsForEntity",
+            "objectTypeInQuery": "EntitySubscription"
+          },
+          {
+            "name": "FlowOrchestrationWorkItems",
+            "objectTypeInQuery": "FlowOrchestrationWorkItem"
+          },
+          {
+            "name": "Histories",
+            "objectTypeInQuery": "ContactHistory"
+          },
+          {
+            "name": "Invoices",
+            "objectTypeInQuery": "Invoice"
+          },
+          {
+            "name": "ListEmailIndividualRecipients",
+            "objectTypeInQuery": "ListEmailIndividualRecipient"
+          },
+          {
+            "name": "ListEmails",
+            "objectTypeInQuery": "ListEmail"
+          },
+          {
+            "name": "MessagingEndUsers",
+            "objectTypeInQuery": "MessagingEndUser"
+          },
+          {
+            "name": "MessagingSessions",
+            "objectTypeInQuery": "MessagingSession"
+          },
+          {
+            "name": "Notes",
+            "objectTypeInQuery": "Note"
+          },
+          {
+            "name": "NotesAndAttachments",
+            "objectTypeInQuery": "NoteAndAttachment"
+          },
+          {
+            "name": "OpenActivities",
+            "objectTypeInQuery": "OpenActivity"
+          },
+          {
+            "name": "Opportunities",
+            "objectTypeInQuery": "Opportunity"
+          },
+          {
+            "name": "OpportunityContactRoles",
+            "objectTypeInQuery": "OpportunityContactRole"
+          },
+          {
+            "name": "OutgoingEmailRelations",
+            "objectTypeInQuery": "OutgoingEmailRelation"
+          },
+          {
+            "name": "PersonRecord",
+            "objectTypeInQuery": "UserEmailPreferredPerson"
+          },
+          {
+            "name": "ProcessInstances",
+            "objectTypeInQuery": "ProcessInstance"
+          },
+          {
+            "name": "ProcessSteps",
+            "objectTypeInQuery": "ProcessInstanceHistory"
+          },
+          {
+            "name": "RecordActionHistories",
+            "objectTypeInQuery": "RecordActionHistory"
+          },
+          {
+            "name": "RecordActions",
+            "objectTypeInQuery": "RecordAction"
+          },
+          {
+            "name": "RecordAssociatedGroups",
+            "objectTypeInQuery": "CollaborationGroupRecord"
+          },
+          {
+            "name": "Shares",
+            "objectTypeInQuery": "ContactShare"
+          },
+          {
+            "name": "Tasks",
+            "objectTypeInQuery": "Task"
+          },
+          {
+            "name": "TopicAssignments",
+            "objectTypeInQuery": "TopicAssignment"
+          },
+          {
+            "name": "UndecidedEventRelations",
+            "objectTypeInQuery": "UndecidedEventRelation"
+          },
+          {
+            "name": "UserDefinedLabelAssignments",
+            "objectTypeInQuery": "UserDefinedLabelAssignment"
+          },
+          {
+            "name": "Users",
+            "objectTypeInQuery": "User"
+          }
+        ],
+        "relationships": [
+          {
+            "name": "Account",
+            "fieldName": "AccountId",
+            "objectName": "Account"
+          },
+          {
+            "name": "Individual",
+            "fieldName": "IndividualId",
+            "objectName": "Individual"
+          },
+          {
+            "name": "Owner",
+            "fieldName": "OwnerId",
+            "objectName": "User"
+          },
+          {
+            "name": "ReportsTo",
+            "fieldName": "ReportsToId",
+            "objectName": "Contact"
+          }
+        ]
+      },
+      "C": [
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Id",
+          "T": "string",
+          "O": {
+            "label": "Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "ID",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AccountId",
+          "T": "string",
+          "O": {
+            "label": "Account ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Account"
+            ],
+            "relationshipName": "Account",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantName",
+          "T": "string",
+          "O": {
+            "label": "Assistant's Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "AssistantPhone",
+          "T": "string",
+          "O": {
+            "label": "Asst. Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Birthdate",
+          "T": "date",
+          "O": {
+            "label": "Birthdate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CleanStatus",
+          "T": "string",
+          "O": {
+            "label": "Clean Status",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "In Sync",
+              "value": "Matched"
+            },
+            {
+              "label": "Different",
+              "value": "Different"
+            },
+            {
+              "label": "Reviewed",
+              "value": "Acknowledged"
+            },
+            {
+              "label": "Not Found",
+              "value": "NotFound"
+            },
+            {
+              "label": "Inactive",
+              "value": "Inactive"
+            },
+            {
+              "label": "Not Compared",
+              "value": "Pending"
+            },
+            {
+              "label": "Select Match",
+              "value": "SelectMatch"
+            },
+            {
+              "label": "Skipped",
+              "value": "Skipped"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ContactSource",
+          "T": "string",
+          "O": {
+            "label": "Creation Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Auto Create",
+              "value": "Auto Create"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedById",
+          "T": "string",
+          "O": {
+            "label": "Created By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "CreatedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "CreatedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Created Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Department",
+          "T": "string",
+          "O": {
+            "label": "Department",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Description",
+          "T": "string",
+          "O": {
+            "label": "Contact Description",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": false,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Email",
+          "T": "string",
+          "O": {
+            "label": "Email",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "EMAIL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Email Bounced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "EmailBouncedReason",
+          "T": "string",
+          "O": {
+            "label": "Email Bounced Reason",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "External_ID__c",
+          "T": "string",
+          "O": {
+            "label": "External_ID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Fax",
+          "T": "string",
+          "O": {
+            "label": "Business Fax",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "FirstName",
+          "T": "string",
+          "O": {
+            "label": "First Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "HomePhone",
+          "T": "string",
+          "O": {
+            "label": "Home Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IndividualId",
+          "T": "string",
+          "O": {
+            "label": "Individual ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Individual"
+            ],
+            "relationshipName": "Individual",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsDeleted",
+          "T": "boolean",
+          "O": {
+            "label": "Deleted",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsEmailBounced",
+          "T": "boolean",
+          "O": {
+            "label": "Is Email Bounced",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "IsPriorityRecord",
+          "T": "boolean",
+          "O": {
+            "label": "Important",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": false,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "BOOLEAN",
+            "soapType": "BOOLEAN"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Jigsaw",
+          "T": "string",
+          "O": {
+            "label": "Data.com Key",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "JigsawContactId",
+          "T": "string",
+          "O": {
+            "label": "Jigsaw Contact ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "relationshipName": "JigsawContact",
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Languages__c",
+          "T": "string",
+          "O": {
+            "label": "Languages__c",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate",
+          "T": "date",
+          "O": {
+            "label": "Last Activity",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastActivityDate__c",
+          "T": "date",
+          "O": {
+            "label": "LastActivityDate",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DATE",
+            "soapType": "DATE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCURequestDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Request Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastCUUpdateDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Stay-in-Touch Save Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedById",
+          "T": "string",
+          "O": {
+            "label": "Last Modified By ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "LastModifiedBy",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastModifiedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Modified Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastName",
+          "T": "string",
+          "O": {
+            "label": "Last Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastReferencedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Referenced Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LastViewedDate",
+          "T": "dateTime",
+          "O": {
+            "label": "Last Viewed Date",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "LeadSource",
+          "T": "string",
+          "O": {
+            "label": "Lead Source",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Web",
+              "value": "Web"
+            },
+            {
+              "label": "Phone Inquiry",
+              "value": "Phone Inquiry"
+            },
+            {
+              "label": "Partner Referral",
+              "value": "Partner Referral"
+            },
+            {
+              "label": "Purchased List",
+              "value": "Purchased List"
+            },
+            {
+              "label": "Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Latitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Latitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Location__Longitude__s",
+          "T": "double",
+          "O": {
+            "label": "Location (Longitude)",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCity",
+          "T": "string",
+          "O": {
+            "label": "Mailing City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingCountry",
+          "T": "string",
+          "O": {
+            "label": "Mailing Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Mailing Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLatitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingLongitude",
+          "T": "double",
+          "O": {
+            "label": "Mailing Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Mailing Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingState",
+          "T": "string",
+          "O": {
+            "label": "Mailing State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MailingStreet",
+          "T": "string",
+          "O": {
+            "label": "Mailing Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MasterRecordId",
+          "T": "string",
+          "O": {
+            "label": "Master Record ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "MasterRecord",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "MobilePhone",
+          "T": "string",
+          "O": {
+            "label": "Mobile Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Name",
+          "T": "string",
+          "O": {
+            "label": "Full Name",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCity",
+          "T": "string",
+          "O": {
+            "label": "Other City",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherCountry",
+          "T": "string",
+          "O": {
+            "label": "Other Country",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherGeocodeAccuracy",
+          "T": "string",
+          "O": {
+            "label": "Other Geocode Accuracy",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Address",
+              "value": "Address"
+            },
+            {
+              "label": "Near Address",
+              "value": "NearAddress"
+            },
+            {
+              "label": "Block",
+              "value": "Block"
+            },
+            {
+              "label": "Street",
+              "value": "Street"
+            },
+            {
+              "label": "Extended Zip",
+              "value": "ExtendedZip"
+            },
+            {
+              "label": "Zip",
+              "value": "Zip"
+            },
+            {
+              "label": "Neighborhood",
+              "value": "Neighborhood"
+            },
+            {
+              "label": "City",
+              "value": "City"
+            },
+            {
+              "label": "County",
+              "value": "County"
+            },
+            {
+              "label": "State",
+              "value": "State"
+            },
+            {
+              "label": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLatitude",
+          "T": "double",
+          "O": {
+            "label": "Other Latitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherLongitude",
+          "T": "double",
+          "O": {
+            "label": "Other Longitude",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "DOUBLE",
+            "soapType": "DOUBLE"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPhone",
+          "T": "string",
+          "O": {
+            "label": "Other Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherPostalCode",
+          "T": "string",
+          "O": {
+            "label": "Other Zip/Postal Code",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherState",
+          "T": "string",
+          "O": {
+            "label": "Other State/Province",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OtherStreet",
+          "T": "string",
+          "O": {
+            "label": "Other Street",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "TEXTAREA",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "OwnerId",
+          "T": "string",
+          "O": {
+            "label": "Owner ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "Owner",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Phone",
+          "T": "string",
+          "O": {
+            "label": "Business Phone",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PHONE",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "PhotoUrl",
+          "T": "string",
+          "O": {
+            "label": "Photo URL",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "URL",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "ReportsToId",
+          "T": "string",
+          "O": {
+            "label": "Reports To ID",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [
+              "Contact"
+            ],
+            "relationshipName": "ReportsTo",
+            "domainType": "REFERENCE",
+            "soapType": "ID"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Salutation",
+          "T": "string",
+          "O": {
+            "label": "Salutation",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "PICKLIST",
+            "soapType": "STRING"
+          },
+          "EV": [
+            {
+              "label": "Mr.",
+              "value": "Mr."
+            },
+            {
+              "label": "Ms.",
+              "value": "Ms."
+            },
+            {
+              "label": "Mrs.",
+              "value": "Mrs."
+            },
+            {
+              "label": "Dr.",
+              "value": "Dr."
+            },
+            {
+              "label": "Prof.",
+              "value": "Prof."
+            }
+          ]
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "SystemModstamp",
+          "T": "dateTime",
+          "O": {
+            "label": "System Modstamp",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": false,
+            "filterable": true,
+            "updatable": false,
+            "referenceTo": [],
+            "domainType": "DATETIME",
+            "soapType": "DATETIME"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "Title",
+          "T": "string",
+          "O": {
+            "label": "Title",
+            "cardinality": "SINGLE",
+            "externalId": false,
+            "idLookup": false,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        },
+        {
+          "NIL": true,
+          "MN": 0,
+          "MX": 1,
+          "N": "WorkdayID__c",
+          "T": "string",
+          "O": {
+            "label": "WorkdayID",
+            "cardinality": "SINGLE",
+            "externalId": true,
+            "idLookup": true,
+            "createable": true,
+            "filterable": true,
+            "updatable": true,
+            "referenceTo": [],
+            "domainType": "STRING",
+            "soapType": "STRING"
+          }
+        }
+      ]
+    }
+  ],
+  "O": {
+    "isCustomSchema": true,
+    "customSchemaIsFlat": false,
+    "customSchemaIsXml": true,
+    "customSchemaIsFlatComplex": false
+  }
+}
