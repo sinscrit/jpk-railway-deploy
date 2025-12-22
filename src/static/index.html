@@ -2,718 +2,230 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="64x64" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPK to JSON Converter - Async</title>
+    <title>JPK to JSON Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 700px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-        }
-
-        .auth-section {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: #f8f9fa;
-            padding: 8px 15px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            height: 40px;
-            box-sizing: border-box;
-        }
-
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            border: 2px solid #e9ecef;
-        }
-
-        .login-btn, .logout-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .login-btn:hover, .logout-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .logout-btn {
-            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-            font-size: 0.9rem;
-            padding: 8px 15px;
-            display: flex;
-            align-items: center;
-            height: 40px;
-            box-sizing: border-box;
-        }
-
-        .logout-btn:hover {
-            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
-        }
-
-        .header {
-            margin-bottom: 40px;
-            margin-top: 60px;
-        }
-
-        .header h1 {
-            color: #333;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-
-        .header p {
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .queue-status {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            display: none;
-        }
-
-        .queue-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .upload-area {
-            border: 3px dashed #ddd;
-            border-radius: 15px;
-            padding: 60px 20px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .upload-area:hover {
-            border-color: #667eea;
-            background-color: #f8f9ff;
-        }
-
-        .upload-area.dragover {
-            border-color: #667eea;
-            background-color: #f0f4ff;
-            transform: scale(1.02);
-        }
-
-        .upload-area.disabled {
-            opacity: 0.5;
-            pointer-events: none;
-            background: #f5f5f5;
-        }
-
-        .login-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.95);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            cursor: pointer;
-            z-index: 10;
-            transition: all 0.3s ease;
-        }
-
-        .login-overlay h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .login-overlay p {
-            color: #666;
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        .login-overlay:hover {
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        .login-overlay:hover h3 {
-            color: #764ba2;
-        }
-
-        .access-denied-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.98);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            z-index: 10;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .access-denied-overlay h3 {
-            color: #dc3545;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .access-denied-overlay p {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-
-        .request-access-btn {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .request-access-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
-        }
-
-        .request-status {
-            margin-top: 10px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.85rem;
-        }
-
-        .request-status.pending {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .request-status.denied {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .admin-link {
-            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .admin-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
-        }
-
-        .upload-icon {
-            font-size: 4rem;
-            color: #ddd;
-            margin-bottom: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .upload-area:hover .upload-icon {
-            color: #667eea;
-        }
-
-        .upload-text {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .upload-subtext {
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        .file-input {
-            display: none;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 10px;
-            min-width: 150px;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        .btn-batch {
-            background: linear-gradient(135deg, #fd7e14 0%, #e63946 100%);
-        }
-
-        .btn-batch:hover {
-            box-shadow: 0 10px 20px rgba(253, 126, 20, 0.3);
-        }
-
-        .progress-container {
-            display: none;
-            margin: 30px 0;
-        }
-
-        .progress-bar {
-            background: #f0f0f0;
-            border-radius: 25px;
-            height: 8px;
-            overflow: hidden;
-            margin-bottom: 15px;
-        }
-
-        .progress-fill {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-            border-radius: 25px;
-        }
-
-        .progress-text {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .status-message {
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            font-weight: 500;
-        }
-
-        .status-success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .status-error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .status-info {
-            background: #d1ecf1;
-            color: #0c5460;
-            border: 1px solid #bee5eb;
-        }
-
-        .file-info {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .file-info h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .file-info p {
-            color: #666;
-            margin: 5px 0;
-        }
-
-        .jpk-analysis {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-            text-align: left;
-            border: 1px solid #dee2e6;
-        }
-
-        .jpk-analysis h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .jpk-analysis .project-name {
-            color: #667eea;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            padding: 10px 15px;
-            background: white;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .jpk-analysis .counts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .jpk-analysis .count-item {
-            background: white;
-            border-radius: 8px;
-            padding: 12px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .jpk-analysis .count-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .jpk-analysis .count-label {
-            font-size: 0.75rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .jpk-analysis .components-section {
-            margin-top: 15px;
-        }
-
-        .jpk-analysis .components-section h4 {
-            color: #495057;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .jpk-analysis .component-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .jpk-analysis .component-tag {
-            background: white;
-            color: #495057;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            border: 1px solid #dee2e6;
-        }
-
-        .jpk-analysis .analyzing {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-        }
-
-        .jpk-analysis .analyzing .spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #ddd;
-            border-top-color: #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-right: 10px;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .download-section {
-            display: none;
-            margin-top: 30px;
-        }
-
-        .download-btn {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-        }
-
-        .download-btn:hover {
-            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
-        }
-
-        .reset-btn {
-            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-        }
-
-        .reset-btn:hover {
-            box-shadow: 0 10px 20px rgba(108, 117, 125, 0.3);
-        }
-
-        .batch-section {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #eee;
-        }
-
-        .batch-jobs {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .job-item {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .job-status {
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .job-status.queued { background: #fff3cd; color: #856404; }
-        .job-status.processing { background: #d1ecf1; color: #0c5460; }
-        .job-status.completed { background: #d4edda; color: #155724; }
-        .job-status.error { background: #f8d7da; color: #721c24; }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .processing {
-            animation: pulse 2s infinite;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .accent-orange { color: #F36C21; }
+        .bg-accent-orange { background-color: #F36C21; }
+        .border-accent-orange { border-color: #F36C21; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .animate-spin { animation: spin 1s linear infinite; }
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
     </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Authentication Section -->
-        <div class="auth-section" id="authSection">
-            <div id="loginSection" style="display: none;">
-                <a href="/login" class="login-btn">🔐 Login with Google</a>
-            </div>
-            <div id="userSection" style="display: none;">
-                <a href="/admin" class="admin-link" id="adminLink" style="display: none;">Admin</a>
-                <div class="user-info">
-                    <img id="userAvatar" class="user-avatar" src="" alt="User Avatar">
-                    <span id="userName"></span>
-                </div>
-                <a href="/logout" class="logout-btn">Logout</a>
-            </div>
-        </div>
+<body class="bg-slate-50 text-slate-600 antialiased min-h-screen flex items-center justify-center p-4">
 
-        <div class="header">
-            <h1>JPK to JSON Converter</h1>
-        </div>
+    <!-- Main Application Container -->
+    <main class="w-full max-w-2xl bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
 
-        <div class="queue-status" id="queueStatus">
-            <h3>Queue Status</h3>
-            <div class="queue-stats">
-                <div class="stat-item">
-                    <div class="stat-number" id="totalJobs">0</div>
-                    <div class="stat-label">Workers</div>
+        <!-- Header -->
+        <header class="border-b border-slate-100 p-6 flex items-center justify-between bg-white">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="relative flex items-center justify-center w-8 h-8 bg-[#F36C21] rounded-lg">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="queuedJobs">0</div>
-                    <div class="stat-label">Queued</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="processingJobs">0</div>
-                    <div class="stat-label">Processing</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="completedJobs">0</div>
-                    <div class="stat-label">Completed</div>
-                </div>
+                <span class="text-lg font-semibold tracking-tight text-slate-900">IO Integrated</span>
             </div>
-        </div>
 
-        <div class="upload-area" id="uploadArea">
-            <div class="login-overlay" id="loginOverlay" style="display: none;">
-                <h3>🔐 Log in first</h3>
-                <p>Please log in with your Google account to use the converter</p>
-            </div>
-            <div class="access-denied-overlay" id="accessDeniedOverlay" style="display: none;">
-                <h3>Access Required</h3>
-                <p id="accessDeniedMessage">Your account is not approved to use the converter.</p>
-                <button class="request-access-btn" id="requestAccessBtn" onclick="requestAccess()">Request Access</button>
-                <div class="request-status" id="requestStatus" style="display: none;"></div>
-            </div>
-            <div class="upload-icon">📁</div>
-            <div class="upload-text">Drop your JPK file here or click to browse</div>
-            <div class="upload-subtext">Supports JPK files up to 100MB • Asynchronous processing</div>
-            <input type="file" id="fileInput" class="file-input" accept=".jpk">
-        </div>
-
-        <div class="file-info" id="fileInfo" style="display: none;">
-            <h3>Selected File</h3>
-            <p id="fileName"></p>
-            <p id="fileSize"></p>
-        </div>
-
-        <div class="jpk-analysis" id="jpkAnalysis" style="display: none;">
-            <h3>📊 JPK Analysis</h3>
-            <div id="analysisContent">
-                <div class="analyzing">
-                    <span class="spinner"></span>Analyzing JPK file...
+            <!-- Auth Section -->
+            <div id="authSection" class="flex items-center gap-3">
+                <!-- Login Button (shown when not authenticated) -->
+                <div id="loginSection" style="display: none;">
+                    <a href="/login" class="bg-[#F36C21] hover:bg-[#e05a10] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-2">
+                        <i data-lucide="log-in" class="w-4 h-4"></i>
+                        Login with Google
+                    </a>
+                </div>
+                <!-- User Section (shown when authenticated) -->
+                <div id="userSection" style="display: none;" class="flex items-center gap-3">
+                    <a href="/admin" id="adminLink" style="display: none;" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors duration-200">
+                        Admin
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <div id="userInitials" class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-medium text-xs"></div>
+                        <span id="userName" class="text-sm font-medium text-slate-700 hidden sm:block"></span>
+                    </div>
+                    <a href="/logout" class="bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 px-4 py-1.5 rounded-lg text-sm font-medium transition-colors duration-200">
+                        Logout
+                    </a>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <button class="btn" id="convertBtn" onclick="startConversion()" disabled>Convert to JSON</button>
+        <!-- Content Area -->
+        <div class="p-8 space-y-6">
 
-        <div class="progress-container" id="progressContainer">
-            <div class="progress-text" id="progressText">Preparing conversion...</div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+            <!-- Title -->
+            <div class="text-center space-y-1">
+                <h1 class="text-3xl font-semibold tracking-tight text-slate-900">JPK to JSON Converter</h1>
+                <p class="text-base text-slate-500">Securely transform your audit files for analysis</p>
             </div>
-        </div>
 
-        <div id="statusMessage"></div>
-
-        <div class="download-section" id="downloadSection">
-            <button class="btn download-btn" id="downloadBtn" onclick="downloadFile()">Download JSON File</button>
-            <button class="btn reset-btn" onclick="resetForm()">Convert Another File</button>
-        </div>
-
-        <div class="batch-section">
-            <h3>Batch Processing</h3>
-            <p>Upload multiple JPK files for concurrent processing</p>
-            <input type="file" id="batchInput" multiple accept=".jpk" style="display: none;">
-            <button class="btn btn-batch" id="batchSelectBtn" onclick="document.getElementById('batchInput').click()">Select Multiple Files</button>
-            <button class="btn btn-batch" id="batchConvertBtn" onclick="startBatchConversion()" disabled>Process Batch</button>
-            
-            <div class="batch-jobs" id="batchJobs">
-                <h4>Batch Jobs</h4>
-                <div id="batchJobsList"></div>
+            <!-- Queue Status -->
+            <div id="queueStatus" class="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                <h3 class="text-center text-sm font-semibold text-slate-900 mb-4 tracking-tight">Queue Status</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                    <div class="flex flex-col items-center px-2 pt-2 md:pt-0">
+                        <span id="totalJobs" class="text-2xl font-semibold text-slate-900 leading-none mb-1">0</span>
+                        <span class="text-xs font-medium tracking-wide text-slate-500 uppercase">Workers</span>
+                    </div>
+                    <div class="flex flex-col items-center px-2 pt-2 md:pt-0">
+                        <span id="queuedJobs" class="text-2xl font-semibold text-slate-900 leading-none mb-1">0</span>
+                        <span class="text-xs font-medium tracking-wide text-slate-500 uppercase">Queued</span>
+                    </div>
+                    <div class="flex flex-col items-center px-2 pt-2 md:pt-0">
+                        <span id="processingJobs" class="text-2xl font-semibold text-slate-900 leading-none mb-1">0</span>
+                        <span class="text-xs font-medium tracking-wide text-slate-500 uppercase">Processing</span>
+                    </div>
+                    <div class="flex flex-col items-center px-2 pt-2 md:pt-0">
+                        <span id="completedJobs" class="text-2xl font-semibold text-[#F36C21] leading-none mb-1">0</span>
+                        <span class="text-xs font-medium tracking-wide text-slate-500 uppercase">Completed</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Upload Area -->
+            <div id="uploadArea" class="relative group cursor-pointer">
+                <!-- Login Overlay -->
+                <div id="loginOverlay" style="display: none;" class="absolute inset-0 bg-white/95 rounded-xl flex flex-col items-center justify-center z-10 cursor-pointer">
+                    <i data-lucide="lock" class="w-10 h-10 text-[#F36C21] mb-3"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-1">Log in first</h3>
+                    <p class="text-sm text-slate-500">Please log in with your Google account to use the converter</p>
+                </div>
+
+                <!-- Access Denied Overlay -->
+                <div id="accessDeniedOverlay" style="display: none;" class="absolute inset-0 bg-white/98 rounded-xl flex flex-col items-center justify-center z-10 p-6 text-center">
+                    <i data-lucide="shield-x" class="w-10 h-10 text-rose-500 mb-3"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-1">Access Required</h3>
+                    <p id="accessDeniedMessage" class="text-sm text-slate-500 mb-4">Your account is not approved to use the converter.</p>
+                    <button id="requestAccessBtn" onclick="requestAccess()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                        Request Access
+                    </button>
+                    <div id="requestStatus" style="display: none;" class="mt-3 px-4 py-2 rounded-lg text-sm"></div>
+                </div>
+
+                <!-- Default Upload State -->
+                <div id="uploadDefault" class="border-2 border-dashed border-slate-200 rounded-xl p-10 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-[#F36C21] hover:bg-slate-50/50">
+                    <div class="w-14 h-14 bg-slate-100 text-slate-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="upload-cloud" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-slate-900 mb-1">Drop your JPK file here or click to browse</h3>
+                    <p class="text-base text-slate-500 max-w-sm mx-auto">
+                        Supports JPK files up to 100MB <span class="text-slate-300 mx-1">&bull;</span> Asynchronous processing
+                    </p>
+                </div>
+
+                <!-- Success State (file selected) -->
+                <div id="uploadSuccess" style="display: none;" class="relative">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl opacity-10"></div>
+                    <div class="relative bg-white border-2 border-dashed border-emerald-200 rounded-xl p-10 flex flex-col items-center justify-center text-center">
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-sm">
+                            <i data-lucide="check" class="w-8 h-8 stroke-[3]"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-900 mb-1">File selected successfully!</h3>
+                        <p class="text-base text-slate-500 max-w-sm mx-auto">
+                            Supports JPK files up to 100MB <span class="text-slate-300 mx-1">&bull;</span> Asynchronous processing
+                        </p>
+                    </div>
+                </div>
+
+                <input type="file" id="fileInput" accept=".jpk" class="hidden">
+            </div>
+
+            <!-- Selected File Details -->
+            <div id="fileInfo" style="display: none;" class="bg-slate-50 border border-slate-100 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <h4 class="text-sm font-semibold text-slate-900 mb-1">Selected File</h4>
+                    <div class="flex flex-col gap-1">
+                        <span id="fileName" class="text-base text-slate-600 font-mono text-sm bg-white border border-slate-200 px-2 py-0.5 rounded w-fit"></span>
+                        <span id="fileSize" class="text-sm text-slate-400"></span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="resetForm()" class="text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors">Replace</button>
+                </div>
+            </div>
+
+            <!-- JPK Analysis -->
+            <div id="jpkAnalysis" style="display: none;" class="bg-slate-50/50 border border-slate-200 rounded-xl p-6">
+                <div class="flex items-center gap-2 mb-6">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 text-[#F36C21]"></i>
+                    <h3 class="text-lg font-semibold text-slate-900 tracking-tight">JPK Analysis</h3>
+                </div>
+                <div id="analysisContent">
+                    <div class="text-center py-4 text-slate-500">
+                        <div class="inline-block w-5 h-5 border-2 border-slate-300 border-t-[#F36C21] rounded-full animate-spin mr-2"></div>
+                        Analyzing JPK file...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Container -->
+            <div id="progressContainer" style="display: none;" class="space-y-3">
+                <p id="progressText" class="text-sm text-slate-600 text-center">Preparing conversion...</p>
+                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div id="progressFill" class="h-full bg-gradient-to-r from-[#F36C21] to-orange-400 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage"></div>
+
+            <!-- Convert Button -->
+            <button id="convertBtn" onclick="startConversion()" disabled class="w-full bg-[#F36C21] hover:bg-[#e05a10] disabled:bg-slate-200 disabled:text-slate-400 text-white py-3 rounded-xl text-base font-semibold transition-colors duration-200">
+                Convert to JSON
+            </button>
+
+            <!-- Download Section -->
+            <div id="downloadSection" style="display: none;" class="flex flex-col sm:flex-row gap-3">
+                <button id="downloadBtn" onclick="downloadFile()" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-xl text-base font-semibold transition-colors duration-200 flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    Download JSON File
+                </button>
+                <button onclick="resetForm()" class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-700 py-3 rounded-xl text-base font-semibold transition-colors duration-200">
+                    Convert Another File
+                </button>
+            </div>
+
+            <!-- Batch Processing Section -->
+            <div class="border-t border-slate-200 pt-6 mt-6">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2">Batch Processing</h3>
+                <p class="text-sm text-slate-500 mb-4">Upload multiple JPK files for concurrent processing</p>
+                <input type="file" id="batchInput" multiple accept=".jpk" class="hidden">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="batchSelectBtn" onclick="document.getElementById('batchInput').click()" class="flex-1 bg-orange-100 hover:bg-orange-200 text-[#F36C21] py-3 rounded-xl text-sm font-semibold transition-colors duration-200">
+                        Select Multiple Files
+                    </button>
+                    <button id="batchConvertBtn" onclick="startBatchConversion()" disabled class="flex-1 bg-[#F36C21] hover:bg-[#e05a10] disabled:bg-slate-200 disabled:text-slate-400 text-white py-3 rounded-xl text-sm font-semibold transition-colors duration-200">
+                        Process Batch
+                    </button>
+                </div>
+
+                <!-- Batch Jobs List -->
+                <div id="batchJobs" style="display: none;" class="mt-4 space-y-2">
+                    <h4 class="text-sm font-semibold text-slate-700">Batch Jobs</h4>
+                    <div id="batchJobsList" class="space-y-2"></div>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </main>
 
     <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
         // Authentication state
         let currentUser = null;
         let isAuthenticated = false;
@@ -721,12 +233,18 @@
         let isAdmin = false;
         let requestStatus = null;
 
-        // Existing variables
+        // Job tracking
         let currentJobId = null;
         let selectedFile = null;
         let selectedBatchFiles = [];
         let batchJobIds = [];
         let statusCheckInterval = null;
+        let queueStatusInterval = null;
+
+        // DOM Elements
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const batchInput = document.getElementById('batchInput');
 
         // Check authentication status on page load
         async function checkAuthStatus() {
@@ -752,8 +270,7 @@
             const loginSection = document.getElementById('loginSection');
             const userSection = document.getElementById('userSection');
             const userName = document.getElementById('userName');
-            const userAvatar = document.getElementById('userAvatar');
-            const uploadArea = document.getElementById('uploadArea');
+            const userInitials = document.getElementById('userInitials');
             const loginOverlay = document.getElementById('loginOverlay');
             const accessDeniedOverlay = document.getElementById('accessDeniedOverlay');
             const accessDeniedMessage = document.getElementById('accessDeniedMessage');
@@ -773,60 +290,50 @@
                 loginSection.style.display = 'none';
                 userSection.style.display = 'flex';
                 userName.textContent = currentUser.name || currentUser.email;
-                userAvatar.src = currentUser.picture || '/static/default-avatar.png';
-                userAvatar.alt = currentUser.name || 'User';
+
+                // Generate initials
+                const name = currentUser.name || currentUser.email || '';
+                const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                userInitials.textContent = initials;
 
                 // Show admin link if user is admin
-                if (isAdmin) {
-                    adminLink.style.display = 'inline-flex';
-                } else {
-                    adminLink.style.display = 'none';
-                }
+                adminLink.style.display = isAdmin ? 'inline-flex' : 'none';
 
                 if (isApproved) {
-                    // User is authenticated AND approved - enable everything
-                    uploadArea.classList.remove('disabled');
-                    if (convertBtn) convertBtn.disabled = false;
-                    if (batchSelectBtn) batchSelectBtn.disabled = false;
-                    if (batchConvertBtn) batchConvertBtn.disabled = false;
+                    // User is authenticated AND approved
+                    uploadArea.classList.remove('pointer-events-none', 'opacity-50');
                 } else {
-                    // User is authenticated but NOT approved - show access denied
-                    uploadArea.classList.add('disabled');
+                    // User is authenticated but NOT approved
+                    uploadArea.classList.add('pointer-events-none', 'opacity-50');
                     accessDeniedOverlay.style.display = 'flex';
 
-                    // Update message based on request status
                     if (requestStatus === 'pending') {
                         accessDeniedMessage.textContent = 'Your access request is pending approval.';
                         requestAccessBtn.style.display = 'none';
                         requestStatusDiv.style.display = 'block';
-                        requestStatusDiv.className = 'request-status pending';
+                        requestStatusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
                         requestStatusDiv.textContent = 'Pending - An admin will review your request';
                     } else if (requestStatus === 'denied') {
                         accessDeniedMessage.textContent = 'Your access request was denied.';
                         requestAccessBtn.style.display = 'none';
                         requestStatusDiv.style.display = 'block';
-                        requestStatusDiv.className = 'request-status denied';
+                        requestStatusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
                         requestStatusDiv.textContent = 'Denied - Contact an administrator';
                     } else {
                         accessDeniedMessage.textContent = 'Your account is not approved to use the converter.';
                         requestAccessBtn.style.display = 'inline-block';
                         requestStatusDiv.style.display = 'none';
                     }
-
-                    if (convertBtn) convertBtn.disabled = true;
-                    if (batchSelectBtn) batchSelectBtn.disabled = true;
-                    if (batchConvertBtn) batchConvertBtn.disabled = true;
                 }
             } else {
-                // Not authenticated - show login
+                // Not authenticated
                 loginSection.style.display = 'block';
                 userSection.style.display = 'none';
-                uploadArea.classList.add('disabled');
+                uploadArea.classList.add('pointer-events-none', 'opacity-50');
                 loginOverlay.style.display = 'flex';
-                if (convertBtn) convertBtn.disabled = true;
-                if (batchSelectBtn) batchSelectBtn.disabled = true;
-                if (batchConvertBtn) batchConvertBtn.disabled = true;
             }
+
+            lucide.createIcons();
         }
 
         // Request access function
@@ -850,69 +357,49 @@
                     requestStatus = 'pending';
                     btn.style.display = 'none';
                     statusDiv.style.display = 'block';
-                    statusDiv.className = 'request-status pending';
+                    statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
                     statusDiv.textContent = 'Request submitted! An admin will review your request.';
                     document.getElementById('accessDeniedMessage').textContent = 'Your access request is pending approval.';
                 } else {
                     statusDiv.style.display = 'block';
-                    statusDiv.className = 'request-status denied';
+                    statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
                     statusDiv.textContent = data.error || 'Failed to submit request';
                     btn.disabled = false;
                     btn.textContent = 'Request Access';
                 }
             } catch (error) {
                 statusDiv.style.display = 'block';
-                statusDiv.className = 'request-status denied';
+                statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
                 statusDiv.textContent = 'Error: ' + error.message;
                 btn.disabled = false;
                 btn.textContent = 'Request Access';
             }
         }
-        let queueStatusInterval = null;
-
-        // DOM elements
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-        const batchInput = document.getElementById('batchInput');
-        const fileInfo = document.getElementById('fileInfo');
-        const fileName = document.getElementById('fileName');
-        const fileSize = document.getElementById('fileSize');
-        const convertBtn = document.getElementById('convertBtn');
-        const batchConvertBtn = document.getElementById('batchConvertBtn');
-        const progressContainer = document.getElementById('progressContainer');
-        const progressFill = document.getElementById('progressFill');
-        const progressText = document.getElementById('progressText');
-        const statusMessage = document.getElementById('statusMessage');
-        const downloadSection = document.getElementById('downloadSection');
-        const queueStatus = document.getElementById('queueStatus');
-        const batchJobs = document.getElementById('batchJobs');
-        const batchJobsList = document.getElementById('batchJobsList');
-
-        // Start queue status monitoring
-        startQueueMonitoring();
 
         // File upload handling
-        uploadArea.addEventListener('click', () => fileInput.click());
-        uploadArea.addEventListener('dragover', handleDragOver);
-        uploadArea.addEventListener('dragleave', handleDragLeave);
-        uploadArea.addEventListener('drop', handleDrop);
+        uploadArea.addEventListener('click', (e) => {
+            if (e.target.closest('#loginOverlay')) {
+                window.location.href = '/login';
+                return;
+            }
+            if (!e.target.closest('#accessDeniedOverlay')) {
+                fileInput.click();
+            }
+        });
 
-        fileInput.addEventListener('change', handleFileSelect);
-        batchInput.addEventListener('change', handleBatchFileSelect);
-
-        function handleDragOver(e) {
+        uploadArea.addEventListener('dragover', (e) => {
             e.preventDefault();
-            uploadArea.classList.add('dragover');
-        }
+            uploadArea.querySelector('#uploadDefault')?.classList.add('border-[#F36C21]', 'bg-orange-50');
+        });
 
-        function handleDragLeave(e) {
+        uploadArea.addEventListener('dragleave', (e) => {
             e.preventDefault();
-            uploadArea.classList.remove('dragover');
-        }
+            uploadArea.querySelector('#uploadDefault')?.classList.remove('border-[#F36C21]', 'bg-orange-50');
+        });
 
-        function handleDrop(e) {
+        uploadArea.addEventListener('drop', (e) => {
             e.preventDefault();
-            uploadArea.classList.remove('dragover');
+            uploadArea.querySelector('#uploadDefault')?.classList.remove('border-[#F36C21]', 'bg-orange-50');
             const files = e.dataTransfer.files;
             if (files.length > 0) {
                 if (files.length === 1) {
@@ -921,21 +408,15 @@
                     handleBatchFiles(Array.from(files));
                 }
             }
-        }
+        });
 
-        function handleFileSelect(e) {
-            const file = e.target.files[0];
-            if (file) {
-                handleFile(file);
-            }
-        }
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files[0]) handleFile(e.target.files[0]);
+        });
 
-        function handleBatchFileSelect(e) {
-            const files = Array.from(e.target.files);
-            if (files.length > 0) {
-                handleBatchFiles(files);
-            }
-        }
+        batchInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) handleBatchFiles(Array.from(e.target.files));
+        });
 
         function handleFile(file) {
             if (!file.name.toLowerCase().endsWith('.jpk')) {
@@ -949,28 +430,27 @@
             }
 
             selectedFile = file;
-            fileName.textContent = `Name: ${file.name}`;
-            fileSize.textContent = `Size: ${formatFileSize(file.size)}`;
-            fileInfo.style.display = 'block';
-            fileInfo.classList.add('fade-in');
-            convertBtn.disabled = false;
 
-            // Update upload area
-            uploadArea.querySelector('.upload-text').textContent = 'File selected successfully!';
-            uploadArea.querySelector('.upload-icon').textContent = '✅';
+            // Update UI
+            document.getElementById('uploadDefault').style.display = 'none';
+            document.getElementById('uploadSuccess').style.display = 'block';
+            document.getElementById('fileInfo').style.display = 'flex';
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('fileSize').textContent = 'Size: ' + formatFileSize(file.size);
+            document.getElementById('convertBtn').disabled = false;
 
-            // Analyze the JPK file to show metadata
+            // Analyze the JPK file
             analyzeFile(file);
+
+            lucide.createIcons();
         }
 
         async function analyzeFile(file) {
             const jpkAnalysis = document.getElementById('jpkAnalysis');
             const analysisContent = document.getElementById('analysisContent');
 
-            // Show analysis section with loading state
             jpkAnalysis.style.display = 'block';
-            jpkAnalysis.classList.add('fade-in');
-            analysisContent.innerHTML = '<div class="analyzing"><span class="spinner"></span>Analyzing JPK file...</div>';
+            analysisContent.innerHTML = '<div class="text-center py-4 text-slate-500"><div class="inline-block w-5 h-5 border-2 border-slate-300 border-t-[#F36C21] rounded-full animate-spin mr-2"></div>Analyzing JPK file...</div>';
 
             try {
                 const formData = new FormData();
@@ -990,7 +470,7 @@
                 displayAnalysis(analysis);
 
             } catch (error) {
-                analysisContent.innerHTML = `<div class="analyzing" style="color: #dc3545;">Analysis failed: ${error.message}</div>`;
+                analysisContent.innerHTML = `<div class="text-center py-4 text-rose-500">Analysis failed: ${error.message}</div>`;
             }
         }
 
@@ -1003,37 +483,55 @@
 
             // Project name
             if (analysis.project_name) {
-                html += `<div class="project-name">Project: ${analysis.project_name}</div>`;
+                html += `<div class="text-[#F36C21] font-semibold mb-4 p-3 bg-white rounded-lg border-l-4 border-[#F36C21]">Project: ${analysis.project_name}</div>`;
             }
 
             // Component counts grid
-            html += '<div class="counts-grid">';
-            html += `<div class="count-item"><div class="count-number">${counts.operations}</div><div class="count-label">Operations</div></div>`;
-            html += `<div class="count-item"><div class="count-number">${counts.transformations}</div><div class="count-label">Transforms</div></div>`;
-            html += `<div class="count-item"><div class="count-number">${counts.scripts}</div><div class="count-label">Scripts</div></div>`;
-            html += `<div class="count-item"><div class="count-number">${counts.endpoints}</div><div class="count-label">Endpoints</div></div>`;
-            html += `<div class="count-item"><div class="count-number">${counts.project_variables + counts.global_variables}</div><div class="count-label">Variables</div></div>`;
-            html += `<div class="count-item"><div class="count-number">${totalComponents}</div><div class="count-label">Total</div></div>`;
+            html += '<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-6">';
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${counts.operations}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Operations</span>
+            </div>`;
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${counts.transformations}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Transforms</span>
+            </div>`;
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${counts.scripts}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Scripts</span>
+            </div>`;
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${counts.endpoints}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Endpoints</span>
+            </div>`;
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${counts.project_variables + counts.global_variables}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Variables</span>
+            </div>`;
+            html += `<div class="bg-white p-3 rounded-lg shadow-sm border border-slate-100 flex flex-col items-center justify-center min-h-[5rem] border-t-2 border-t-[#F36C21]">
+                <span class="text-2xl font-semibold text-slate-900 mb-1">${totalComponents}</span>
+                <span class="text-[0.65rem] font-bold tracking-wider text-slate-400 uppercase">Total</span>
+            </div>`;
             html += '</div>';
 
             // Operations list
             if (analysis.operations && analysis.operations.length > 0) {
-                html += '<div class="components-section">';
-                html += '<h4>Operations</h4>';
-                html += '<div class="component-list">';
+                html += '<div class="mb-4">';
+                html += '<h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Operations</h4>';
+                html += '<div class="flex flex-wrap gap-2">';
                 analysis.operations.forEach(op => {
-                    html += `<span class="component-tag">${op.name}</span>`;
+                    html += `<span class="bg-white text-slate-600 px-3 py-1 rounded-full text-sm border border-slate-200">${op.name}</span>`;
                 });
                 html += '</div></div>';
             }
 
             // Transformations list
             if (analysis.transformations && analysis.transformations.length > 0) {
-                html += '<div class="components-section">';
-                html += '<h4>Transformations</h4>';
-                html += '<div class="component-list">';
+                html += '<div>';
+                html += '<h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Transformations</h4>';
+                html += '<div class="flex flex-wrap gap-2">';
                 analysis.transformations.forEach(tf => {
-                    html += `<span class="component-tag">${tf.name}</span>`;
+                    html += `<span class="bg-white text-slate-600 px-3 py-1 rounded-full text-sm border border-slate-200">${tf.name}</span>`;
                 });
                 html += '</div></div>';
             }
@@ -1054,12 +552,10 @@
                 return true;
             });
 
-            if (validFiles.length === 0) {
-                return;
-            }
+            if (validFiles.length === 0) return;
 
             selectedBatchFiles = validFiles;
-            batchConvertBtn.disabled = false;
+            document.getElementById('batchConvertBtn').disabled = false;
             showStatus(`${validFiles.length} files selected for batch processing`, 'info');
         }
 
@@ -1078,10 +574,8 @@
             formData.append('file', selectedFile);
 
             try {
-                convertBtn.disabled = true;
-                progressContainer.style.display = 'block';
-                progressContainer.classList.add('fade-in');
-                uploadArea.classList.add('processing');
+                document.getElementById('convertBtn').disabled = true;
+                document.getElementById('progressContainer').style.display = 'block';
 
                 const response = await fetch('/api/converter/upload', {
                     method: 'POST',
@@ -1090,16 +584,12 @@
 
                 const result = await response.json();
 
-                // Handle authentication requirement
                 if (response.status === 401) {
                     showStatus('Please log in to use the converter', 'error');
-                    if (result.redirect) {
-                        window.location.href = result.redirect;
-                    }
+                    if (result.redirect) window.location.href = result.redirect;
                     return;
                 }
 
-                // Handle access denied (not approved)
                 if (response.status === 403) {
                     showStatus(result.message || 'Access denied. Please request access.', 'error');
                     isApproved = false;
@@ -1113,8 +603,6 @@
 
                 currentJobId = result.job_id;
                 showStatus(result.message, 'info');
-                
-                // Start polling for status
                 statusCheckInterval = setInterval(checkStatus, 1000);
 
             } catch (error) {
@@ -1127,12 +615,10 @@
             if (selectedBatchFiles.length === 0) return;
 
             const formData = new FormData();
-            selectedBatchFiles.forEach(file => {
-                formData.append('files', file);
-            });
+            selectedBatchFiles.forEach(file => formData.append('files', file));
 
             try {
-                batchConvertBtn.disabled = true;
+                document.getElementById('batchConvertBtn').disabled = true;
                 showStatus('Starting batch conversion...', 'info');
 
                 const response = await fetch('/api/converter/batch/upload', {
@@ -1141,13 +627,10 @@
                 });
 
                 const result = await response.json();
-                
-                // Handle authentication requirement
+
                 if (response.status === 401) {
                     showStatus('Please log in to use the converter', 'error');
-                    if (result.redirect) {
-                        window.location.href = result.redirect;
-                    }
+                    if (result.redirect) window.location.href = result.redirect;
                     return;
                 }
 
@@ -1158,29 +641,35 @@
                 batchJobIds = result.job_ids;
                 showStatus(result.message, 'success');
                 displayBatchJobs(result.results);
-                
-                // Start monitoring batch jobs
                 startBatchMonitoring();
 
             } catch (error) {
                 showStatus(`Batch Error: ${error.message}`, 'error');
-                batchConvertBtn.disabled = false;
+                document.getElementById('batchConvertBtn').disabled = false;
             }
         }
 
         function displayBatchJobs(jobs) {
+            const batchJobs = document.getElementById('batchJobs');
+            const batchJobsList = document.getElementById('batchJobsList');
             batchJobs.style.display = 'block';
             batchJobsList.innerHTML = '';
-            
+
             jobs.forEach(job => {
+                const statusColors = {
+                    queued: 'bg-amber-100 text-amber-700',
+                    processing: 'bg-blue-100 text-blue-700',
+                    completed: 'bg-emerald-100 text-emerald-700',
+                    error: 'bg-rose-100 text-rose-700'
+                };
                 const jobElement = document.createElement('div');
-                jobElement.className = 'job-item';
+                jobElement.className = 'bg-slate-50 rounded-lg p-3 flex justify-between items-center';
                 jobElement.innerHTML = `
                     <div>
-                        <strong>${job.filename}</strong>
-                        <div style="font-size: 0.9rem; color: #666;">${job.job_id}</div>
+                        <div class="font-medium text-slate-900 text-sm">${job.filename}</div>
+                        <div class="text-xs text-slate-400">${job.job_id}</div>
                     </div>
-                    <div class="job-status ${job.status}" id="status-${job.job_id}">${job.status}</div>
+                    <span id="status-${job.job_id}" class="px-3 py-1 rounded-full text-xs font-semibold uppercase ${statusColors[job.status] || statusColors.queued}">${job.status}</span>
                 `;
                 batchJobsList.appendChild(jobElement);
             });
@@ -1189,18 +678,24 @@
         function startBatchMonitoring() {
             const batchInterval = setInterval(async () => {
                 let allCompleted = true;
-                
+
                 for (const jobId of batchJobIds) {
                     try {
                         const response = await fetch(`/api/converter/status/${jobId}`);
                         const status = await response.json();
-                        
+
                         const statusElement = document.getElementById(`status-${jobId}`);
                         if (statusElement) {
+                            const statusColors = {
+                                queued: 'bg-amber-100 text-amber-700',
+                                processing: 'bg-blue-100 text-blue-700',
+                                completed: 'bg-emerald-100 text-emerald-700',
+                                error: 'bg-rose-100 text-rose-700'
+                            };
                             statusElement.textContent = status.status;
-                            statusElement.className = `job-status ${status.status}`;
+                            statusElement.className = `px-3 py-1 rounded-full text-xs font-semibold uppercase ${statusColors[status.status] || statusColors.queued}`;
                         }
-                        
+
                         if (status.status !== 'completed' && status.status !== 'error') {
                             allCompleted = false;
                         }
@@ -1208,11 +703,11 @@
                         console.error(`Error checking status for ${jobId}:`, error);
                     }
                 }
-                
+
                 if (allCompleted) {
                     clearInterval(batchInterval);
                     showStatus('Batch processing completed!', 'success');
-                    batchConvertBtn.disabled = false;
+                    document.getElementById('batchConvertBtn').disabled = false;
                 }
             }, 2000);
         }
@@ -1223,14 +718,11 @@
             try {
                 const response = await fetch(`/api/converter/status/${currentJobId}`);
                 const status = await response.json();
-                
-                // Handle authentication requirement
+
                 if (response.status === 401) {
                     clearInterval(statusCheckInterval);
                     showStatus('Session expired. Please log in again.', 'error');
-                    if (status.redirect) {
-                        setTimeout(() => window.location.href = status.redirect, 2000);
-                    }
+                    if (status.redirect) setTimeout(() => window.location.href = status.redirect, 2000);
                     return;
                 }
 
@@ -1243,7 +735,8 @@
                 if (status.status === 'completed') {
                     clearInterval(statusCheckInterval);
                     showStatus(status.message, 'success');
-                    showDownloadSection();
+                    document.getElementById('downloadSection').style.display = 'flex';
+                    document.getElementById('convertBtn').style.display = 'none';
                     resetProgress();
                 } else if (status.status === 'error') {
                     clearInterval(statusCheckInterval);
@@ -1259,18 +752,16 @@
         }
 
         function startQueueMonitoring() {
-            queueStatus.style.display = 'block';
-            
             queueStatusInterval = setInterval(async () => {
                 try {
                     const response = await fetch('/api/converter/queue/status');
                     const stats = await response.json();
-                    
+
                     document.getElementById('totalJobs').textContent = stats.total_jobs;
                     document.getElementById('queuedJobs').textContent = stats.queued;
                     document.getElementById('processingJobs').textContent = stats.processing;
                     document.getElementById('completedJobs').textContent = stats.completed;
-                    
+
                 } catch (error) {
                     console.error('Error fetching queue status:', error);
                 }
@@ -1278,29 +769,26 @@
         }
 
         function updateProgress(percent, message) {
-            progressFill.style.width = `${percent}%`;
-            progressText.textContent = message;
+            document.getElementById('progressFill').style.width = `${percent}%`;
+            document.getElementById('progressText').textContent = message;
         }
 
         function resetProgress() {
-            uploadArea.classList.remove('processing');
-            convertBtn.disabled = false;
-            progressContainer.style.display = 'none';
+            document.getElementById('convertBtn').disabled = false;
+            document.getElementById('progressContainer').style.display = 'none';
             updateProgress(0, 'Preparing conversion...');
         }
 
         function showStatus(message, type) {
-            statusMessage.innerHTML = `<div class="status-message status-${type} fade-in">${message}</div>`;
-            setTimeout(() => {
-                if (type !== 'success') {
-                    statusMessage.innerHTML = '';
-                }
-            }, 5000);
-        }
-
-        function showDownloadSection() {
-            downloadSection.style.display = 'block';
-            downloadSection.classList.add('fade-in');
+            const colors = {
+                success: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+                error: 'bg-rose-50 text-rose-700 border-rose-200',
+                info: 'bg-blue-50 text-blue-700 border-blue-200'
+            };
+            document.getElementById('statusMessage').innerHTML = `<div class="p-4 rounded-xl border ${colors[type] || colors.info} text-sm">${message}</div>`;
+            if (type !== 'success') {
+                setTimeout(() => document.getElementById('statusMessage').innerHTML = '', 5000);
+            }
         }
 
         async function downloadFile() {
@@ -1308,7 +796,7 @@
 
             try {
                 const response = await fetch(`/api/converter/download/${currentJobId}`);
-                
+
                 if (!response.ok) {
                     const error = await response.json();
                     throw new Error(error.error || 'Download failed');
@@ -1332,36 +820,35 @@
         }
 
         function resetForm() {
-            // Clean up current job
             if (currentJobId) {
                 fetch(`/api/converter/cleanup/${currentJobId}`, { method: 'DELETE' });
                 currentJobId = null;
             }
 
-            // Clear intervals
             if (statusCheckInterval) {
                 clearInterval(statusCheckInterval);
                 statusCheckInterval = null;
             }
 
-            // Reset UI
             selectedFile = null;
             selectedBatchFiles = [];
             batchJobIds = [];
             fileInput.value = '';
             batchInput.value = '';
-            fileInfo.style.display = 'none';
+
+            document.getElementById('uploadDefault').style.display = 'flex';
+            document.getElementById('uploadSuccess').style.display = 'none';
+            document.getElementById('fileInfo').style.display = 'none';
             document.getElementById('jpkAnalysis').style.display = 'none';
-            downloadSection.style.display = 'none';
-            batchJobs.style.display = 'none';
-            statusMessage.innerHTML = '';
-            convertBtn.disabled = true;
-            batchConvertBtn.disabled = true;
+            document.getElementById('downloadSection').style.display = 'none';
+            document.getElementById('batchJobs').style.display = 'none';
+            document.getElementById('statusMessage').innerHTML = '';
+            document.getElementById('convertBtn').disabled = true;
+            document.getElementById('convertBtn').style.display = 'block';
+            document.getElementById('batchConvertBtn').disabled = true;
             resetProgress();
 
-            // Reset upload area
-            uploadArea.querySelector('.upload-text').textContent = 'Drop your JPK file here or click to browse';
-            uploadArea.querySelector('.upload-icon').textContent = '📁';
+            lucide.createIcons();
         }
 
         // Cleanup on page unload
@@ -1369,23 +856,13 @@
             if (currentJobId) {
                 navigator.sendBeacon(`/api/converter/cleanup/${currentJobId}`, JSON.stringify({}));
             }
-            if (queueStatusInterval) {
-                clearInterval(queueStatusInterval);
-            }
+            if (queueStatusInterval) clearInterval(queueStatusInterval);
         });
 
-        // Initialize authentication on page load
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
             checkAuthStatus();
-            
-            // Setup login overlay click handler
-            const loginOverlay = document.getElementById('loginOverlay');
-            if (loginOverlay) {
-                loginOverlay.addEventListener('click', (e) => {
-                    e.stopPropagation(); // Prevent triggering the upload area click
-                    window.location.href = '/login';
-                });
-            }
+            startQueueMonitoring();
         });
     </script>
 </body>
