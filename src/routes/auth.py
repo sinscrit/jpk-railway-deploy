@@ -243,10 +243,23 @@ def get_user():
 
 @auth_bp.route('/auth/status')
 def auth_status():
-    """Check authentication status"""
+    """Check authentication status including approval"""
+    from src.routes.admin import is_approved_user, is_admin
+
+    user = session.get('user')
+    if not user:
+        return jsonify({
+            'authenticated': False,
+            'approved': False,
+            'user': None
+        })
+
+    email = user.get('email', '')
     return jsonify({
-        'authenticated': 'user' in session,
-        'user': session.get('user')
+        'authenticated': True,
+        'approved': is_approved_user(email),
+        'is_admin': is_admin(),
+        'user': user
     })
 
 def require_auth(f):

@@ -213,6 +213,89 @@
             color: #764ba2;
         }
 
+        .access-denied-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            z-index: 10;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .access-denied-overlay h3 {
+            color: #dc3545;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .access-denied-overlay p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .request-access-btn {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .request-access-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .request-status {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+        }
+
+        .request-status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .request-status.denied {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .admin-link {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .admin-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.4);
+        }
+
         .upload-icon {
             font-size: 4rem;
             color: #ddd;
@@ -533,6 +616,7 @@
                 <a href="/login" class="login-btn">🔐 Login with Google</a>
             </div>
             <div id="userSection" style="display: none;">
+                <a href="/admin" class="admin-link" id="adminLink" style="display: none;">Admin</a>
                 <div class="user-info">
                     <img id="userAvatar" class="user-avatar" src="" alt="User Avatar">
                     <span id="userName"></span>
@@ -571,6 +655,12 @@
             <div class="login-overlay" id="loginOverlay" style="display: none;">
                 <h3>🔐 Log in first</h3>
                 <p>Please log in with your Google account to use the converter</p>
+            </div>
+            <div class="access-denied-overlay" id="accessDeniedOverlay" style="display: none;">
+                <h3>Access Required</h3>
+                <p id="accessDeniedMessage">Your account is not approved to use the converter.</p>
+                <button class="request-access-btn" id="requestAccessBtn" onclick="requestAccess()">Request Access</button>
+                <div class="request-status" id="requestStatus" style="display: none;"></div>
             </div>
             <div class="upload-icon">📁</div>
             <div class="upload-text">Drop your JPK file here or click to browse</div>
@@ -627,6 +717,9 @@
         // Authentication state
         let currentUser = null;
         let isAuthenticated = false;
+        let isApproved = false;
+        let isAdmin = false;
+        let requestStatus = null;
 
         // Existing variables
         let currentJobId = null;
@@ -640,10 +733,13 @@
             try {
                 const response = await fetch('/auth/status');
                 const data = await response.json();
-                
+
                 isAuthenticated = data.authenticated;
+                isApproved = data.approved;
+                isAdmin = data.is_admin;
                 currentUser = data.user;
-                
+                requestStatus = data.request_status || null;
+
                 updateAuthUI();
             } catch (error) {
                 console.error('Error checking auth status:', error);
@@ -659,9 +755,18 @@
             const userAvatar = document.getElementById('userAvatar');
             const uploadArea = document.getElementById('uploadArea');
             const loginOverlay = document.getElementById('loginOverlay');
+            const accessDeniedOverlay = document.getElementById('accessDeniedOverlay');
+            const accessDeniedMessage = document.getElementById('accessDeniedMessage');
+            const requestAccessBtn = document.getElementById('requestAccessBtn');
+            const requestStatusDiv = document.getElementById('requestStatus');
+            const adminLink = document.getElementById('adminLink');
             const convertBtn = document.getElementById('convertBtn');
             const batchSelectBtn = document.getElementById('batchSelectBtn');
             const batchConvertBtn = document.getElementById('batchConvertBtn');
+
+            // Hide all overlays by default
+            loginOverlay.style.display = 'none';
+            accessDeniedOverlay.style.display = 'none';
 
             if (isAuthenticated && currentUser) {
                 // Show user info
@@ -670,24 +775,97 @@
                 userName.textContent = currentUser.name || currentUser.email;
                 userAvatar.src = currentUser.picture || '/static/default-avatar.png';
                 userAvatar.alt = currentUser.name || 'User';
-                
-                // Enable upload area and buttons
-                uploadArea.classList.remove('disabled');
-                loginOverlay.style.display = 'none';
-                if (convertBtn) convertBtn.disabled = false;
-                if (batchSelectBtn) batchSelectBtn.disabled = false;
-                if (batchConvertBtn) batchConvertBtn.disabled = false;
+
+                // Show admin link if user is admin
+                if (isAdmin) {
+                    adminLink.style.display = 'inline-flex';
+                } else {
+                    adminLink.style.display = 'none';
+                }
+
+                if (isApproved) {
+                    // User is authenticated AND approved - enable everything
+                    uploadArea.classList.remove('disabled');
+                    if (convertBtn) convertBtn.disabled = false;
+                    if (batchSelectBtn) batchSelectBtn.disabled = false;
+                    if (batchConvertBtn) batchConvertBtn.disabled = false;
+                } else {
+                    // User is authenticated but NOT approved - show access denied
+                    uploadArea.classList.add('disabled');
+                    accessDeniedOverlay.style.display = 'flex';
+
+                    // Update message based on request status
+                    if (requestStatus === 'pending') {
+                        accessDeniedMessage.textContent = 'Your access request is pending approval.';
+                        requestAccessBtn.style.display = 'none';
+                        requestStatusDiv.style.display = 'block';
+                        requestStatusDiv.className = 'request-status pending';
+                        requestStatusDiv.textContent = 'Pending - An admin will review your request';
+                    } else if (requestStatus === 'denied') {
+                        accessDeniedMessage.textContent = 'Your access request was denied.';
+                        requestAccessBtn.style.display = 'none';
+                        requestStatusDiv.style.display = 'block';
+                        requestStatusDiv.className = 'request-status denied';
+                        requestStatusDiv.textContent = 'Denied - Contact an administrator';
+                    } else {
+                        accessDeniedMessage.textContent = 'Your account is not approved to use the converter.';
+                        requestAccessBtn.style.display = 'inline-block';
+                        requestStatusDiv.style.display = 'none';
+                    }
+
+                    if (convertBtn) convertBtn.disabled = true;
+                    if (batchSelectBtn) batchSelectBtn.disabled = true;
+                    if (batchConvertBtn) batchConvertBtn.disabled = true;
+                }
             } else {
-                // Show login button
+                // Not authenticated - show login
                 loginSection.style.display = 'block';
                 userSection.style.display = 'none';
-                
-                // Disable upload area, show login overlay, and disable buttons
                 uploadArea.classList.add('disabled');
                 loginOverlay.style.display = 'flex';
                 if (convertBtn) convertBtn.disabled = true;
                 if (batchSelectBtn) batchSelectBtn.disabled = true;
                 if (batchConvertBtn) batchConvertBtn.disabled = true;
+            }
+        }
+
+        // Request access function
+        async function requestAccess() {
+            const btn = document.getElementById('requestAccessBtn');
+            const statusDiv = document.getElementById('requestStatus');
+
+            btn.disabled = true;
+            btn.textContent = 'Requesting...';
+
+            try {
+                const response = await fetch('/api/request-access', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ reason: 'Requesting access to JPK to JSON converter' })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    requestStatus = 'pending';
+                    btn.style.display = 'none';
+                    statusDiv.style.display = 'block';
+                    statusDiv.className = 'request-status pending';
+                    statusDiv.textContent = 'Request submitted! An admin will review your request.';
+                    document.getElementById('accessDeniedMessage').textContent = 'Your access request is pending approval.';
+                } else {
+                    statusDiv.style.display = 'block';
+                    statusDiv.className = 'request-status denied';
+                    statusDiv.textContent = data.error || 'Failed to submit request';
+                    btn.disabled = false;
+                    btn.textContent = 'Request Access';
+                }
+            } catch (error) {
+                statusDiv.style.display = 'block';
+                statusDiv.className = 'request-status denied';
+                statusDiv.textContent = 'Error: ' + error.message;
+                btn.disabled = false;
+                btn.textContent = 'Request Access';
             }
         }
         let queueStatusInterval = null;
@@ -911,13 +1089,21 @@
                 });
 
                 const result = await response.json();
-                
+
                 // Handle authentication requirement
                 if (response.status === 401) {
                     showStatus('Please log in to use the converter', 'error');
                     if (result.redirect) {
                         window.location.href = result.redirect;
                     }
+                    return;
+                }
+
+                // Handle access denied (not approved)
+                if (response.status === 403) {
+                    showStatus(result.message || 'Access denied. Please request access.', 'error');
+                    isApproved = false;
+                    updateAuthUI();
                     return;
                 }
 

@@ -12,6 +12,7 @@ from src.models.user import db, PageLoadLog
 from src.routes.user import user_bp
 from src.routes.flask_async_converter import flask_async_converter_bp
 from src.routes.auth import auth_bp
+from src.routes.admin import admin_bp
 
 def validate_converter_on_startup():
     """Validate converter functionality during app startup"""
@@ -64,6 +65,7 @@ Session(app)
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(flask_async_converter_bp, url_prefix='/api/converter')
 app.register_blueprint(auth_bp)
+app.register_blueprint(admin_bp)
 
 # uncomment if you need to use database
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
@@ -126,4 +128,5 @@ if __name__ == '__main__':
     print("🚀 Starting Asynchronous JPK to JSON Converter Service...")
     print("📊 Thread pool executor ready for concurrent processing")
     print("✅ Service configured for high-performance async operations")
-    app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

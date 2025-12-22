@@ -18,6 +18,60 @@ class User(db.Model):
             'email': self.email
         }
 
+class ApprovedUser(db.Model):
+    """Users who are approved to use the converter"""
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    name = db.Column(db.String(255), nullable=True)
+    is_admin = db.Column(db.Boolean, default=False, nullable=False)
+    is_active = db.Column(db.Boolean, default=True, nullable=False)
+    approved_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    approved_by = db.Column(db.String(120), nullable=True)  # Admin who approved
+    notes = db.Column(db.Text, nullable=True)  # Admin notes
+    max_conversions_per_day = db.Column(db.Integer, default=50, nullable=False)
+
+    def __repr__(self):
+        return f'<ApprovedUser {self.email}>'
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'email': self.email,
+            'name': self.name,
+            'is_admin': self.is_admin,
+            'is_active': self.is_active,
+            'approved_at': self.approved_at.isoformat() if self.approved_at else None,
+            'approved_by': self.approved_by,
+            'notes': self.notes,
+            'max_conversions_per_day': self.max_conversions_per_day
+        }
+
+class AccessRequest(db.Model):
+    """Pending access requests from users"""
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    name = db.Column(db.String(255), nullable=True)
+    requested_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    reason = db.Column(db.Text, nullable=True)  # Why they need access
+    status = db.Column(db.String(20), default='pending', nullable=False)  # pending, approved, denied
+    reviewed_at = db.Column(db.DateTime, nullable=True)
+    reviewed_by = db.Column(db.String(120), nullable=True)
+
+    def __repr__(self):
+        return f'<AccessRequest {self.email} {self.status}>'
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'email': self.email,
+            'name': self.name,
+            'requested_at': self.requested_at.isoformat() if self.requested_at else None,
+            'reason': self.reason,
+            'status': self.status,
+            'reviewed_at': self.reviewed_at.isoformat() if self.reviewed_at else None,
+            'reviewed_by': self.reviewed_by
+        }
+
 class ConversionLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     job_id = db.Column(db.String(36), unique=True, nullable=False)

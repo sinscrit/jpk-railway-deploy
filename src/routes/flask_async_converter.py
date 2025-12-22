@@ -133,6 +133,33 @@ def require_auth(f):
         return f(*args, **kwargs)
     return decorated_function
 
+def require_approved(f):
+    """Decorator that requires user to be both authenticated AND approved"""
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'user' not in session:
+            return jsonify({
+                'error': 'Authentication required',
+                'message': 'Please log in to use this service',
+                'redirect': '/login'
+            }), 401
+
+        # Check if user is approved
+        from src.routes.admin import is_approved_user
+        user = session.get('user')
+        email = user.get('email', '') if user else ''
+
+        if not is_approved_user(email):
+            return jsonify({
+                'error': 'Access denied',
+                'message': 'Your account is not approved to use the converter. Please request access.',
+                'approved': False,
+                'redirect': '/request-access'
+            }), 403
+
+        return f(*args, **kwargs)
+    return decorated_function
+
 def get_client_ip():
     """Get client IP address, handling proxies"""
     if request.headers.get('X-Forwarded-For'):
@@ -317,7 +344,7 @@ def run_conversion_sync(job_id, input_path, output_path, input_filename, input_f
                 print(f"🗑️ Cleaned up input file: {input_path}")
 
 @flask_async_converter_bp.route('/upload', methods=['POST'])
-@require_auth
+@require_approved
 @rate_limit(max_requests=5, window_seconds=60)  # 5 uploads per minute
 def upload_file():
     """Handle file upload and start asynchronous conversion"""
@@ -385,7 +412,7 @@ def upload_file():
 
 
 @flask_async_converter_bp.route('/analyze', methods=['POST'])
-@require_auth
+@require_approved
 @rate_limit(max_requests=10, window_seconds=60)  # 10 analyses per minute
 def analyze_file():
     """
@@ -525,7 +552,7 @@ def get_queue_status():
     })
 
 @flask_async_converter_bp.route('/batch/upload', methods=['POST'])
-@require_auth
+@require_approved
 def batch_upload():
     """Handle multiple file uploads for batch processing"""
     try:
