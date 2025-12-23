@@ -67,8 +67,17 @@ app.register_blueprint(flask_async_converter_bp, url_prefix='/api/converter')
 app.register_blueprint(auth_bp)
 app.register_blueprint(admin_bp)
 
-# uncomment if you need to use database
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(os.path.dirname(__file__), 'database', 'app.db')}"
+# Database configuration - use /tmp for Railway (ephemeral), local path for development
+if os.getenv('RAILWAY_ENVIRONMENT'):
+    # Railway: use /tmp which is writable
+    db_path = '/tmp/app.db'
+else:
+    # Local development: use local database folder
+    db_dir = os.path.join(os.path.dirname(__file__), 'database')
+    os.makedirs(db_dir, exist_ok=True)
+    db_path = os.path.join(db_dir, 'app.db')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 with app.app_context():
