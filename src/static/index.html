@@ -63,8 +63,23 @@
             </div>
         </header>
 
-        <!-- Content Area -->
-        <div class="p-8 space-y-6">
+        <!-- Access Denied Section (shown when user is not authenticated or not approved) -->
+        <div id="accessDeniedSection" style="display: none;" class="p-8">
+            <div class="flex flex-col items-center justify-center py-16 text-center">
+                <div id="accessDeniedIcon" class="w-20 h-20 bg-rose-100 text-rose-400 rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="shield-x" class="w-10 h-10"></i>
+                </div>
+                <h2 id="accessDeniedTitle" class="text-2xl font-semibold text-slate-900 mb-3">Access Required</h2>
+                <p id="accessDeniedSectionMessage" class="text-base text-slate-500 mb-6 max-w-sm">Your account is not approved to use the converter.</p>
+                <button id="requestAccessSectionBtn" onclick="requestAccess()" class="bg-[#F36C21] hover:bg-[#e05a10] text-white px-8 py-3 rounded-xl text-base font-semibold transition-colors duration-200">
+                    Request Access
+                </button>
+                <div id="requestSectionStatus" style="display: none;" class="mt-4 px-4 py-2 rounded-lg text-sm"></div>
+            </div>
+        </div>
+
+        <!-- Main Content Area (hidden when user is not approved) -->
+        <div id="mainContent" class="p-8 space-y-6">
 
             <!-- Title -->
             <div class="text-center space-y-1">
@@ -97,24 +112,6 @@
 
             <!-- Upload Area -->
             <div id="uploadArea" class="relative group cursor-pointer">
-                <!-- Login Overlay -->
-                <div id="loginOverlay" style="display: none;" class="absolute inset-0 bg-white/95 rounded-xl flex flex-col items-center justify-center z-10 cursor-pointer">
-                    <i data-lucide="lock" class="w-10 h-10 text-[#F36C21] mb-3"></i>
-                    <h3 class="text-lg font-semibold text-slate-900 mb-1">Log in first</h3>
-                    <p class="text-sm text-slate-500">Please log in with your Google account to use the converter</p>
-                </div>
-
-                <!-- Access Denied Overlay -->
-                <div id="accessDeniedOverlay" style="display: none;" class="absolute inset-0 bg-white/98 rounded-xl flex flex-col items-center justify-center z-10 p-6 text-center">
-                    <i data-lucide="shield-x" class="w-10 h-10 text-rose-500 mb-3"></i>
-                    <h3 class="text-lg font-semibold text-slate-900 mb-1">Access Required</h3>
-                    <p id="accessDeniedMessage" class="text-sm text-slate-500 mb-4">Your account is not approved to use the converter.</p>
-                    <button id="requestAccessBtn" onclick="requestAccess()" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-                        Request Access
-                    </button>
-                    <div id="requestStatus" style="display: none;" class="mt-3 px-4 py-2 rounded-lg text-sm"></div>
-                </div>
-
                 <!-- Default Upload State -->
                 <div id="uploadDefault" class="border-2 border-dashed border-slate-200 rounded-xl p-10 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-[#F36C21] hover:bg-slate-50/50">
                     <div class="w-14 h-14 bg-slate-100 text-slate-400 rounded-xl flex items-center justify-center mb-4">
@@ -219,7 +216,8 @@
                 </div>
             </div>
 
-        </div>
+        </div><!-- End of mainContent -->
+
     </main>
 
     <script>
@@ -271,22 +269,15 @@
             const userSection = document.getElementById('userSection');
             const userName = document.getElementById('userName');
             const userInitials = document.getElementById('userInitials');
-            const loginOverlay = document.getElementById('loginOverlay');
-            const accessDeniedOverlay = document.getElementById('accessDeniedOverlay');
-            const accessDeniedMessage = document.getElementById('accessDeniedMessage');
-            const requestAccessBtn = document.getElementById('requestAccessBtn');
-            const requestStatusDiv = document.getElementById('requestStatus');
             const adminLink = document.getElementById('adminLink');
-            const convertBtn = document.getElementById('convertBtn');
-            const batchSelectBtn = document.getElementById('batchSelectBtn');
-            const batchConvertBtn = document.getElementById('batchConvertBtn');
-
-            // Hide all overlays by default
-            loginOverlay.style.display = 'none';
-            accessDeniedOverlay.style.display = 'none';
+            const mainContent = document.getElementById('mainContent');
+            const accessDeniedSection = document.getElementById('accessDeniedSection');
+            const accessDeniedSectionMessage = document.getElementById('accessDeniedSectionMessage');
+            const requestAccessSectionBtn = document.getElementById('requestAccessSectionBtn');
+            const requestSectionStatus = document.getElementById('requestSectionStatus');
 
             if (isAuthenticated && currentUser) {
-                // Show user info
+                // Show user info in header
                 loginSection.style.display = 'none';
                 userSection.style.display = 'flex';
                 userName.textContent = currentUser.name || currentUser.email;
@@ -300,37 +291,55 @@
                 adminLink.style.display = isAdmin ? 'inline-flex' : 'none';
 
                 if (isApproved) {
-                    // User is authenticated AND approved
-                    uploadArea.classList.remove('pointer-events-none', 'opacity-50');
+                    // User is authenticated AND approved - show main content
+                    mainContent.style.display = 'block';
+                    accessDeniedSection.style.display = 'none';
                 } else {
-                    // User is authenticated but NOT approved
-                    uploadArea.classList.add('pointer-events-none', 'opacity-50');
-                    accessDeniedOverlay.style.display = 'flex';
+                    // User is authenticated but NOT approved - show access denied, hide everything else
+                    mainContent.style.display = 'none';
+                    accessDeniedSection.style.display = 'block';
+
+                    // Update icon and title for access denied state
+                    const accessDeniedIcon = document.getElementById('accessDeniedIcon');
+                    const accessDeniedTitle = document.getElementById('accessDeniedTitle');
+                    accessDeniedIcon.className = 'w-20 h-20 bg-rose-100 text-rose-400 rounded-full flex items-center justify-center mb-6';
+                    accessDeniedIcon.innerHTML = '<i data-lucide="shield-x" class="w-10 h-10"></i>';
+                    accessDeniedTitle.textContent = 'Access Required';
 
                     if (requestStatus === 'pending') {
-                        accessDeniedMessage.textContent = 'Your access request is pending approval.';
-                        requestAccessBtn.style.display = 'none';
-                        requestStatusDiv.style.display = 'block';
-                        requestStatusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
-                        requestStatusDiv.textContent = 'Pending - An admin will review your request';
+                        accessDeniedSectionMessage.textContent = 'Your access request is pending approval.';
+                        requestAccessSectionBtn.style.display = 'none';
+                        requestSectionStatus.style.display = 'block';
+                        requestSectionStatus.className = 'mt-4 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
+                        requestSectionStatus.textContent = 'Pending - An admin will review your request';
                     } else if (requestStatus === 'denied') {
-                        accessDeniedMessage.textContent = 'Your access request was denied.';
-                        requestAccessBtn.style.display = 'none';
-                        requestStatusDiv.style.display = 'block';
-                        requestStatusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
-                        requestStatusDiv.textContent = 'Denied - Contact an administrator';
+                        accessDeniedSectionMessage.textContent = 'Your access request was denied.';
+                        requestAccessSectionBtn.style.display = 'none';
+                        requestSectionStatus.style.display = 'block';
+                        requestSectionStatus.className = 'mt-4 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
+                        requestSectionStatus.textContent = 'Denied - Contact an administrator';
                     } else {
-                        accessDeniedMessage.textContent = 'Your account is not approved to use the converter.';
-                        requestAccessBtn.style.display = 'inline-block';
-                        requestStatusDiv.style.display = 'none';
+                        accessDeniedSectionMessage.textContent = 'Your account is not approved to use the converter.';
+                        requestAccessSectionBtn.style.display = 'inline-block';
+                        requestSectionStatus.style.display = 'none';
                     }
                 }
             } else {
-                // Not authenticated
+                // Not authenticated - show login prompt in access denied section
                 loginSection.style.display = 'block';
                 userSection.style.display = 'none';
-                uploadArea.classList.add('pointer-events-none', 'opacity-50');
-                loginOverlay.style.display = 'flex';
+                mainContent.style.display = 'none';
+                accessDeniedSection.style.display = 'block';
+
+                // Update icon and title for login state
+                const accessDeniedIcon = document.getElementById('accessDeniedIcon');
+                const accessDeniedTitle = document.getElementById('accessDeniedTitle');
+                accessDeniedIcon.className = 'w-20 h-20 bg-orange-100 text-[#F36C21] rounded-full flex items-center justify-center mb-6';
+                accessDeniedIcon.innerHTML = '<i data-lucide="log-in" class="w-10 h-10"></i>';
+                accessDeniedTitle.textContent = 'Login Required';
+                accessDeniedSectionMessage.textContent = 'Please log in with your Google account to use the converter.';
+                requestAccessSectionBtn.style.display = 'none';
+                requestSectionStatus.style.display = 'none';
             }
 
             lucide.createIcons();
@@ -338,8 +347,9 @@
 
         // Request access function
         async function requestAccess() {
-            const btn = document.getElementById('requestAccessBtn');
-            const statusDiv = document.getElementById('requestStatus');
+            const btn = document.getElementById('requestAccessSectionBtn');
+            const statusDiv = document.getElementById('requestSectionStatus');
+            const messageDiv = document.getElementById('accessDeniedSectionMessage');
 
             btn.disabled = true;
             btn.textContent = 'Requesting...';
@@ -357,19 +367,19 @@
                     requestStatus = 'pending';
                     btn.style.display = 'none';
                     statusDiv.style.display = 'block';
-                    statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
+                    statusDiv.className = 'mt-4 px-4 py-2 rounded-lg text-sm bg-amber-100 text-amber-700';
                     statusDiv.textContent = 'Request submitted! An admin will review your request.';
-                    document.getElementById('accessDeniedMessage').textContent = 'Your access request is pending approval.';
+                    messageDiv.textContent = 'Your access request is pending approval.';
                 } else {
                     statusDiv.style.display = 'block';
-                    statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
+                    statusDiv.className = 'mt-4 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
                     statusDiv.textContent = data.error || 'Failed to submit request';
                     btn.disabled = false;
                     btn.textContent = 'Request Access';
                 }
             } catch (error) {
                 statusDiv.style.display = 'block';
-                statusDiv.className = 'mt-3 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
+                statusDiv.className = 'mt-4 px-4 py-2 rounded-lg text-sm bg-rose-100 text-rose-700';
                 statusDiv.textContent = 'Error: ' + error.message;
                 btn.disabled = false;
                 btn.textContent = 'Request Access';
@@ -378,13 +388,7 @@
 
         // File upload handling
         uploadArea.addEventListener('click', (e) => {
-            if (e.target.closest('#loginOverlay')) {
-                window.location.href = '/login';
-                return;
-            }
-            if (!e.target.closest('#accessDeniedOverlay')) {
-                fileInput.click();
-            }
+            fileInput.click();
         });
 
         uploadArea.addEventListener('dragover', (e) => {
