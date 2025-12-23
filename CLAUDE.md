@@ -3,7 +3,7 @@
 ## Quick Reference
 
 ### Local Development
-- **Local URL**: http://localhost:8080/
+- **Local URL**: http://localhost:8000/
 - **Framework**: Flask (Python 3.11)
 - **Entry Point**: `src/main.py` or `app.py`
 
@@ -64,10 +64,10 @@ A high-performance asynchronous web service for converting Jitterbit JPK files t
 
 ```bash
 # Default command
-PORT=8080 python src/main.py
+PORT=8000 python src/main.py
 
 # Or via gunicorn
-gunicorn --bind 0.0.0.0:8080 --workers 1 --threads 4 --timeout 600 wsgi:app
+gunicorn --bind 0.0.0.0:8000 --workers 1 --threads 4 --timeout 600 wsgi:app
 ```
 
 ## Testing
@@ -75,3 +75,5 @@ gunicorn --bind 0.0.0.0:8080 --workers 1 --threads 4 --timeout 600 wsgi:app
 - Test files available in `baseline/` directory
 - Conversion parity tests: `python test_conversion_parity.py`
 - Deployment validation: `python deployment_check.py`
+- Always use the design skills when you change the UI
+- always validate first before considering deployment to remote
