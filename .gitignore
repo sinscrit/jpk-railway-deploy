@@ -65,6 +65,7 @@ config/*_config.json
 config/secrets.json
 
 # Test and output files (temporary/generated)
+# Note: j2j_v3_converter config and schema_references are excluded from this rule via force-add
 *output*.json
 *result*.json
 test_*.json

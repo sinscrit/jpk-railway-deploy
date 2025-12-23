@@ -1,0 +1,1477 @@
+{
+  "apis": [],
+  "assets": [
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.52b4a924b166c6ff64c41dd33aefbe0e.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:common_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "768"
+        }
+      ],
+      "compressedContent": "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"
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.7552470ba96f842965d60fc354f29fab.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.faults_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "13468"
+        }
+      ],
+      "compressedContent": "eNrtWm1vozgQ/t5fEfG9gbw0DVHS1ba9SnvqXqWkJ903ZPDQeg8wi02T7q+/4SUJEAIkadp0df2wasF+/MwzM/Yw3vGXheu0XiAQjHsTpdPWlBZ4FqfMe5oofz/enQ+VlpDEo8ThHkwUjytfrs7GwnoGl7RwsicmyrOU/khV5/N5e95r8+BJ7WpaR/3n+/0sHqckA0e+Q6TNA/eGBwgVBt7Iwt+MrtYZGt328m17DqaA4IVZINoeSBEyCW2Lu2Uwj69+giRffRx+EN4dCR1ZALSjZ2JnyLmgzkqXRCzRxleCEz8WKBqgLkcvBG0iIpEyYGYo4Q4p3EJMDbl6P0PiMJsBRd854IIncwMyryUJnkD+RVwQPrH28sHVWas1RsIj5vo8kC0vDxYAImAsiWfmr2RzmJCiQrNEoHtuxVMnyg8mJQQmk+tx/d7wUu906Dnt653zvkWG53qn3z+34UKzCAx6tq23Qx8XkMYN9ySxZJuaNiW6Ri1dt61+T+t3Lc0EW7Mt6NiU2m00Q1Exmrebs1dUHckc6PZAI+TS7OjaAEdD19ahPyBd3dYvh0Aam7NzTB/JoMuLi27/UjOJPrCH/a4+uKADdE7vom+jTcTMGYREfAcWmJ4QWzVRromAKdhxRKYxaT1zpJ88SB+lGdFymfdgWWGA2xXucQnCN49JhsnxC76GiwiqFQk0UbIbzGhjkLoHfj34bsg3oZDcnQJGJt2GXRzTHL0ad/XW+PN6Z8rsVxxD1Zwzg3bFfwyIJzC4atcoDEzXGav5MEr/XsceRmNJJHLuAPES4DsGDl3HZYyaTokCH+mvX8QvYYEPo/O3ZWJEl5ItwVxNF/AzxCMbNl8l6KlkCdMX4oSwVCUyzUyor3XOTFXLocfqinHGRLXMxtXTrdJl7LvHUyIr2pbVVzFAFssYCD2Thx6NTriyyLDWa1QExEpjNWtVnkSVPcQUMsCAmigyiDTesK8QE6vTPB3JULfAI843mvUPYmIpluNUnCisgPmyalpTN6zzPp1XdMG4KgGjf6s4FKTcx/6NSVEk7jwpGrjThDqFm+pb2HP+F/kYImcOjw8QuGhFjdHv64+y3Q/1S0/0SMmmUt8SCZ/xuKPI+5G58GHn3S0PTedzShcz/zDhNsrwD0juqhwq8ltn0/ul/S4qnrSEJ6tfVKM+BMU6qVG5urOWy5+zqjx7uzKyyamy30lfryr3nj7jlujwTW+924b4PXQkmyFDS560duXfaSWK5pYvJtr7qFzeaEpYZPtMGztmtjmR9HSjnucUnAO6oqVNjqR1tpQsXWS0fJzrYmRJNutjHPP7r2byQd2hE/vsebsyO9dq++0/F99Ot0+wLZ7mBlgipSQyFEfpy4kY+hYkYU6pBrPsgIq2XHnsillo4a4qKtqdTc1PKRxW7Vmcbrh6eeWYM/UGB2bL30boLlpKnhqUk5UoxMbcnYWmy+QdMgFa0yuu8QRd3kH+MZ0+TJWKXC8VIvcN0MBVkbmfsY4sd9SRUjzPJcnBiuyLL+Bq+/ZfKQ2iVKvNkKat9bW/ti+6rHoOS8tZ6Ef1l0CT624HMotGdwqIyOSrIVYARlKPxdVis7LnnghpfOc0vp83rl8Nw+H839A39qLSGeqHU9hPhB+m4SCQm+KYr6VE3tLttR5IFyhP+5JIOfxo3szWzF5oswXQ5DJqg7bSqHtcBlda6SyLv/RzIrvfbvk0z6jzFh4pBOKpewLp/m4eqE7Ik0+NDfYn7J9x+h+8rs7+Az9bvdU="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.7835cdad547d2a930a00698252622ad2.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.common_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "2644"
+        }
+      ],
+      "compressedContent": "eNqtVF1vm0AQfPevQLybD5ukgGxHaio/Oa2UpmrfrONuca6CO3K3BOff9wATQ2wlxS1P6HaZnZmdY3GzzzPrGZTmUixt3/FsCwSVjIvd0v7xsJ6GtqWRCEYyKWBpC2nfrCYLTR8hJ5b5WOil/YhYxK5bVZVTzR2pdu7M83z3193me9Nnt41xkRFMpcpvpTJQpRIxNW/bmeeH25nTVZ0KEg3qmVPQjgDUJUdwqMzfwqxJmeHDS9FC4Uth+tP6TF8Mead3uoXLQWuyg/FQlWbZqyWtT9oxJS1J0XhTN7hd916zv/GPICqelAhrQ+ELNCoNT/FUkoynHJhZWwY5CBw09MpI1A7wKzG6CkLhUpGriWUtDOmY54VUaIkh4Mh9tvZsJCXY5O83RwSVcDz2BfPwU+T7bMqCyJ8GlITTyA+CaQpXHiVwPU/TyCkLMwC3t1IgoegwloQsCiFIAo/QGQ0j8y1L54R41+Qq8h0jwHZNjA2JIoO9yRA0SkzkG6QN13gPTyVobBS3z0LXR4LC8ag5Pjhv5WT/jdJS1QkSiSwFq43PuehOffswRYExql6KGby0+9civm9Lbm+sO5y7cHu0PxShCyk0jFChID1Squ9DXCmziA6pRv03dj/7cJcSa7wyPyYsdZ/NcB9H573O+YRoMzs9a/3nQ+3/qWvMGhGgAeHxes/mr6U12OFb9c2Wh2sZ4UE3vh1Uvmbv7JTT++W+A/Eu4TMpP8U6ze6H2ruELw5/79XkD66wahs="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.dbfda90dc99fc43042c0bef0fce1fddf.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:relationships_2018_2.lists.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "1384"
+        }
+      ],
+      "compressedContent": "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"
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.ddb8d98e4b40ac2c89491df3aa06a591.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "PossibleRootNodes",
+          "value": "status"
+        },
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:core_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "1764"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.e23e0aa7b1906914e2f9e46a29f978ea.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "IsTopLevel",
+          "value": "0"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:types.core_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "2128"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    },
+    {
+      "path": "jitterbit.netsuite.a07f69ca-fa26-424c-993f-092620b3c94a.upsert_Contact.request.xsd",
+      "type": "xml",
+      "properties": [
+        {
+          "key": "PossibleRootNodes",
+          "value": "upsertListResponse,upsertList,writeResponseList"
+        },
+        {
+          "key": "IsTopLevel",
+          "value": "1"
+        },
+        {
+          "key": "TargetNamespace",
+          "value": "urn:messages_2018_2.platform.webservices.netsuite.com"
+        },
+        {
+          "key": "SchemaType",
+          "value": "netsuite"
+        },
+        {
+          "key": "FileSize",
+          "value": "760"
+        }
+      ],
+      "compressedContent": "eNqzsa/IzVEoSy0qzszPs1Uy1DNQUkjNS85PycxLt1UKDXHTtVCyt7MpTs5IzU3UtwMAbRUO1g=="
+    }
+  ],
+  "project": {
+    "organizationId": "419271",
+    "type": 100,
+    "workflows": [
+      {
+        "name": "sync-salesforce_contacts-to-netsuite_contacts_IS",
+        "operations": [
+          {
+            "id": "d622988f-6525-4829-8c96-3d442bcf8991",
+            "type": 200
+          },
+          {
+            "id": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+            "type": 200,
+            "writeActivity": {
+              "id": "write-activity-2",
+              "type": "write",
+              "endpoint": "salesforce",
+              "operation": "upsert",
+              "enabled": true
+            }
+          },
+          {
+            "id": "bbe41448-8d60-491e-92f4-d1596d786bad",
+            "type": 200,
+            "writeActivity": {
+              "id": "write-activity-3",
+              "type": "write",
+              "endpoint": "salesforce",
+              "operation": "upsert",
+              "enabled": true
+            }
+          },
+          {
+            "id": "92edadeb-a37c-410f-82fd-85335151dfd7",
+            "type": 200
+          },
+          {
+            "id": "1961d810-78d9-4018-a253-26e78eebb6f0",
+            "type": 200,
+            "writeActivity": {
+              "id": "write-activity-5",
+              "type": "write",
+              "endpoint": "salesforce",
+              "operation": "upsert",
+              "enabled": true
+            }
+          },
+          {
+            "id": "5fa4bdfa-3464-4877-b79f-c7e199215fb6",
+            "type": 200
+          },
+          {
+            "id": "6f789012-3456-7890-f012-678901234567",
+            "type": 200
+          }
+        ],
+        "type": 1100,
+        "id": "15e221f0-49c6-4fc3-87bf-a6a57f9ce2ba",
+        "validationState": 100,
+        "requiresDeploy": true,
+        "projectId": "4da0b033-096a-41a2-9258-4af8c12494eb",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "checksum": 735
+      },
+      {
+        "name": "Project Migration Notes",
+        "operations": [
+          {
+            "id": "d622988f-6525-4829-8c96-3d442bcf8991",
+            "type": 200
+          }
+        ],
+        "type": 1100,
+        "id": "8b5c2d1e-9f3a-4b6c-8d7e-1a2b3c4d5e6f",
+        "validationState": 100,
+        "requiresDeploy": true,
+        "projectId": "4da0b033-096a-41a2-9258-4af8f12494eb",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "checksum": 542
+      }
+    ],
+    "isDeleted": 0,
+    "metadataVersion": "1.0.1",
+    "targetEnvironmentId": "503401",
+    "settings": {
+      "aiMinScore": 0.7,
+      "selectedAiModel": "bert",
+      "aiTopEntries": 3,
+      "aiIncludeType": true,
+      "aiModelDescription": "Automapping 1.0",
+      "enableOperationAutoNumber": true
+    },
+    "requireDeployComment": false,
+    "requireDeployTag": false,
+    "ignoreHTTPTargetTargetValidation": false,
+    "disableScriptParser": false,
+    "name": "sync-salesforce_contacts-to-netsuite_contacts (2)",
+    "description": "sync-salesforce_contacts-to-netsuite_contacts (2).jpk",
+    "checksum": "135",
+    "encryptedAtRest": true,
+    "appliedDataMigrations": [
+      "StandaloneWorkflowMigration",
+      "RepairMigratedProjectMigration",
+      "ConvertStepObjectsToStepReferencesMigration",
+      "AddGlobalVariablesToTransformationScriptsMigration",
+      "DeleteSourcepathsVariablepathsFromRulesMigration",
+      "AddActivityPolarityMigration",
+      "FixApiPolarityMigration",
+      "DeleteLoopSubmappingsMigration",
+      "FilebasedActivityMigration",
+      "GlobalVariableEndpointMigration",
+      "RedoScriptComponentReferencesMigration",
+      "FtpEndpointEncryptChoiceMigration",
+      "ScriptTransMigration",
+      "AddSourceUsersToDocumentsMigration",
+      "GlobalVariableEndpointToEndpointsMigration",
+      "DesignComponentDocumentsMigration",
+      "SFTransformationMappingMigration",
+      "MoveLastDeployedInformationToPrjSummaryMigration",
+      "DesignComponentSplitMigration",
+      "SchemaTypeNodeRenameMigration",
+      "RestoreDeletedTransformationPropertiesMigration",
+      "HttpUrlMigration",
+      "SfdcBulkPatternTypeMigration",
+      "SFManualQueryMigration",
+      "NetsuitePropertiesCleanupMigration",
+      "SaveHarmonyProjectIdMigration",
+      "RemoveEncryptionMigration",
+      "DesignComponentEncryptPasswordMigration",
+      "DesignComponentMigration",
+      "SampleDocumentTypeMigration",
+      "AddTagComponentTypeMigration",
+      "TransformationSourceTargetMigration",
+      "JiraCreateUpdateGenericRootNameMigration",
+      "PatchTransformationSourceTargetMigration",
+      "TransformationAugmentationMigration"
+    ],
+    "appliedPostDataMigrations": [
+      "TransformationRuleMigration",
+      "OperationValidationMigration",
+      "ScriptSyntaxMigration",
+      "EmailContentMigration",
+      "ProjectMetadataMigration",
+      "AdapterValidationMigration"
+    ],
+    "id": "199f3acc-09fe-430d-92bb-4ad8f823e2f7",
+    "createdOn": 1756415614886,
+    "harmonyProjectId": 3211450,
+    "validationState": 400,
+    "adapterIds": [
+      "228",
+      "6601",
+      "8001",
+      "12801",
+      "12901",
+      "ftp",
+      "http",
+      "salesforce",
+      "tempstorage"
+    ],
+    "recentlyDeletedComponents": [],
+    "tags": [],
+    "requiresDeploy": true,
+    "components": [
+      {
+        "name": "jb.salesforce.query.erp",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 500
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 700
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 500
+          },
+          {
+            "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+            "type": 700
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "d622988f-6525-4829-8c96-3d442bcf8991",
+        "checksum": "4",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.update.erp",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 500
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 700
+          },
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 500
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+            "id": "f7f37f1c-5010-4162-a299-467bacab38cc"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+        "checksum": "12",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": false,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.create.erp",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+            "id": "739b2e00-9a2c-46ce-9f88-35fdba53e1ce"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "bbe41448-8d60-491e-92f4-d1596d786bad",
+        "checksum": "6",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.sync.erp",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 400
+          },
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 400
+          },
+          {
+            "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "92edadeb-a37c-410f-82fd-85335151dfd7",
+        "checksum": "7",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.process.erp",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          },
+          {
+            "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+            "type": 400
+          },
+          {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "type": 400
+          }
+        ],
+        "outcomes": [
+          {
+            "outcomeType": 200,
+            "operationId": "44bc142f-ddec-4d5f-8fab-424e22b6418d",
+            "id": "c649e7d8-fcba-4c97-afc2-9ea3add33aec"
+          }
+        ],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "1961d810-78d9-4018-a253-26e78eebb6f0",
+        "checksum": "9",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.transform.erp",
+        "steps": [
+          {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "5fa4bdfa-3464-4877-b79f-c7e199215fb6",
+        "checksum": "3",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "jb.salesforce.validate.erp",
+        "steps": [
+          {
+            "id": "8623f0e1-b49b-4b0e-9e84-32c59a6d814a",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "6f789012-3456-7890-f012-678901234567",
+        "checksum": "2",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true,
+        "parentStepId": null
+      },
+      {
+        "name": "jb.salesforce.cleanup.erp",
+        "steps": [
+          {
+            "id": "92681677-c51b-4db4-b906-527e117e65d5",
+            "type": 400
+          }
+        ],
+        "outcomes": [],
+        "options": {
+          "timeoutValue": 2,
+          "timeoutMultiplier": 3600,
+          "timeoutUnit": "HOURS",
+          "logLevel": "Everything",
+          "debugModeEnabled": false,
+          "debug_mode_until": "",
+          "AlwaysRunSuccessOperation": 0,
+          "enableChunking": false,
+          "chunk_size": 0,
+          "target_chunk_size": 0,
+          "max_number_of_threads": 1,
+          "source_chunk_node": "",
+          "target_chunk_node": "",
+          "validate_source_text_file": 0,
+          "schedule_policy": "skip_if_running"
+        },
+        "validationState": 100,
+        "type": 200,
+        "operationType": 3,
+        "isNew": false,
+        "id": "78901234-5678-9012-0123-789012345678",
+        "checksum": "3",
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "hidden": false,
+        "chunks": 1,
+        "partial": false,
+        "requiresDeploy": true
+      },
+      {
+        "name": "Run Canonical to Target",
+        "type": 400,
+        "id": "51b4d55a-0dda-4c74-9a72-8c8fefe258a0",
+        "scriptBody": "<trans>\n$DataErrorFilename = 'Data_Error_' +GUID();\n$SummaryLogFilename = 'Summary_Log_' + GUID();\n$SuccessesCountFilename = 'Success_Count_' + GUID();\n$FailureCountFilename = 'Failure_Count_' + GUID();\n\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$DataErrorFilename = 'Data_Error_' +GUID();\n$SummaryLogFilename = 'Summary_Log_' + GUID();\n$SuccessesCountFilename = 'Success_Count_' + GUID();\n$FailureCountFilename = 'Failure_Count_' + GUID();\n\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "DataErrorFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "FailureCountFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SuccessesCountFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SummaryLogFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "3",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Format Batch Log Files",
+        "type": 400,
+        "id": "4126c457-d028-4eb8-a59a-a7e70de79c65",
+        "scriptBody": "<trans>\n// Format Batch Log Files - Comprehensive Processing System\n// Initialize processing environment\n$startTime = Now();\n$processingId = GUID();\nWriteToOperationLog(\"=== BATCH LOG PROCESSING STARTED ===\");\nWriteToOperationLog(\"Processing ID: \" + $processingId);\nWriteToOperationLog(\"Start Time: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Define log file categories and their processing rules\n$logFileCategories = {};\n$logFileCategories[\"summary\"] = {\n    \"path\": $SummaryLogPath,\n    \"type\": \"SUMMARY\",\n    \"priority\": 1,\n    \"format\": \"XML\",\n    \"retention\": 30,\n    \"compression\": true\n};\n$logFileCategories[\"success\"] = {\n    \"path\": $SuccessCountPath,\n    \"type\": \"METRICS\",\n    \"priority\": 2,\n    \"format\": \"JSON\",\n    \"retention\": 90,\n    \"compression\": false\n};\n$logFileCategories[\"failure\"] = {\n    \"path\": $FailureCountPath,\n    \"type\": \"METRICS\",\n    \"priority\": 1,\n    \"format\": \"JSON\",\n    \"retention\": 180,\n    \"compression\": false\n};\n$logFileCategories[\"error\"] = {\n    \"path\": $DataErrorPath,\n    \"type\": \"ERROR\",\n    \"priority\": 0,\n    \"format\": \"TEXT\",\n    \"retention\": 365,\n    \"compression\": true\n};\n\n// Initialize processing statistics\n$processingStats = {};\n$processingStats[\"totalFiles\"] = 0;\n$processingStats[\"processedFiles\"] = 0;\n$processingStats[\"errorFiles\"] = 0;\n$processingStats[\"totalSize\"] = 0;\n$processingStats[\"compressedSize\"] = 0;\n$processingStats[\"processingErrors\"] = [];\n\n// Process each log file category with comprehensive error handling\n$categoryKeys = Keys($logFileCategories);\nFor($i = 0; $i < Length($categoryKeys); $i = $i + 1,\n    $category = $categoryKeys[$i];\n    $config = $logFileCategories[$category];\n    $filePath = $config[\"path\"];\n    \n    WriteToOperationLog(\"Processing category: \" + $category + \" (Priority: \" + $config[\"priority\"] + \")\");\n    $processingStats[\"totalFiles\"] = $processingStats[\"totalFiles\"] + 1;\n    \n    If(FileExists($filePath),\n        Try(\n            // Read and analyze file\n            $fileContent = ReadFile($filePath);\n            $fileSize = Length($fileContent);\n            $processingStats[\"totalSize\"] = $processingStats[\"totalSize\"] + $fileSize;\n            \n            WriteToOperationLog(\"  \u2713 File found: \" + $filePath);\n            WriteToOperationLog(\"  \u2713 Size: \" + $fileSize + \" bytes\");\n            WriteToOperationLog(\"  \u2713 Format: \" + $config[\"format\"]);\n            \n            // Generate comprehensive file metadata and processing report\n            $metadata = {};\n            $metadata[\"originalSize\"] = $fileSize;\n            $metadata[\"category\"] = $category;\n            $metadata[\"type\"] = $config[\"type\"];\n            $metadata[\"format\"] = $config[\"format\"];\n            $metadata[\"processedAt\"] = FormatDate(Now(), \"yyyy-MM-dd HH:mm:ss\");\n            $metadata[\"processingId\"] = $processingId;\n            $metadata[\"retentionDays\"] = $config[\"retention\"];\n            \n            $processingStats[\"processedFiles\"] = $processingStats[\"processedFiles\"] + 1;\n            \n        , // catch processing errors\n            WriteToOperationLog(\"  \u2717 Processing error: \" + $ERROR);\n            $processingStats[\"errorFiles\"] = $processingStats[\"errorFiles\"] + 1;\n        );\n    , // else file not found\n        WriteToOperationLog(\"  \u26a0 File not found: \" + $filePath);\n        $processingStats[\"errorFiles\"] = $processingStats[\"errorFiles\"] + 1;\n    );\n);\n\n// Generate final processing report\n$endTime = Now();\n$processingDuration = DateDiff($endTime, $startTime, \"seconds\");\n$processingRate = ($processingStats[\"processedFiles\"] / $processingStats[\"totalFiles\"]) * 100;\n\nWriteToOperationLog(\"=== BATCH LOG PROCESSING COMPLETED ===\");\nWriteToOperationLog(\"Duration: \" + $processingDuration + \" seconds\");\nWriteToOperationLog(\"Processing rate: \" + Round($processingRate, 2) + \"%\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Format Batch Log Files - Comprehensive Processing System\n// Initialize processing environment\n$startTime = Now();\n$processingId = GUID();\nWriteToOperationLog(\"=== BATCH LOG PROCESSING STARTED ===\");\nWriteToOperationLog(\"Processing ID: \" + $processingId);\nWriteToOperationLog(\"Start Time: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Define log file categories and their processing rules\n$logFileCategories = {};\n$logFileCategories[\"summary\"] = {\n    \"path\": $SummaryLogPath,\n    \"type\": \"SUMMARY\",\n    \"priority\": 1,\n    \"format\": \"XML\",\n    \"retention\": 30,\n    \"compression\": true\n};\n$logFileCategories[\"success\"] = {\n    \"path\": $SuccessCountPath,\n    \"type\": \"METRICS\",\n    \"priority\": 2,\n    \"format\": \"JSON\",\n    \"retention\": 90,\n    \"compression\": false\n};\n$logFileCategories[\"failure\"] = {\n    \"path\": $FailureCountPath,\n    \"type\": \"METRICS\",\n    \"priority\": 1,\n    \"format\": \"JSON\",\n    \"retention\": 180,\n    \"compression\": false\n};\n$logFileCategories[\"error\"] = {\n    \"path\": $DataErrorPath,\n    \"type\": \"ERROR\",\n    \"priority\": 0,\n    \"format\": \"TEXT\",\n    \"retention\": 365,\n    \"compression\": true\n};\n\n// Initialize processing statistics\n$processingStats = {};\n$processingStats[\"totalFiles\"] = 0;\n$processingStats[\"processedFiles\"] = 0;\n$processingStats[\"errorFiles\"] = 0;\n$processingStats[\"totalSize\"] = 0;\n$processingStats[\"compressedSize\"] = 0;\n$processingStats[\"processingErrors\"] = [];\n\n// Process each log file category with comprehensive error handling\n$categoryKeys = Keys($logFileCategories);\nFor($i = 0; $i < Length($categoryKeys); $i = $i + 1,\n    $category = $categoryKeys[$i];\n    $config = $logFileCategories[$category];\n    $filePath = $config[\"path\"];\n    \n    WriteToOperationLog(\"Processing category: \" + $category + \" (Priority: \" + $config[\"priority\"] + \")\");\n    $processingStats[\"totalFiles\"] = $processingStats[\"totalFiles\"] + 1;\n    \n    If(FileExists($filePath),\n        Try(\n            // Read and analyze file\n            $fileContent = ReadFile($filePath);\n            $fileSize = Length($fileContent);\n            $processingStats[\"totalSize\"] = $processingStats[\"totalSize\"] + $fileSize;\n            \n            WriteToOperationLog(\"  \u2713 File found: \" + $filePath);\n            WriteToOperationLog(\"  \u2713 Size: \" + $fileSize + \" bytes\");\n            WriteToOperationLog(\"  \u2713 Format: \" + $config[\"format\"]);\n            \n            // Generate comprehensive file metadata and processing report\n            $metadata = {};\n            $metadata[\"originalSize\"] = $fileSize;\n            $metadata[\"category\"] = $category;\n            $metadata[\"type\"] = $config[\"type\"];\n            $metadata[\"format\"] = $config[\"format\"];\n            $metadata[\"processedAt\"] = FormatDate(Now(), \"yyyy-MM-dd HH:mm:ss\");\n            $metadata[\"processingId\"] = $processingId;\n            $metadata[\"retentionDays\"] = $config[\"retention\"];\n            \n            $processingStats[\"processedFiles\"] = $processingStats[\"processedFiles\"] + 1;\n            \n        , // catch processing errors\n            WriteToOperationLog(\"  \u2717 Processing error: \" + $ERROR);\n            $processingStats[\"errorFiles\"] = $processingStats[\"errorFiles\"] + 1;\n        );\n    , // else file not found\n        WriteToOperationLog(\"  \u26a0 File not found: \" + $filePath);\n        $processingStats[\"errorFiles\"] = $processingStats[\"errorFiles\"] + 1;\n    );\n);\n\n// Generate final processing report\n$endTime = Now();\n$processingDuration = DateDiff($endTime, $startTime, \"seconds\");\n$processingRate = ($processingStats[\"processedFiles\"] / $processingStats[\"totalFiles\"]) * 100;\n\nWriteToOperationLog(\"=== BATCH LOG PROCESSING COMPLETED ===\");\nWriteToOperationLog(\"Duration: \" + $processingDuration + \" seconds\");\nWriteToOperationLog(\"Processing rate: \" + Round($processingRate, 2) + \"%\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "logsWritten",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "successCount",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "errorCount",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "totalProcessed",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "7",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": {
+          "line": 47,
+          "ch": 16,
+          "sticky": null
+        },
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Logging and Notification Rollup",
+        "type": 400,
+        "id": "7cc98705-7256-4dcb-b26a-abe7e05bec23",
+        "scriptBody": "<trans>\n// Logging and Notification Rollup Script\n// Consolidate all operation logs and prepare email notifications\n\n$currentTime = Now();\n$operationId = GetOperationId();\n$projectName = GetProjectName();\n\n// Initialize rollup variables\n$totalRecordsProcessed = 0;\n$successfulRecords = 0;\n$errorRecords = 0;\n$warningRecords = 0;\n\n// Collect operation statistics\n$operationStats = GetOperationStats();\nIf(IsValid($operationStats),\n    $totalRecordsProcessed = $operationStats[\"totalProcessed\"];\n    $successfulRecords = $operationStats[\"successful\"];\n    $errorRecords = $operationStats[\"errors\"];\n    $warningRecords = $operationStats[\"warnings\"];\n);\n\n// Build comprehensive email message\n$EmailSubject = $projectName + \" - Operation Summary [\" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm\") + \"]\";\n\n$EmailMessage = \"=== OPERATION SUMMARY ===\" + \"\\n\\n\";\n$EmailMessage = $EmailMessage + \"Project: \" + $projectName + \"\\n\";\n$EmailMessage = $EmailMessage + \"Operation ID: \" + $operationId + \"\\n\";\n$EmailMessage = $EmailMessage + \"Execution Time: \" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$EmailMessage = $EmailMessage + \"Source: \" + $SourceIdentifier + \"\\n\";\n$EmailMessage = $EmailMessage + \"Target: \" + $TargetIdentifier + \"\\n\\n\";\n\n$EmailMessage = $EmailMessage + \"=== PROCESSING RESULTS ===\" + \"\\n\";\n$EmailMessage = $EmailMessage + \"Total Records: \" + $totalRecordsProcessed + \"\\n\";\n$EmailMessage = $EmailMessage + \"Successful: \" + $successfulRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Errors: \" + $errorRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Warnings: \" + $warningRecords + \"\\n\";\n\nIf($totalRecordsProcessed > 0,\n    $successRate = ($successfulRecords / $totalRecordsProcessed) * 100;\n    $EmailMessage = $EmailMessage + \"Success Rate: \" + Round($successRate, 2) + \"%\" + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== LOG DETAILS ===\" + \"\\n\";\nIf(Length($email_summary) > 0,\n    $EmailMessage = $EmailMessage + \"Summary Log: \" + $email_summary + \"\\n\";\n);\nIf(Length($email_dataError) > 0,\n    $EmailMessage = $EmailMessage + \"Error Details: \" + $email_dataError + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== END SUMMARY ===\" + \"\\n\";\n\nWriteToOperationLog(\"Logging and Notification Rollup Complete\");\nWriteToOperationLog(\"Email prepared - Subject: \" + $EmailSubject);\nWriteToOperationLog(\"Total records processed: \" + $totalRecordsProcessed);\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Logging and Notification Rollup Script\n// Consolidate all operation logs and prepare email notifications\n\n$currentTime = Now();\n$operationId = GetOperationId();\n$projectName = GetProjectName();\n\n// Initialize rollup variables\n$totalRecordsProcessed = 0;\n$successfulRecords = 0;\n$errorRecords = 0;\n$warningRecords = 0;\n\n// Collect operation statistics\n$operationStats = GetOperationStats();\nIf(IsValid($operationStats),\n    $totalRecordsProcessed = $operationStats[\"totalProcessed\"];\n    $successfulRecords = $operationStats[\"successful\"];\n    $errorRecords = $operationStats[\"errors\"];\n    $warningRecords = $operationStats[\"warnings\"];\n);\n\n// Build comprehensive email message\n$EmailSubject = $projectName + \" - Operation Summary [\" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm\") + \"]\";\n\n$EmailMessage = \"=== OPERATION SUMMARY ===\" + \"\\n\\n\";\n$EmailMessage = $EmailMessage + \"Project: \" + $projectName + \"\\n\";\n$EmailMessage = $EmailMessage + \"Operation ID: \" + $operationId + \"\\n\";\n$EmailMessage = $EmailMessage + \"Execution Time: \" + FormatDate($currentTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$EmailMessage = $EmailMessage + \"Source: \" + $SourceIdentifier + \"\\n\";\n$EmailMessage = $EmailMessage + \"Target: \" + $TargetIdentifier + \"\\n\\n\";\n\n$EmailMessage = $EmailMessage + \"=== PROCESSING RESULTS ===\" + \"\\n\";\n$EmailMessage = $EmailMessage + \"Total Records: \" + $totalRecordsProcessed + \"\\n\";\n$EmailMessage = $EmailMessage + \"Successful: \" + $successfulRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Errors: \" + $errorRecords + \"\\n\";\n$EmailMessage = $EmailMessage + \"Warnings: \" + $warningRecords + \"\\n\";\n\nIf($totalRecordsProcessed > 0,\n    $successRate = ($successfulRecords / $totalRecordsProcessed) * 100;\n    $EmailMessage = $EmailMessage + \"Success Rate: \" + Round($successRate, 2) + \"%\" + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== LOG DETAILS ===\" + \"\\n\";\nIf(Length($email_summary) > 0,\n    $EmailMessage = $EmailMessage + \"Summary Log: \" + $email_summary + \"\\n\";\n);\nIf(Length($email_dataError) > 0,\n    $EmailMessage = $EmailMessage + \"Error Details: \" + $email_dataError + \"\\n\";\n);\n\n$EmailMessage = $EmailMessage + \"\\n=== END SUMMARY ===\" + \"\\n\";\n\nWriteToOperationLog(\"Logging and Notification Rollup Complete\");\nWriteToOperationLog(\"Email prepared - Subject: \" + $EmailSubject);\nWriteToOperationLog(\"Total records processed: \" + $totalRecordsProcessed);\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "EmailMessage",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "EmailSubject",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "SourceIdentifier",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "TargetIdentifier",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "email_dataError",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "email_summary",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "6",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": {
+          "line": 35,
+          "ch": 0,
+          "sticky": null
+        },
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Send Error Email",
+        "type": 400,
+        "id": "d7ac02bb-f2fa-4059-931b-c9b5226186f8",
+        "scriptBody": "<trans>\nSendEmail(\"Error Notification\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nSendEmail(\"Error Notification\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "email_enabled",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Operation",
+        "type": 400,
+        "id": "956e926b-ec6f-424d-923f-4e3960fb288c",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Salesforce Login Url",
+        "type": 400,
+        "id": "a92e98cc-6794-4f1f-87af-e3c3e5ecb7cf",
+        "scriptBody": "<trans>\n$SalesforceLoginUrl = \"https://login.salesforce.com\";\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$SalesforceLoginUrl = \"https://login.salesforce.com\";\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "sf_loginUrl",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "sf_isSandbox",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Canonical to NetSuite",
+        "type": 400,
+        "id": "3e13e949-d67b-462d-99f5-b181338f93b5",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Canonical Contacts to NetStuite Customers</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "5",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Variables",
+        "type": 400,
+        "id": "eba20ede-69c2-47e5-8441-11ec1ecfb885",
+        "scriptBody": "<trans>\n$fileGuid = Guid();\nRunScript(\"<TAG>script:Set Salesforce Login Url</TAG>\");\nRunScript(\"<TAG>script:Set Salesforce Where Clause</TAG>\");\nRunScript(\"<TAG>script:Set Last Modified Date</TAG>\");\n\n\n// set canonical filename for linking to canonical to target half recipe\n$CanonicalFilename = \"canonical_customer_\" + $fileGuid + \".xml\";\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$fileGuid = Guid();\nRunScript(\"<TAG>script:Set Salesforce Login Url</TAG>\");\nRunScript(\"<TAG>script:Set Salesforce Where Clause</TAG>\");\nRunScript(\"<TAG>script:Set Last Modified Date</TAG>\");\n\n\n// set canonical filename for linking to canonical to target half recipe\n$CanonicalFilename = \"canonical_customer_\" + $fileGuid + \".xml\";\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "fileGuid",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "CanonicalFilename",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          }
+        ],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Query Contacts Log",
+        "type": 400,
+        "id": "0dcbd85b-d8d6-4e0c-8fda-bbd88ba3f2c2",
+        "scriptBody": "<trans>\nWriteToOperationLog(ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Salesforce Query Response</TAG>\"))\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Salesforce Query Response</TAG>\"))\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "3",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "On Failure Email",
+        "type": 400,
+        "id": "2d0148b8-efe9-4890-8acb-f278ab7f654c",
+        "scriptBody": "<trans>\n// RQ-136: Enhanced failure notification system with comprehensive error handling\n// Initialize error tracking and notification system\n$startTime = Now();\n$errorId = GUID();\n$failureCount = 0;\n$criticalErrorFlag = false;\n\nWriteToOperationLog(\"=== FAILURE NOTIFICATION SYSTEM ACTIVATED ===\");\nWriteToOperationLog(\"Error ID: \" + $errorId);\nWriteToOperationLog(\"Timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Capture comprehensive error context\n$errorContext = Dict();\n$errorContext[\"errorId\"] = $errorId;\n$errorContext[\"timestamp\"] = $startTime;\n$errorContext[\"operationName\"] = $jitterbit.operation.name;\n$errorContext[\"projectName\"] = $projectName;\n$errorContext[\"environmentName\"] = GetEnvironmentName();\n$errorContext[\"agentName\"] = GetAgentName();\n$errorContext[\"organizationName\"] = GetOrganizationName();\n\n// Get detailed error information\n$lastError = GetLastError();\n$errorContext[\"errorMessage\"] = $lastError;\n$errorContext[\"errorType\"] = \"OPERATION_FAILURE\";\n\n// Determine error severity\nIf(Contains($lastError, \"CRITICAL\") || Contains($lastError, \"FATAL\") || Contains($lastError, \"ABORT\"),\n    $errorContext[\"severity\"] = \"CRITICAL\";\n    $criticalErrorFlag = true;\n    WriteToOperationLog(\"\ud83d\udea8 CRITICAL ERROR DETECTED: \" + $lastError),\n    \n    If(Contains($lastError, \"WARNING\") || Contains($lastError, \"WARN\"),\n        $errorContext[\"severity\"] = \"WARNING\";\n        WriteToOperationLog(\"\u26a0\ufe0f WARNING LEVEL ERROR: \" + $lastError),\n        \n        $errorContext[\"severity\"] = \"ERROR\";\n        WriteToOperationLog(\"\u274c STANDARD ERROR: \" + $lastError)\n    )\n);\n\n// Build comprehensive error report\n$errorReport = \"=== JITTERBIT OPERATION FAILURE REPORT ===\" + \"\\n\\n\";\n$errorReport = $errorReport + \"Error ID: \" + $errorId + \"\\n\";\n$errorReport = $errorReport + \"Timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$errorReport = $errorReport + \"Operation: \" + $jitterbit.operation.name + \"\\n\";\n$errorReport = $errorReport + \"Project: \" + $projectName + \"\\n\";\n$errorReport = $errorReport + \"Environment: \" + GetEnvironmentName() + \"\\n\";\n$errorReport = $errorReport + \"Agent: \" + GetAgentName() + \"\\n\";\n$errorReport = $errorReport + \"Organization: \" + GetOrganizationName() + \"\\n\";\n$errorReport = $errorReport + \"Severity: \" + $errorContext[\"severity\"] + \"\\n\\n\";\n$errorReport = $errorReport + \"ERROR DETAILS:\\n\";\n$errorReport = $errorReport + $lastError + \"\\n\\n\";\n\n// Add system information\n$errorReport = $errorReport + \"SYSTEM INFORMATION:\\n\";\n$errorReport = $errorReport + \"- Memory Usage: \" + GetMemoryUsage() + \" MB\\n\";\n$errorReport = $errorReport + \"- Active Connections: \" + GetActiveConnections() + \"\\n\";\n$errorReport = $errorReport + \"- Operation Runtime: \" + (Now() - $jitterbit.operation.start_time) + \" seconds\\n\\n\";\n\n// Add troubleshooting recommendations\n$errorReport = $errorReport + \"RECOMMENDED ACTIONS:\\n\";\nIf($criticalErrorFlag,\n    $errorReport = $errorReport + \"1. IMMEDIATE: Stop all related operations\\n\";\n    $errorReport = $errorReport + \"2. URGENT: Check system resources and connectivity\\n\";\n    $errorReport = $errorReport + \"3. CRITICAL: Review error logs for root cause\\n\";\n    $errorReport = $errorReport + \"4. ESCALATE: Contact system administrator immediately\\n\",\n    \n    $errorReport = $errorReport + \"1. Review operation configuration\\n\";\n    $errorReport = $errorReport + \"2. Check source/target connectivity\\n\";\n    $errorReport = $errorReport + \"3. Verify data format and mappings\\n\";\n    $errorReport = $errorReport + \"4. Retry operation after resolving issues\\n\"\n);\n\n$errorReport = $errorReport + \"\\nFor support, reference Error ID: \" + $errorId;\n\n// Log the complete error report\nWriteToOperationLog($errorReport);\n\n// Send failure notification email\nIf($email_enabled == true,\n    $emailResult = SendEmail(\"Failure Notification\");\n    If(Length($emailResult) > 0,\n        WriteToOperationLog(\"\u274c Failed to send notification email: \" + $emailResult);\n        $failureCount = $failureCount + 1,\n        WriteToOperationLog(\"\u2705 Failure notification email sent successfully\")\n    ),\n    WriteToOperationLog(\"\ud83d\udce7 Email notifications disabled - skipping email send\")\n);\n\n// Update failure statistics\n$failureCount = $failureCount + 1;\nWriteToOperationLog(\"Total failure notifications processed: \" + $failureCount);\n\n// Set global error state for downstream operations\n$globalErrorState = $errorContext;\n$lastFailureTimestamp = $startTime;\n\nWriteToOperationLog(\"=== FAILURE NOTIFICATION PROCESSING COMPLETE ===\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// RQ-136: Enhanced failure notification system with comprehensive error handling\n// Initialize error tracking and notification system\n$startTime = Now();\n$errorId = GUID();\n$failureCount = 0;\n$criticalErrorFlag = false;\n\nWriteToOperationLog(\"=== FAILURE NOTIFICATION SYSTEM ACTIVATED ===\");\nWriteToOperationLog(\"Error ID: \" + $errorId);\nWriteToOperationLog(\"Timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Capture comprehensive error context\n$errorContext = Dict();\n$errorContext[\"errorId\"] = $errorId;\n$errorContext[\"timestamp\"] = $startTime;\n$errorContext[\"operationName\"] = $jitterbit.operation.name;\n$errorContext[\"projectName\"] = $projectName;\n$errorContext[\"environmentName\"] = GetEnvironmentName();\n$errorContext[\"agentName\"] = GetAgentName();\n$errorContext[\"organizationName\"] = GetOrganizationName();\n\n// Get detailed error information\n$lastError = GetLastError();\n$errorContext[\"errorMessage\"] = $lastError;\n$errorContext[\"errorType\"] = \"OPERATION_FAILURE\";\n\n// Determine error severity\nIf(Contains($lastError, \"CRITICAL\") || Contains($lastError, \"FATAL\") || Contains($lastError, \"ABORT\"),\n    $errorContext[\"severity\"] = \"CRITICAL\";\n    $criticalErrorFlag = true;\n    WriteToOperationLog(\"\ud83d\udea8 CRITICAL ERROR DETECTED: \" + $lastError),\n    \n    If(Contains($lastError, \"WARNING\") || Contains($lastError, \"WARN\"),\n        $errorContext[\"severity\"] = \"WARNING\";\n        WriteToOperationLog(\"\u26a0\ufe0f WARNING LEVEL ERROR: \" + $lastError),\n        \n        $errorContext[\"severity\"] = \"ERROR\";\n        WriteToOperationLog(\"\u274c STANDARD ERROR: \" + $lastError)\n    )\n);\n\n// Build comprehensive error report\n$errorReport = \"=== JITTERBIT OPERATION FAILURE REPORT ===\" + \"\\n\\n\";\n$errorReport = $errorReport + \"Error ID: \" + $errorId + \"\\n\";\n$errorReport = $errorReport + \"Timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\") + \"\\n\";\n$errorReport = $errorReport + \"Operation: \" + $jitterbit.operation.name + \"\\n\";\n$errorReport = $errorReport + \"Project: \" + $projectName + \"\\n\";\n$errorReport = $errorReport + \"Environment: \" + GetEnvironmentName() + \"\\n\";\n$errorReport = $errorReport + \"Agent: \" + GetAgentName() + \"\\n\";\n$errorReport = $errorReport + \"Organization: \" + GetOrganizationName() + \"\\n\";\n$errorReport = $errorReport + \"Severity: \" + $errorContext[\"severity\"] + \"\\n\\n\";\n$errorReport = $errorReport + \"ERROR DETAILS:\\n\";\n$errorReport = $errorReport + $lastError + \"\\n\\n\";\n\n// Add system information\n$errorReport = $errorReport + \"SYSTEM INFORMATION:\\n\";\n$errorReport = $errorReport + \"- Memory Usage: \" + GetMemoryUsage() + \" MB\\n\";\n$errorReport = $errorReport + \"- Active Connections: \" + GetActiveConnections() + \"\\n\";\n$errorReport = $errorReport + \"- Operation Runtime: \" + (Now() - $jitterbit.operation.start_time) + \" seconds\\n\\n\";\n\n// Add troubleshooting recommendations\n$errorReport = $errorReport + \"RECOMMENDED ACTIONS:\\n\";\nIf($criticalErrorFlag,\n    $errorReport = $errorReport + \"1. IMMEDIATE: Stop all related operations\\n\";\n    $errorReport = $errorReport + \"2. URGENT: Check system resources and connectivity\\n\";\n    $errorReport = $errorReport + \"3. CRITICAL: Review error logs for root cause\\n\";\n    $errorReport = $errorReport + \"4. ESCALATE: Contact system administrator immediately\\n\",\n    \n    $errorReport = $errorReport + \"1. Review operation configuration\\n\";\n    $errorReport = $errorReport + \"2. Check source/target connectivity\\n\";\n    $errorReport = $errorReport + \"3. Verify data format and mappings\\n\";\n    $errorReport = $errorReport + \"4. Retry operation after resolving issues\\n\"\n);\n\n$errorReport = $errorReport + \"\\nFor support, reference Error ID: \" + $errorId;\n\n// Log the complete error report\nWriteToOperationLog($errorReport);\n\n// Send failure notification email\nIf($email_enabled == true,\n    $emailResult = SendEmail(\"Failure Notification\");\n    If(Length($emailResult) > 0,\n        WriteToOperationLog(\"\u274c Failed to send notification email: \" + $emailResult);\n        $failureCount = $failureCount + 1,\n        WriteToOperationLog(\"\u2705 Failure notification email sent successfully\")\n    ),\n    WriteToOperationLog(\"\ud83d\udce7 Email notifications disabled - skipping email send\")\n);\n\n// Update failure statistics\n$failureCount = $failureCount + 1;\nWriteToOperationLog(\"Total failure notifications processed: \" + $failureCount);\n\n// Set global error state for downstream operations\n$globalErrorState = $errorContext;\n$lastFailureTimestamp = $startTime;\n\nWriteToOperationLog(\"=== FAILURE NOTIFICATION PROCESSING COMPLETE ===\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "email_enabled",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isHidden": false
+          },
+          {
+            "name": "globalErrorState",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          },
+          {
+            "name": "lastFailureTimestamp",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Variables For Upsert",
+        "type": 400,
+        "id": "269bc544-efef-4790-b265-7b65400f3aa9",
+        "scriptBody": "<trans>\nRunScript(\"<TAG>script:NetSuite Country Dict</TAG>\");\nRunScript(\"<TAG>script:Set Logging Variables</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunScript(\"<TAG>script:NetSuite Country Dict</TAG>\");\nRunScript(\"<TAG>script:Set Logging Variables</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "4",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Last Modified Date",
+        "type": 400,
+        "id": "8b4a8472-21a4-46f5-84b6-ff10a08684aa",
+        "scriptBody": "<trans>\n$LastModifiedDate = Now();\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$LastModifiedDate = Now();\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "NetSuite Country Dict",
+        "type": 400,
+        "id": "716ff8ec-e77e-4ee5-a6d2-66e2204f1c0e",
+        "scriptBody": "<trans>\n// NetSuite Country Dictionary - Complete mapping for international operations\n$CountryDict = {};\n\n// North America\n$CountryDict[\"US\"] = \"United States\";\n$CountryDict[\"CA\"] = \"Canada\";\n$CountryDict[\"MX\"] = \"Mexico\";\n\n// Europe\n$CountryDict[\"GB\"] = \"United Kingdom\";\n$CountryDict[\"DE\"] = \"Germany\";\n$CountryDict[\"FR\"] = \"France\";\n$CountryDict[\"IT\"] = \"Italy\";\n$CountryDict[\"ES\"] = \"Spain\";\n$CountryDict[\"NL\"] = \"Netherlands\";\n$CountryDict[\"BE\"] = \"Belgium\";\n$CountryDict[\"AT\"] = \"Austria\";\n$CountryDict[\"CH\"] = \"Switzerland\";\n$CountryDict[\"SE\"] = \"Sweden\";\n$CountryDict[\"NO\"] = \"Norway\";\n$CountryDict[\"DK\"] = \"Denmark\";\n$CountryDict[\"FI\"] = \"Finland\";\n$CountryDict[\"IE\"] = \"Ireland\";\n$CountryDict[\"PT\"] = \"Portugal\";\n$CountryDict[\"GR\"] = \"Greece\";\n$CountryDict[\"PL\"] = \"Poland\";\n$CountryDict[\"CZ\"] = \"Czech Republic\";\n$CountryDict[\"HU\"] = \"Hungary\";\n$CountryDict[\"SK\"] = \"Slovakia\";\n$CountryDict[\"SI\"] = \"Slovenia\";\n$CountryDict[\"HR\"] = \"Croatia\";\n$CountryDict[\"RO\"] = \"Romania\";\n$CountryDict[\"BG\"] = \"Bulgaria\";\n$CountryDict[\"EE\"] = \"Estonia\";\n$CountryDict[\"LV\"] = \"Latvia\";\n$CountryDict[\"LT\"] = \"Lithuania\";\n$CountryDict[\"LU\"] = \"Luxembourg\";\n$CountryDict[\"MT\"] = \"Malta\";\n$CountryDict[\"CY\"] = \"Cyprus\";\n\n// Asia Pacific\n$CountryDict[\"AU\"] = \"Australia\";\n$CountryDict[\"NZ\"] = \"New Zealand\";\n$CountryDict[\"JP\"] = \"Japan\";\n$CountryDict[\"KR\"] = \"South Korea\";\n$CountryDict[\"CN\"] = \"China\";\n$CountryDict[\"HK\"] = \"Hong Kong\";\n$CountryDict[\"SG\"] = \"Singapore\";\n$CountryDict[\"MY\"] = \"Malaysia\";\n$CountryDict[\"TH\"] = \"Thailand\";\n$CountryDict[\"PH\"] = \"Philippines\";\n$CountryDict[\"ID\"] = \"Indonesia\";\n$CountryDict[\"VN\"] = \"Vietnam\";\n$CountryDict[\"IN\"] = \"India\";\n$CountryDict[\"PK\"] = \"Pakistan\";\n$CountryDict[\"BD\"] = \"Bangladesh\";\n$CountryDict[\"LK\"] = \"Sri Lanka\";\n$CountryDict[\"TW\"] = \"Taiwan\";\n\n// Middle East & Africa\n$CountryDict[\"AE\"] = \"United Arab Emirates\";\n$CountryDict[\"SA\"] = \"Saudi Arabia\";\n$CountryDict[\"IL\"] = \"Israel\";\n$CountryDict[\"TR\"] = \"Turkey\";\n$CountryDict[\"EG\"] = \"Egypt\";\n$CountryDict[\"ZA\"] = \"South Africa\";\n$CountryDict[\"NG\"] = \"Nigeria\";\n$CountryDict[\"KE\"] = \"Kenya\";\n$CountryDict[\"MA\"] = \"Morocco\";\n$CountryDict[\"TN\"] = \"Tunisia\";\n$CountryDict[\"GH\"] = \"Ghana\";\n$CountryDict[\"ET\"] = \"Ethiopia\";\n$CountryDict[\"UG\"] = \"Uganda\";\n$CountryDict[\"TZ\"] = \"Tanzania\";\n$CountryDict[\"ZW\"] = \"Zimbabwe\";\n$CountryDict[\"BW\"] = \"Botswana\";\n$CountryDict[\"ZM\"] = \"Zambia\";\n$CountryDict[\"MW\"] = \"Malawi\";\n$CountryDict[\"MZ\"] = \"Mozambique\";\n$CountryDict[\"AO\"] = \"Angola\";\n$CountryDict[\"CD\"] = \"Democratic Republic of Congo\";\n$CountryDict[\"CM\"] = \"Cameroon\";\n$CountryDict[\"CI\"] = \"Ivory Coast\";\n$CountryDict[\"SN\"] = \"Senegal\";\n$CountryDict[\"ML\"] = \"Mali\";\n$CountryDict[\"BF\"] = \"Burkina Faso\";\n$CountryDict[\"NE\"] = \"Niger\";\n$CountryDict[\"TD\"] = \"Chad\";\n$CountryDict[\"CF\"] = \"Central African Republic\";\n$CountryDict[\"GA\"] = \"Gabon\";\n$CountryDict[\"CG\"] = \"Republic of Congo\";\n$CountryDict[\"GQ\"] = \"Equatorial Guinea\";\n$CountryDict[\"ST\"] = \"Sao Tome and Principe\";\n$CountryDict[\"CV\"] = \"Cape Verde\";\n$CountryDict[\"GM\"] = \"Gambia\";\n$CountryDict[\"GW\"] = \"Guinea-Bissau\";\n$CountryDict[\"GN\"] = \"Guinea\";\n$CountryDict[\"SL\"] = \"Sierra Leone\";\n$CountryDict[\"LR\"] = \"Liberia\";\n\n// South America\n$CountryDict[\"BR\"] = \"Brazil\";\n$CountryDict[\"AR\"] = \"Argentina\";\n$CountryDict[\"CL\"] = \"Chile\";\n$CountryDict[\"PE\"] = \"Peru\";\n$CountryDict[\"CO\"] = \"Colombia\";\n$CountryDict[\"VE\"] = \"Venezuela\";\n$CountryDict[\"EC\"] = \"Ecuador\";\n$CountryDict[\"BO\"] = \"Bolivia\";\n$CountryDict[\"PY\"] = \"Paraguay\";\n$CountryDict[\"UY\"] = \"Uruguay\";\n$CountryDict[\"GY\"] = \"Guyana\";\n$CountryDict[\"SR\"] = \"Suriname\";\n$CountryDict[\"GF\"] = \"French Guiana\";\n\n// Central America & Caribbean\n$CountryDict[\"GT\"] = \"Guatemala\";\n$CountryDict[\"BZ\"] = \"Belize\";\n$CountryDict[\"SV\"] = \"El Salvador\";\n$CountryDict[\"HN\"] = \"Honduras\";\n$CountryDict[\"NI\"] = \"Nicaragua\";\n$CountryDict[\"CR\"] = \"Costa Rica\";\n$CountryDict[\"PA\"] = \"Panama\";\n$CountryDict[\"CU\"] = \"Cuba\";\n$CountryDict[\"JM\"] = \"Jamaica\";\n$CountryDict[\"HT\"] = \"Haiti\";\n$CountryDict[\"DO\"] = \"Dominican Republic\";\n$CountryDict[\"PR\"] = \"Puerto Rico\";\n$CountryDict[\"TT\"] = \"Trinidad and Tobago\";\n$CountryDict[\"BB\"] = \"Barbados\";\n$CountryDict[\"GD\"] = \"Grenada\";\n$CountryDict[\"LC\"] = \"Saint Lucia\";\n$CountryDict[\"VC\"] = \"Saint Vincent and the Grenadines\";\n$CountryDict[\"AG\"] = \"Antigua and Barbuda\";\n$CountryDict[\"KN\"] = \"Saint Kitts and Nevis\";\n$CountryDict[\"DM\"] = \"Dominica\";\n$CountryDict[\"BS\"] = \"Bahamas\";\n\n// Additional regions\n$CountryDict[\"RU\"] = \"Russia\";\n$CountryDict[\"UA\"] = \"Ukraine\";\n$CountryDict[\"BY\"] = \"Belarus\";\n$CountryDict[\"MD\"] = \"Moldova\";\n$CountryDict[\"GE\"] = \"Georgia\";\n$CountryDict[\"AM\"] = \"Armenia\";\n$CountryDict[\"AZ\"] = \"Azerbaijan\";\n$CountryDict[\"KZ\"] = \"Kazakhstan\";\n$CountryDict[\"UZ\"] = \"Uzbekistan\";\n$CountryDict[\"TM\"] = \"Turkmenistan\";\n$CountryDict[\"TJ\"] = \"Tajikistan\";\n$CountryDict[\"KG\"] = \"Kyrgyzstan\";\n$CountryDict[\"MN\"] = \"Mongolia\";\n$CountryDict[\"AF\"] = \"Afghanistan\";\n$CountryDict[\"IR\"] = \"Iran\";\n$CountryDict[\"IQ\"] = \"Iraq\";\n$CountryDict[\"SY\"] = \"Syria\";\n$CountryDict[\"LB\"] = \"Lebanon\";\n$CountryDict[\"JO\"] = \"Jordan\";\n$CountryDict[\"YE\"] = \"Yemen\";\n$CountryDict[\"OM\"] = \"Oman\";\n$CountryDict[\"QA\"] = \"Qatar\";\n$CountryDict[\"BH\"] = \"Bahrain\";\n$CountryDict[\"KW\"] = \"Kuwait\";\n\n// Log country dictionary initialization\nWriteToOperationLog(\"NetSuite Country Dictionary initialized with \" + Length($CountryDict) + \" country mappings\");\nWriteToOperationLog(\"Country dictionary supports international contact synchronization\");\n\n// Validate critical countries are present\nIf(!IsNull($CountryDict[\"US\"]), \n    WriteToOperationLog(\"\u2713 US mapping verified: \" + $CountryDict[\"US\"]),\n    RaiseError(\"Critical error: US country mapping missing from dictionary\")\n);\n\nIf(!IsNull($CountryDict[\"CA\"]), \n    WriteToOperationLog(\"\u2713 CA mapping verified: \" + $CountryDict[\"CA\"]),\n    WriteToOperationLog(\"\u26a0 Warning: CA country mapping not found\")\n);\n\n// Set global variable for use in transformations\n$netsuiteCountryDict = $CountryDict;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// NetSuite Country Dictionary - Complete mapping for international operations\n$CountryDict = {};\n\n// North America\n$CountryDict[\"US\"] = \"United States\";\n$CountryDict[\"CA\"] = \"Canada\";\n$CountryDict[\"MX\"] = \"Mexico\";\n\n// Europe\n$CountryDict[\"GB\"] = \"United Kingdom\";\n$CountryDict[\"DE\"] = \"Germany\";\n$CountryDict[\"FR\"] = \"France\";\n$CountryDict[\"IT\"] = \"Italy\";\n$CountryDict[\"ES\"] = \"Spain\";\n$CountryDict[\"NL\"] = \"Netherlands\";\n$CountryDict[\"BE\"] = \"Belgium\";\n$CountryDict[\"AT\"] = \"Austria\";\n$CountryDict[\"CH\"] = \"Switzerland\";\n$CountryDict[\"SE\"] = \"Sweden\";\n$CountryDict[\"NO\"] = \"Norway\";\n$CountryDict[\"DK\"] = \"Denmark\";\n$CountryDict[\"FI\"] = \"Finland\";\n$CountryDict[\"IE\"] = \"Ireland\";\n$CountryDict[\"PT\"] = \"Portugal\";\n$CountryDict[\"GR\"] = \"Greece\";\n$CountryDict[\"PL\"] = \"Poland\";\n$CountryDict[\"CZ\"] = \"Czech Republic\";\n$CountryDict[\"HU\"] = \"Hungary\";\n$CountryDict[\"SK\"] = \"Slovakia\";\n$CountryDict[\"SI\"] = \"Slovenia\";\n$CountryDict[\"HR\"] = \"Croatia\";\n$CountryDict[\"RO\"] = \"Romania\";\n$CountryDict[\"BG\"] = \"Bulgaria\";\n$CountryDict[\"EE\"] = \"Estonia\";\n$CountryDict[\"LV\"] = \"Latvia\";\n$CountryDict[\"LT\"] = \"Lithuania\";\n$CountryDict[\"LU\"] = \"Luxembourg\";\n$CountryDict[\"MT\"] = \"Malta\";\n$CountryDict[\"CY\"] = \"Cyprus\";\n\n// Asia Pacific\n$CountryDict[\"AU\"] = \"Australia\";\n$CountryDict[\"NZ\"] = \"New Zealand\";\n$CountryDict[\"JP\"] = \"Japan\";\n$CountryDict[\"KR\"] = \"South Korea\";\n$CountryDict[\"CN\"] = \"China\";\n$CountryDict[\"HK\"] = \"Hong Kong\";\n$CountryDict[\"SG\"] = \"Singapore\";\n$CountryDict[\"MY\"] = \"Malaysia\";\n$CountryDict[\"TH\"] = \"Thailand\";\n$CountryDict[\"PH\"] = \"Philippines\";\n$CountryDict[\"ID\"] = \"Indonesia\";\n$CountryDict[\"VN\"] = \"Vietnam\";\n$CountryDict[\"IN\"] = \"India\";\n$CountryDict[\"PK\"] = \"Pakistan\";\n$CountryDict[\"BD\"] = \"Bangladesh\";\n$CountryDict[\"LK\"] = \"Sri Lanka\";\n$CountryDict[\"TW\"] = \"Taiwan\";\n\n// Middle East & Africa\n$CountryDict[\"AE\"] = \"United Arab Emirates\";\n$CountryDict[\"SA\"] = \"Saudi Arabia\";\n$CountryDict[\"IL\"] = \"Israel\";\n$CountryDict[\"TR\"] = \"Turkey\";\n$CountryDict[\"EG\"] = \"Egypt\";\n$CountryDict[\"ZA\"] = \"South Africa\";\n$CountryDict[\"NG\"] = \"Nigeria\";\n$CountryDict[\"KE\"] = \"Kenya\";\n$CountryDict[\"MA\"] = \"Morocco\";\n$CountryDict[\"TN\"] = \"Tunisia\";\n$CountryDict[\"GH\"] = \"Ghana\";\n$CountryDict[\"ET\"] = \"Ethiopia\";\n$CountryDict[\"UG\"] = \"Uganda\";\n$CountryDict[\"TZ\"] = \"Tanzania\";\n$CountryDict[\"ZW\"] = \"Zimbabwe\";\n$CountryDict[\"BW\"] = \"Botswana\";\n$CountryDict[\"ZM\"] = \"Zambia\";\n$CountryDict[\"MW\"] = \"Malawi\";\n$CountryDict[\"MZ\"] = \"Mozambique\";\n$CountryDict[\"AO\"] = \"Angola\";\n$CountryDict[\"CD\"] = \"Democratic Republic of Congo\";\n$CountryDict[\"CM\"] = \"Cameroon\";\n$CountryDict[\"CI\"] = \"Ivory Coast\";\n$CountryDict[\"SN\"] = \"Senegal\";\n$CountryDict[\"ML\"] = \"Mali\";\n$CountryDict[\"BF\"] = \"Burkina Faso\";\n$CountryDict[\"NE\"] = \"Niger\";\n$CountryDict[\"TD\"] = \"Chad\";\n$CountryDict[\"CF\"] = \"Central African Republic\";\n$CountryDict[\"GA\"] = \"Gabon\";\n$CountryDict[\"CG\"] = \"Republic of Congo\";\n$CountryDict[\"GQ\"] = \"Equatorial Guinea\";\n$CountryDict[\"ST\"] = \"Sao Tome and Principe\";\n$CountryDict[\"CV\"] = \"Cape Verde\";\n$CountryDict[\"GM\"] = \"Gambia\";\n$CountryDict[\"GW\"] = \"Guinea-Bissau\";\n$CountryDict[\"GN\"] = \"Guinea\";\n$CountryDict[\"SL\"] = \"Sierra Leone\";\n$CountryDict[\"LR\"] = \"Liberia\";\n\n// South America\n$CountryDict[\"BR\"] = \"Brazil\";\n$CountryDict[\"AR\"] = \"Argentina\";\n$CountryDict[\"CL\"] = \"Chile\";\n$CountryDict[\"PE\"] = \"Peru\";\n$CountryDict[\"CO\"] = \"Colombia\";\n$CountryDict[\"VE\"] = \"Venezuela\";\n$CountryDict[\"EC\"] = \"Ecuador\";\n$CountryDict[\"BO\"] = \"Bolivia\";\n$CountryDict[\"PY\"] = \"Paraguay\";\n$CountryDict[\"UY\"] = \"Uruguay\";\n$CountryDict[\"GY\"] = \"Guyana\";\n$CountryDict[\"SR\"] = \"Suriname\";\n$CountryDict[\"GF\"] = \"French Guiana\";\n\n// Central America & Caribbean\n$CountryDict[\"GT\"] = \"Guatemala\";\n$CountryDict[\"BZ\"] = \"Belize\";\n$CountryDict[\"SV\"] = \"El Salvador\";\n$CountryDict[\"HN\"] = \"Honduras\";\n$CountryDict[\"NI\"] = \"Nicaragua\";\n$CountryDict[\"CR\"] = \"Costa Rica\";\n$CountryDict[\"PA\"] = \"Panama\";\n$CountryDict[\"CU\"] = \"Cuba\";\n$CountryDict[\"JM\"] = \"Jamaica\";\n$CountryDict[\"HT\"] = \"Haiti\";\n$CountryDict[\"DO\"] = \"Dominican Republic\";\n$CountryDict[\"PR\"] = \"Puerto Rico\";\n$CountryDict[\"TT\"] = \"Trinidad and Tobago\";\n$CountryDict[\"BB\"] = \"Barbados\";\n$CountryDict[\"GD\"] = \"Grenada\";\n$CountryDict[\"LC\"] = \"Saint Lucia\";\n$CountryDict[\"VC\"] = \"Saint Vincent and the Grenadines\";\n$CountryDict[\"AG\"] = \"Antigua and Barbuda\";\n$CountryDict[\"KN\"] = \"Saint Kitts and Nevis\";\n$CountryDict[\"DM\"] = \"Dominica\";\n$CountryDict[\"BS\"] = \"Bahamas\";\n\n// Additional regions\n$CountryDict[\"RU\"] = \"Russia\";\n$CountryDict[\"UA\"] = \"Ukraine\";\n$CountryDict[\"BY\"] = \"Belarus\";\n$CountryDict[\"MD\"] = \"Moldova\";\n$CountryDict[\"GE\"] = \"Georgia\";\n$CountryDict[\"AM\"] = \"Armenia\";\n$CountryDict[\"AZ\"] = \"Azerbaijan\";\n$CountryDict[\"KZ\"] = \"Kazakhstan\";\n$CountryDict[\"UZ\"] = \"Uzbekistan\";\n$CountryDict[\"TM\"] = \"Turkmenistan\";\n$CountryDict[\"TJ\"] = \"Tajikistan\";\n$CountryDict[\"KG\"] = \"Kyrgyzstan\";\n$CountryDict[\"MN\"] = \"Mongolia\";\n$CountryDict[\"AF\"] = \"Afghanistan\";\n$CountryDict[\"IR\"] = \"Iran\";\n$CountryDict[\"IQ\"] = \"Iraq\";\n$CountryDict[\"SY\"] = \"Syria\";\n$CountryDict[\"LB\"] = \"Lebanon\";\n$CountryDict[\"JO\"] = \"Jordan\";\n$CountryDict[\"YE\"] = \"Yemen\";\n$CountryDict[\"OM\"] = \"Oman\";\n$CountryDict[\"QA\"] = \"Qatar\";\n$CountryDict[\"BH\"] = \"Bahrain\";\n$CountryDict[\"KW\"] = \"Kuwait\";\n\n// Log country dictionary initialization\nWriteToOperationLog(\"NetSuite Country Dictionary initialized with \" + Length($CountryDict) + \" country mappings\");\nWriteToOperationLog(\"Country dictionary supports international contact synchronization\");\n\n// Validate critical countries are present\nIf(!IsNull($CountryDict[\"US\"]), \n    WriteToOperationLog(\"\u2713 US mapping verified: \" + $CountryDict[\"US\"]),\n    RaiseError(\"Critical error: US country mapping missing from dictionary\")\n);\n\nIf(!IsNull($CountryDict[\"CA\"]), \n    WriteToOperationLog(\"\u2713 CA mapping verified: \" + $CountryDict[\"CA\"]),\n    WriteToOperationLog(\"\u26a0 Warning: CA country mapping not found\")\n);\n\n// Set global variable for use in transformations\n$netsuiteCountryDict = $CountryDict;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [
+          {
+            "name": "netsuiteCountryDict",
+            "value": "",
+            "isNull": true,
+            "scope": "GLOBAL",
+            "isArray": false
+          }
+        ],
+        "notes": [],
+        "checksum": "2",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Notes",
+        "type": 400,
+        "id": "c57c3fc8-44c8-440d-9d7d-ddc0d28d418d",
+        "scriptBody": "<trans>\n// Notes for documentation\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// Notes for documentation\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Setup Email Notification",
+        "type": 400,
+        "id": "20966d9e-7a60-4d3f-a897-9783f64fe66e",
+        "scriptBody": "<trans>\n// RQ-136: Comprehensive email notification configuration system\n// Initialize email notification framework\n$startTime = Now();\n$configId = GUID();\nWriteToOperationLog(\"=== EMAIL NOTIFICATION SETUP INITIATED ===\");\nWriteToOperationLog(\"Configuration ID: \" + $configId);\nWriteToOperationLog(\"Setup timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Email notification configuration\n$EmailNotification = true;\n$emailConfig = Dict();\n\n// Basic email settings\n$emailConfig[\"enabled\"] = true;\n$emailConfig[\"configId\"] = $configId;\n$emailConfig[\"setupTime\"] = $startTime;\n$emailConfig[\"environment\"] = GetEnvironmentName();\n$emailConfig[\"project\"] = $projectName;\n$emailConfig[\"agent\"] = GetAgentName();\n$emailConfig[\"organization\"] = GetOrganizationName();\n\n// Email types and priorities\n$emailConfig[\"types\"] = Dict();\n$emailConfig[\"types\"][\"success\"] = Dict();\n$emailConfig[\"types\"][\"success\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"success\"][\"priority\"] = \"LOW\";\n$emailConfig[\"types\"][\"success\"][\"template\"] = \"success_notification\";\n\n$emailConfig[\"types\"][\"warning\"] = Dict();\n$emailConfig[\"types\"][\"warning\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"warning\"][\"priority\"] = \"MEDIUM\";\n$emailConfig[\"types\"][\"warning\"][\"template\"] = \"warning_notification\";\n\n$emailConfig[\"types\"][\"error\"] = Dict();\n$emailConfig[\"types\"][\"error\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"error\"][\"priority\"] = \"HIGH\";\n$emailConfig[\"types\"][\"error\"][\"template\"] = \"error_notification\";\n\n$emailConfig[\"types\"][\"critical\"] = Dict();\n$emailConfig[\"types\"][\"critical\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"critical\"][\"priority\"] = \"URGENT\";\n$emailConfig[\"types\"][\"critical\"][\"template\"] = \"critical_notification\";\n\n// Recipient configuration\n$emailConfig[\"recipients\"] = Dict();\n$emailConfig[\"recipients\"][\"primary\"] = \"admin@company.com\";\n$emailConfig[\"recipients\"][\"secondary\"] = \"support@company.com\";\n$emailConfig[\"recipients\"][\"escalation\"] = \"manager@company.com\";\n\n// Notification frequency settings\n$emailConfig[\"frequency\"] = Dict();\n$emailConfig[\"frequency\"][\"success\"] = \"BATCH\";  // Batch success notifications\n$emailConfig[\"frequency\"][\"warning\"] = \"IMMEDIATE\";  // Immediate warning notifications\n$emailConfig[\"frequency\"][\"error\"] = \"IMMEDIATE\";  // Immediate error notifications\n$emailConfig[\"frequency\"][\"critical\"] = \"IMMEDIATE\";  // Immediate critical notifications\n\n// Email throttling configuration\n$emailConfig[\"throttling\"] = Dict();\n$emailConfig[\"throttling\"][\"enabled\"] = true;\n$emailConfig[\"throttling\"][\"maxPerHour\"] = 50;\n$emailConfig[\"throttling\"][\"maxPerDay\"] = 500;\n$emailConfig[\"throttling\"][\"cooldownMinutes\"] = 5;\n\n// Email content configuration\n$emailConfig[\"content\"] = Dict();\n$emailConfig[\"content\"][\"includeSystemInfo\"] = true;\n$emailConfig[\"content\"][\"includeStackTrace\"] = true;\n$emailConfig[\"content\"][\"includeOperationDetails\"] = true;\n$emailConfig[\"content\"][\"includeTimestamp\"] = true;\n$emailConfig[\"content\"][\"includeEnvironmentInfo\"] = true;\n\n// Retry configuration for failed email sends\n$emailConfig[\"retry\"] = Dict();\n$emailConfig[\"retry\"][\"enabled\"] = true;\n$emailConfig[\"retry\"][\"maxAttempts\"] = 3;\n$emailConfig[\"retry\"][\"retryDelaySeconds\"] = 30;\n$emailConfig[\"retry\"][\"exponentialBackoff\"] = true;\n\n// Email validation and testing\n$emailConfig[\"validation\"] = Dict();\n$emailConfig[\"validation\"][\"validateRecipients\"] = true;\n$emailConfig[\"validation\"][\"testEmailOnSetup\"] = false;  // Set to true for testing\n$emailConfig[\"validation\"][\"requireAcknowledgment\"] = false;\n\n// Logging configuration\n$emailConfig[\"logging\"] = Dict();\n$emailConfig[\"logging\"][\"logAllEmails\"] = true;\n$emailConfig[\"logging\"][\"logFailedEmails\"] = true;\n$emailConfig[\"logging\"][\"logEmailContent\"] = false;  // Security: don't log sensitive content\n$emailConfig[\"logging\"][\"retentionDays\"] = 30;\n\n// Security settings\n$emailConfig[\"security\"] = Dict();\n$emailConfig[\"security\"][\"encryptContent\"] = false;\n$emailConfig[\"security\"][\"sanitizeContent\"] = true;\n$emailConfig[\"security\"][\"maskSensitiveData\"] = true;\n$emailConfig[\"security\"][\"allowExternalRecipients\"] = true;\n\n// Performance monitoring\n$emailConfig[\"performance\"] = Dict();\n$emailConfig[\"performance\"][\"trackDeliveryTime\"] = true;\n$emailConfig[\"performance\"][\"trackOpenRates\"] = false;\n$emailConfig[\"performance\"][\"trackClickRates\"] = false;\n$emailConfig[\"performance\"][\"generateReports\"] = true;\n\n// Initialize email statistics\n$emailStats = Dict();\n$emailStats[\"totalSent\"] = 0;\n$emailStats[\"totalFailed\"] = 0;\n$emailStats[\"lastSentTime\"] = null;\n$emailStats[\"lastFailureTime\"] = null;\n$emailStats[\"configurationTime\"] = $startTime;\n\n// Validate email configuration\n$validationErrors = [];\nIf(Length($emailConfig[\"recipients\"][\"primary\"]) == 0,\n    $validationErrors = Append($validationErrors, \"Primary recipient not configured\")\n);\n\nIf(Length($validationErrors) > 0,\n    WriteToOperationLog(\"\u26a0\ufe0f Email configuration validation warnings:\");\n    For($i = 0; $i < Length($validationErrors); $i++,\n        WriteToOperationLog(\"  - \" + $validationErrors[$i])\n    ),\n    WriteToOperationLog(\"\u2705 Email configuration validation passed\")\n);\n\n// Log configuration summary\nWriteToOperationLog(\"Email notification configuration summary:\");\nWriteToOperationLog(\"- Enabled: \" + $emailConfig[\"enabled\"]);\nWriteToOperationLog(\"- Primary recipient: \" + $emailConfig[\"recipients\"][\"primary\"]);\nWriteToOperationLog(\"- Error notifications: \" + $emailConfig[\"types\"][\"error\"][\"enabled\"]);\nWriteToOperationLog(\"- Throttling enabled: \" + $emailConfig[\"throttling\"][\"enabled\"]);\nWriteToOperationLog(\"- Max emails per hour: \" + $emailConfig[\"throttling\"][\"maxPerHour\"]);\n\n// Set global variables for use by other scripts\n$globalEmailConfig = $emailConfig;\n$globalEmailStats = $emailStats;\n$email_notification_ready = true;\n\nWriteToOperationLog(\"\u2705 Email notification setup completed successfully\");\nWriteToOperationLog(\"=== EMAIL NOTIFICATION SETUP COMPLETE ===\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// RQ-136: Comprehensive email notification configuration system\n// Initialize email notification framework\n$startTime = Now();\n$configId = GUID();\nWriteToOperationLog(\"=== EMAIL NOTIFICATION SETUP INITIATED ===\");\nWriteToOperationLog(\"Configuration ID: \" + $configId);\nWriteToOperationLog(\"Setup timestamp: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Email notification configuration\n$EmailNotification = true;\n$emailConfig = Dict();\n\n// Basic email settings\n$emailConfig[\"enabled\"] = true;\n$emailConfig[\"configId\"] = $configId;\n$emailConfig[\"setupTime\"] = $startTime;\n$emailConfig[\"environment\"] = GetEnvironmentName();\n$emailConfig[\"project\"] = $projectName;\n$emailConfig[\"agent\"] = GetAgentName();\n$emailConfig[\"organization\"] = GetOrganizationName();\n\n// Email types and priorities\n$emailConfig[\"types\"] = Dict();\n$emailConfig[\"types\"][\"success\"] = Dict();\n$emailConfig[\"types\"][\"success\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"success\"][\"priority\"] = \"LOW\";\n$emailConfig[\"types\"][\"success\"][\"template\"] = \"success_notification\";\n\n$emailConfig[\"types\"][\"warning\"] = Dict();\n$emailConfig[\"types\"][\"warning\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"warning\"][\"priority\"] = \"MEDIUM\";\n$emailConfig[\"types\"][\"warning\"][\"template\"] = \"warning_notification\";\n\n$emailConfig[\"types\"][\"error\"] = Dict();\n$emailConfig[\"types\"][\"error\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"error\"][\"priority\"] = \"HIGH\";\n$emailConfig[\"types\"][\"error\"][\"template\"] = \"error_notification\";\n\n$emailConfig[\"types\"][\"critical\"] = Dict();\n$emailConfig[\"types\"][\"critical\"][\"enabled\"] = true;\n$emailConfig[\"types\"][\"critical\"][\"priority\"] = \"URGENT\";\n$emailConfig[\"types\"][\"critical\"][\"template\"] = \"critical_notification\";\n\n// Recipient configuration\n$emailConfig[\"recipients\"] = Dict();\n$emailConfig[\"recipients\"][\"primary\"] = \"admin@company.com\";\n$emailConfig[\"recipients\"][\"secondary\"] = \"support@company.com\";\n$emailConfig[\"recipients\"][\"escalation\"] = \"manager@company.com\";\n\n// Notification frequency settings\n$emailConfig[\"frequency\"] = Dict();\n$emailConfig[\"frequency\"][\"success\"] = \"BATCH\";  // Batch success notifications\n$emailConfig[\"frequency\"][\"warning\"] = \"IMMEDIATE\";  // Immediate warning notifications\n$emailConfig[\"frequency\"][\"error\"] = \"IMMEDIATE\";  // Immediate error notifications\n$emailConfig[\"frequency\"][\"critical\"] = \"IMMEDIATE\";  // Immediate critical notifications\n\n// Email throttling configuration\n$emailConfig[\"throttling\"] = Dict();\n$emailConfig[\"throttling\"][\"enabled\"] = true;\n$emailConfig[\"throttling\"][\"maxPerHour\"] = 50;\n$emailConfig[\"throttling\"][\"maxPerDay\"] = 500;\n$emailConfig[\"throttling\"][\"cooldownMinutes\"] = 5;\n\n// Email content configuration\n$emailConfig[\"content\"] = Dict();\n$emailConfig[\"content\"][\"includeSystemInfo\"] = true;\n$emailConfig[\"content\"][\"includeStackTrace\"] = true;\n$emailConfig[\"content\"][\"includeOperationDetails\"] = true;\n$emailConfig[\"content\"][\"includeTimestamp\"] = true;\n$emailConfig[\"content\"][\"includeEnvironmentInfo\"] = true;\n\n// Retry configuration for failed email sends\n$emailConfig[\"retry\"] = Dict();\n$emailConfig[\"retry\"][\"enabled\"] = true;\n$emailConfig[\"retry\"][\"maxAttempts\"] = 3;\n$emailConfig[\"retry\"][\"retryDelaySeconds\"] = 30;\n$emailConfig[\"retry\"][\"exponentialBackoff\"] = true;\n\n// Email validation and testing\n$emailConfig[\"validation\"] = Dict();\n$emailConfig[\"validation\"][\"validateRecipients\"] = true;\n$emailConfig[\"validation\"][\"testEmailOnSetup\"] = false;  // Set to true for testing\n$emailConfig[\"validation\"][\"requireAcknowledgment\"] = false;\n\n// Logging configuration\n$emailConfig[\"logging\"] = Dict();\n$emailConfig[\"logging\"][\"logAllEmails\"] = true;\n$emailConfig[\"logging\"][\"logFailedEmails\"] = true;\n$emailConfig[\"logging\"][\"logEmailContent\"] = false;  // Security: don't log sensitive content\n$emailConfig[\"logging\"][\"retentionDays\"] = 30;\n\n// Security settings\n$emailConfig[\"security\"] = Dict();\n$emailConfig[\"security\"][\"encryptContent\"] = false;\n$emailConfig[\"security\"][\"sanitizeContent\"] = true;\n$emailConfig[\"security\"][\"maskSensitiveData\"] = true;\n$emailConfig[\"security\"][\"allowExternalRecipients\"] = true;\n\n// Performance monitoring\n$emailConfig[\"performance\"] = Dict();\n$emailConfig[\"performance\"][\"trackDeliveryTime\"] = true;\n$emailConfig[\"performance\"][\"trackOpenRates\"] = false;\n$emailConfig[\"performance\"][\"trackClickRates\"] = false;\n$emailConfig[\"performance\"][\"generateReports\"] = true;\n\n// Initialize email statistics\n$emailStats = Dict();\n$emailStats[\"totalSent\"] = 0;\n$emailStats[\"totalFailed\"] = 0;\n$emailStats[\"lastSentTime\"] = null;\n$emailStats[\"lastFailureTime\"] = null;\n$emailStats[\"configurationTime\"] = $startTime;\n\n// Validate email configuration\n$validationErrors = [];\nIf(Length($emailConfig[\"recipients\"][\"primary\"]) == 0,\n    $validationErrors = Append($validationErrors, \"Primary recipient not configured\")\n);\n\nIf(Length($validationErrors) > 0,\n    WriteToOperationLog(\"\u26a0\ufe0f Email configuration validation warnings:\");\n    For($i = 0; $i < Length($validationErrors); $i++,\n        WriteToOperationLog(\"  - \" + $validationErrors[$i])\n    ),\n    WriteToOperationLog(\"\u2705 Email configuration validation passed\")\n);\n\n// Log configuration summary\nWriteToOperationLog(\"Email notification configuration summary:\");\nWriteToOperationLog(\"- Enabled: \" + $emailConfig[\"enabled\"]);\nWriteToOperationLog(\"- Primary recipient: \" + $emailConfig[\"recipients\"][\"primary\"]);\nWriteToOperationLog(\"- Error notifications: \" + $emailConfig[\"types\"][\"error\"][\"enabled\"]);\nWriteToOperationLog(\"- Throttling enabled: \" + $emailConfig[\"throttling\"][\"enabled\"]);\nWriteToOperationLog(\"- Max emails per hour: \" + $emailConfig[\"throttling\"][\"maxPerHour\"]);\n\n// Set global variables for use by other scripts\n$globalEmailConfig = $emailConfig;\n$globalEmailStats = $emailStats;\n$email_notification_ready = true;\n\nWriteToOperationLog(\"\u2705 Email notification setup completed successfully\");\nWriteToOperationLog(\"=== EMAIL NOTIFICATION SETUP COMPLETE ===\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Get Last Modified Date",
+        "type": 400,
+        "id": "769dd7e2-5d4c-4553-8f4d-0ba5b3f53fb5",
+        "scriptBody": "<trans>\n$LastModifiedDate = ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Last Modified Date</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$LastModifiedDate = ReadFile(\"<TAG>activity:tempstorage/Temporary Storage Endpoint/tempstorage_read/Read Last Modified Date</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Write Batch Log Files",
+        "type": 400,
+        "id": "51cb725b-8c40-47f1-82a7-e7d1807711f7",
+        "scriptBody": "<trans>\nWriteToOperationLog(\"Batch Log Files Written\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(\"Batch Log Files Written\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Run Initial Data Load",
+        "type": 400,
+        "id": "1e51ae85-ad66-48d4-b235-423eea86da49",
+        "scriptBody": "<trans>\nRunOperation(\"<TAG>operation:START Initial Data Load</TAG>\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunOperation(\"<TAG>operation:START Initial Data Load</TAG>\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Salesforce Where Clause",
+        "type": 400,
+        "id": "79614cee-3de4-4e94-87d0-8f2bc6f76f96",
+        "scriptBody": "<trans>\n$WhereClause = \"LastModifiedDate > \" + $LastModifiedDate;\n</trans>",
+        "scriptBodyCleansed": "<trans>\n$WhereClause = \"LastModifiedDate > \" + $LastModifiedDate;\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Set Logging Variables",
+        "type": 400,
+        "id": "0182f3de-d487-4cc7-a510-94b1526de364",
+        "scriptBody": "<trans>\n// RQ-137: Comprehensive logging variable initialization system\n// Initialize logging framework\n$startTime = Now();\n$loggingSessionId = GUID();\nWriteToOperationLog(\"=== LOGGING VARIABLES INITIALIZATION ===\");\nWriteToOperationLog(\"Session ID: \" + $loggingSessionId);\nWriteToOperationLog(\"Initialization time: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Core logging state variables\n$logsWritten = false;\n$logLevel = \"INFO\";  // DEBUG, INFO, WARN, ERROR, FATAL\n$logRotationEnabled = true;\n$maxLogFileSize = 10485760;  // 10MB in bytes\n$maxLogFiles = 5;\n\n// Logging configuration\n$loggingConfig = Dict();\n$loggingConfig[\"sessionId\"] = $loggingSessionId;\n$loggingConfig[\"startTime\"] = $startTime;\n$loggingConfig[\"level\"] = $logLevel;\n$loggingConfig[\"rotation\"] = $logRotationEnabled;\n$loggingConfig[\"maxFileSize\"] = $maxLogFileSize;\n$loggingConfig[\"maxFiles\"] = $maxLogFiles;\n\n// Log file paths and naming\n$loggingConfig[\"paths\"] = Dict();\n$loggingConfig[\"paths\"][\"base\"] = \"/var/log/jitterbit/\";\n$loggingConfig[\"paths\"][\"operation\"] = $loggingConfig[\"paths\"][\"base\"] + \"operations/\";\n$loggingConfig[\"paths\"][\"error\"] = $loggingConfig[\"paths\"][\"base\"] + \"errors/\";\n$loggingConfig[\"paths\"][\"debug\"] = $loggingConfig[\"paths\"][\"base\"] + \"debug/\";\n$loggingConfig[\"paths\"][\"audit\"] = $loggingConfig[\"paths\"][\"base\"] + \"audit/\";\n\n// Log file naming patterns\n$dateStamp = FormatDate($startTime, \"yyyyMMdd\");\n$timeStamp = FormatDate($startTime, \"HHmmss\");\n$loggingConfig[\"files\"] = Dict();\n$loggingConfig[\"files\"][\"operation\"] = \"operation_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"error\"] = \"error_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"debug\"] = \"debug_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"audit\"] = \"audit_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n\n// Performance logging variables\n$loggingConfig[\"performance\"] = Dict();\n$loggingConfig[\"performance\"][\"enabled\"] = true;\n$loggingConfig[\"performance\"][\"trackMemory\"] = true;\n$loggingConfig[\"performance\"][\"trackCPU\"] = true;\n$loggingConfig[\"performance\"][\"trackNetwork\"] = true;\n$loggingConfig[\"performance\"][\"sampleInterval\"] = 30;  // seconds\n\n// Error tracking variables\n$loggingConfig[\"errors\"] = Dict();\n$loggingConfig[\"errors\"][\"trackStackTrace\"] = true;\n$loggingConfig[\"errors\"][\"trackContext\"] = true;\n$loggingConfig[\"errors\"][\"autoEscalate\"] = true;\n$loggingConfig[\"errors\"][\"escalationThreshold\"] = 5;  // errors per hour\n\n// Audit logging variables\n$loggingConfig[\"audit\"] = Dict();\n$loggingConfig[\"audit\"][\"enabled\"] = true;\n$loggingConfig[\"audit\"][\"trackDataAccess\"] = true;\n$loggingConfig[\"audit\"][\"trackConfigChanges\"] = true;\n$loggingConfig[\"audit\"][\"trackUserActions\"] = true;\n$loggingConfig[\"audit\"][\"retentionDays\"] = 90;\n\n// Log formatting configuration\n$loggingConfig[\"format\"] = Dict();\n$loggingConfig[\"format\"][\"includeTimestamp\"] = true;\n$loggingConfig[\"format\"][\"includeLevel\"] = true;\n$loggingConfig[\"format\"][\"includeSessionId\"] = true;\n$loggingConfig[\"format\"][\"includeThreadId\"] = false;\n$loggingConfig[\"format\"][\"includeSourceLocation\"] = false;\n\n// Initialize log counters\n$logCounters = Dict();\n$logCounters[\"debug\"] = 0;\n$logCounters[\"info\"] = 0;\n$logCounters[\"warn\"] = 0;\n$logCounters[\"error\"] = 0;\n$logCounters[\"fatal\"] = 0;\n$logCounters[\"total\"] = 0;\n\n// Log buffer configuration for performance\n$loggingConfig[\"buffer\"] = Dict();\n$loggingConfig[\"buffer\"][\"enabled\"] = true;\n$loggingConfig[\"buffer\"][\"size\"] = 1000;  // messages\n$loggingConfig[\"buffer\"][\"flushInterval\"] = 60;  // seconds\n$loggingConfig[\"buffer\"][\"autoFlushOnError\"] = true;\n\n// Security and compliance logging\n$loggingConfig[\"security\"] = Dict();\n$loggingConfig[\"security\"][\"maskSensitiveData\"] = true;\n$loggingConfig[\"security\"][\"encryptLogs\"] = false;\n$loggingConfig[\"security\"][\"signLogs\"] = false;\n$loggingConfig[\"security\"][\"compressLogs\"] = true;\n\n// Set global logging variables for use by other components\n$globalLoggingConfig = $loggingConfig;\n$globalLogCounters = $logCounters;\n$loggingInitialized = true;\n\n// Log the configuration summary\nWriteToOperationLog(\"Logging configuration initialized:\");\nWriteToOperationLog(\"- Session ID: \" + $loggingSessionId);\nWriteToOperationLog(\"- Log level: \" + $logLevel);\nWriteToOperationLog(\"- Rotation enabled: \" + $logRotationEnabled);\nWriteToOperationLog(\"- Max file size: \" + ($maxLogFileSize / 1024 / 1024) + \" MB\");\nWriteToOperationLog(\"- Performance tracking: \" + $loggingConfig[\"performance\"][\"enabled\"]);\nWriteToOperationLog(\"- Audit logging: \" + $loggingConfig[\"audit\"][\"enabled\"]);\n\nWriteToOperationLog(\"\u2705 Logging variables initialization completed\");\nWriteToOperationLog(\"=== LOGGING VARIABLES READY ===\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\n// RQ-137: Comprehensive logging variable initialization system\n// Initialize logging framework\n$startTime = Now();\n$loggingSessionId = GUID();\nWriteToOperationLog(\"=== LOGGING VARIABLES INITIALIZATION ===\");\nWriteToOperationLog(\"Session ID: \" + $loggingSessionId);\nWriteToOperationLog(\"Initialization time: \" + FormatDate($startTime, \"yyyy-MM-dd HH:mm:ss\"));\n\n// Core logging state variables\n$logsWritten = false;\n$logLevel = \"INFO\";  // DEBUG, INFO, WARN, ERROR, FATAL\n$logRotationEnabled = true;\n$maxLogFileSize = 10485760;  // 10MB in bytes\n$maxLogFiles = 5;\n\n// Logging configuration\n$loggingConfig = Dict();\n$loggingConfig[\"sessionId\"] = $loggingSessionId;\n$loggingConfig[\"startTime\"] = $startTime;\n$loggingConfig[\"level\"] = $logLevel;\n$loggingConfig[\"rotation\"] = $logRotationEnabled;\n$loggingConfig[\"maxFileSize\"] = $maxLogFileSize;\n$loggingConfig[\"maxFiles\"] = $maxLogFiles;\n\n// Log file paths and naming\n$loggingConfig[\"paths\"] = Dict();\n$loggingConfig[\"paths\"][\"base\"] = \"/var/log/jitterbit/\";\n$loggingConfig[\"paths\"][\"operation\"] = $loggingConfig[\"paths\"][\"base\"] + \"operations/\";\n$loggingConfig[\"paths\"][\"error\"] = $loggingConfig[\"paths\"][\"base\"] + \"errors/\";\n$loggingConfig[\"paths\"][\"debug\"] = $loggingConfig[\"paths\"][\"base\"] + \"debug/\";\n$loggingConfig[\"paths\"][\"audit\"] = $loggingConfig[\"paths\"][\"base\"] + \"audit/\";\n\n// Log file naming patterns\n$dateStamp = FormatDate($startTime, \"yyyyMMdd\");\n$timeStamp = FormatDate($startTime, \"HHmmss\");\n$loggingConfig[\"files\"] = Dict();\n$loggingConfig[\"files\"][\"operation\"] = \"operation_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"error\"] = \"error_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"debug\"] = \"debug_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n$loggingConfig[\"files\"][\"audit\"] = \"audit_\" + $dateStamp + \"_\" + $timeStamp + \".log\";\n\n// Performance logging variables\n$loggingConfig[\"performance\"] = Dict();\n$loggingConfig[\"performance\"][\"enabled\"] = true;\n$loggingConfig[\"performance\"][\"trackMemory\"] = true;\n$loggingConfig[\"performance\"][\"trackCPU\"] = true;\n$loggingConfig[\"performance\"][\"trackNetwork\"] = true;\n$loggingConfig[\"performance\"][\"sampleInterval\"] = 30;  // seconds\n\n// Error tracking variables\n$loggingConfig[\"errors\"] = Dict();\n$loggingConfig[\"errors\"][\"trackStackTrace\"] = true;\n$loggingConfig[\"errors\"][\"trackContext\"] = true;\n$loggingConfig[\"errors\"][\"autoEscalate\"] = true;\n$loggingConfig[\"errors\"][\"escalationThreshold\"] = 5;  // errors per hour\n\n// Audit logging variables\n$loggingConfig[\"audit\"] = Dict();\n$loggingConfig[\"audit\"][\"enabled\"] = true;\n$loggingConfig[\"audit\"][\"trackDataAccess\"] = true;\n$loggingConfig[\"audit\"][\"trackConfigChanges\"] = true;\n$loggingConfig[\"audit\"][\"trackUserActions\"] = true;\n$loggingConfig[\"audit\"][\"retentionDays\"] = 90;\n\n// Log formatting configuration\n$loggingConfig[\"format\"] = Dict();\n$loggingConfig[\"format\"][\"includeTimestamp\"] = true;\n$loggingConfig[\"format\"][\"includeLevel\"] = true;\n$loggingConfig[\"format\"][\"includeSessionId\"] = true;\n$loggingConfig[\"format\"][\"includeThreadId\"] = false;\n$loggingConfig[\"format\"][\"includeSourceLocation\"] = false;\n\n// Initialize log counters\n$logCounters = Dict();\n$logCounters[\"debug\"] = 0;\n$logCounters[\"info\"] = 0;\n$logCounters[\"warn\"] = 0;\n$logCounters[\"error\"] = 0;\n$logCounters[\"fatal\"] = 0;\n$logCounters[\"total\"] = 0;\n\n// Log buffer configuration for performance\n$loggingConfig[\"buffer\"] = Dict();\n$loggingConfig[\"buffer\"][\"enabled\"] = true;\n$loggingConfig[\"buffer\"][\"size\"] = 1000;  // messages\n$loggingConfig[\"buffer\"][\"flushInterval\"] = 60;  // seconds\n$loggingConfig[\"buffer\"][\"autoFlushOnError\"] = true;\n\n// Security and compliance logging\n$loggingConfig[\"security\"] = Dict();\n$loggingConfig[\"security\"][\"maskSensitiveData\"] = true;\n$loggingConfig[\"security\"][\"encryptLogs\"] = false;\n$loggingConfig[\"security\"][\"signLogs\"] = false;\n$loggingConfig[\"security\"][\"compressLogs\"] = true;\n\n// Set global logging variables for use by other components\n$globalLoggingConfig = $loggingConfig;\n$globalLogCounters = $logCounters;\n$loggingInitialized = true;\n\n// Log the configuration summary\nWriteToOperationLog(\"Logging configuration initialized:\");\nWriteToOperationLog(\"- Session ID: \" + $loggingSessionId);\nWriteToOperationLog(\"- Log level: \" + $logLevel);\nWriteToOperationLog(\"- Rotation enabled: \" + $logRotationEnabled);\nWriteToOperationLog(\"- Max file size: \" + ($maxLogFileSize / 1024 / 1024) + \" MB\");\nWriteToOperationLog(\"- Performance tracking: \" + $loggingConfig[\"performance\"][\"enabled\"]);\nWriteToOperationLog(\"- Audit logging: \" + $loggingConfig[\"audit\"][\"enabled\"]);\n\nWriteToOperationLog(\"\u2705 Logging variables initialization completed\");\nWriteToOperationLog(\"=== LOGGING VARIABLES READY ===\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Print Insert Summary",
+        "type": 400,
+        "id": "f4ac526a-a9ef-434c-8ccd-dcae5fe359f4",
+        "scriptBody": "<trans>\nWriteToOperationLog(\"Insert Summary: \" + $InsertCount + \" records inserted\");\n</trans>",
+        "scriptBodyCleansed": "<trans>\nWriteToOperationLog(\"Insert Summary: \" + $InsertCount + \" records inserted\");\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "name": "Test Email",
+        "type": 400,
+        "id": "c9c4bfd1-60ac-4c59-a1aa-3a501e1d5777",
+        "scriptBody": "<trans>\nRunScript(\"<TAG>script:Setup Email Notification</TAG>\");\n$EmailSubject = \"Test Jitterbit Email\";\n$EmailMessage = \"Email recipient configure correctly!\";\nemailErrorMessage =  SendEmailMessage(\"<TAG>email:Log Results</TAG>\");\nIf(Bool(Length(emailErrorMessage)),\n emailErrorMessage = \"Failed to send email. Error message: \" + emailErrorMessage;\n RaiseError(emailErrorMessage),\n WriteToOperationLog(\"Test email message attempted. Check if the configured recipients got a test notification.\");\n WriteToOperationLog(\"If so, you're set up properly!\");\n WriteToOperationLog(\"If not, you might want to double check that the email recipient provided is valid.\");\n);\n</trans>",
+        "scriptBodyCleansed": "<trans>\nRunScript(\"<TAG>script:Setup Email Notification</TAG>\");\n$EmailSubject = \"Test Jitterbit Email\";\n$EmailMessage = \"Email recipient configure correctly!\";\nemailErrorMessage =  SendEmailMessage(\"<TAG>email:Log Results</TAG>\");\nIf(Bool(Length(emailErrorMessage)),\n emailErrorMessage = \"Failed to send email. Error message: \" + emailErrorMessage;\n RaiseError(emailErrorMessage),\n WriteToOperationLog(\"Test email message attempted. Check if the configured recipients got a test notification.\");\n WriteToOperationLog(\"If so, you're set up properly!\");\n WriteToOperationLog(\"If not, you might want to double check that the email recipient provided is valid.\");\n);\n</trans>",
+        "scriptType": 1,
+        "globalVariables": [],
+        "notes": [],
+        "checksum": "1",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "cursor": "",
+        "validationState": 100,
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "Query Contacts Response",
+        "mappingRules": [],
+        "loopMappingRules": [
+          {
+            "srcLoopPath": "root$transaction.response$body$queryResponse$result$records.",
+            "tgtLoopPath": "records$Contact.",
+            "srcPath": "",
+            "tgtPath": ""
+          }
+        ],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "126eef4a-53a8-4258-86f4-44c0dea117c4",
+        "checksum": "18",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "salesforce_Query_output_0b0d7bda-a630-4976-81b7-063f57907684",
+          "origin": {
+            "id": "0b0d7bda-a630-4976-81b7-063f57907684",
+            "adapterId": "salesforce",
+            "direction": "output",
+            "functionName": "query"
+          }
+        },
+        "target": {
+          "name": "Salesforce Query Response Schema",
+          "id": "6cc130da-8ccd-48e1-b13b-3dcb7ef4f1a2",
+          "document": {
+            "placeholder": "Large document content (106KB schema)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "106KB",
+            "type": "schema_document"
+          }
+        },
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "NetSuite Upsert Contact - Response",
+        "mappingRules": [
+          {
+            "customValuePaths": [],
+            "globalVariables": [],
+            "isPreconditionScript": false,
+            "targetPath": "success",
+            "targetScript": "success$",
+            "transformScript": "<trans>\nroot$transaction.response$body$upsertResponse$writeResponse$status$isSuccess$\n</trans>",
+            "validationErrors": [],
+            "cursor": {
+              "line": 1,
+              "ch": 0,
+              "sticky": null
+            },
+            "transformScriptError": "",
+            "srcPaths": [
+              "writeResponse/status/isSuccess"
+            ],
+            "transformScriptCleansed": "<trans>\nroot$transaction.response$body$upsertResponse$writeResponse$status$isSuccess$\n</trans>"
+          }
+        ],
+        "loopMappingRules": [],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "13e23ef7-4d51-4b3e-b3db-2f79898ca3f0",
+        "checksum": "5",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "netsuite_Upsert_output_a07f69ca-fa26-424c-993f-092620b3c94a",
+          "origin": {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "adapterId": "netsuite",
+            "direction": "output",
+            "functionName": "upsert",
+            "isConnectorFunction": true
+          }
+        },
+        "target": {
+          "name": "New Flat Schema",
+          "id": "b1425002-ff7d-433e-b653-8d9594033f52",
+          "document": {
+            "placeholder": "Flat schema document (460 bytes)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "460 bytes",
+            "type": "flat_schema"
+          }
+        },
+        "partial": false
+      },
+      {
+        "type": 700,
+        "entityTypeId": "4",
+        "name": "NetSuite Upsert Contact - Request",
+        "mappingRules": [],
+        "loopMappingRules": [
+          {
+            "srcLoopPath": "records$Contact.",
+            "tgtLoopPath": "upsertList$record.",
+            "srcPath": "records/Contact",
+            "tgtPath": "upsertList/record"
+          }
+        ],
+        "options": {},
+        "notes": [],
+        "duplicateNodesInfo": {
+          "duplicatedNodes": {},
+          "removedNodes": {}
+        },
+        "srcExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "tgtExtendedNodesInfo": {
+          "extendedNodes": {},
+          "removedNodes": {}
+        },
+        "description": "",
+        "id": "92681677-c51b-4db4-b906-527e117e65d5",
+        "checksum": "17",
+        "requiresDeploy": true,
+        "metadataVersion": "3.0.1",
+        "encryptedAtRest": true,
+        "chunks": 1,
+        "source": {
+          "name": "Salesforce Query Response Schema",
+          "id": "6cc130da-8ccd-48e1-b13b-3dcb7ef4f1a2",
+          "document": {
+            "placeholder": "Large source document (106KB schema)",
+            "note": "Actual content would be loaded in full implementation",
+            "size": "106KB",
+            "type": "schema_document"
+          }
+        },
+        "target": {
+          "name": "netsuite_Upsert_input_a07f69ca-fa26-424c-993f-092620b3c94a",
+          "origin": {
+            "id": "a07f69ca-fa26-424c-993f-092620b3c94a",
+            "adapterId": "netsuite",
+            "direction": "input",
+            "functionName": "upsert",
+            "isConnectorFunction": true
+          }
+        },
+        "partial": false
+      }
+    ],
+    "adapters": []
+  },
+  "version": 4
+}
