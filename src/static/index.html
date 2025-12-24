@@ -85,6 +85,7 @@
             <div class="text-center space-y-1">
                 <h1 class="text-3xl font-semibold tracking-tight text-slate-900">JPK to JSON Converter</h1>
                 <p class="text-base text-slate-500">Securely transform your audit files for analysis</p>
+                <p id="converterVersion" class="text-xs text-slate-400 mt-2"></p>
             </div>
 
             <!-- Queue Status -->
@@ -863,10 +864,28 @@
             if (queueStatusInterval) clearInterval(queueStatusInterval);
         });
 
+        // Fetch and display converter version
+        async function fetchConverterVersion() {
+            try {
+                const response = await fetch('/api/converter/health');
+                const data = await response.json();
+                const versionEl = document.getElementById('converterVersion');
+                if (versionEl && data.converter_version) {
+                    versionEl.textContent = `Converter: ${data.converter_version}`;
+                    if (data.deploy_id) {
+                        versionEl.textContent += ` (${data.deploy_id})`;
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching converter version:', error);
+            }
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
             checkAuthStatus();
             startQueueMonitoring();
+            fetchConverterVersion();
         });
     </script>
 </body>

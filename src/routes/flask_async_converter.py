@@ -643,21 +643,45 @@ def batch_status():
 def converter_health():
     """Health check endpoint for converter functionality"""
     try:
+        # Detect converter version
+        converter_version = 'unknown'
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'jpk2json'))
+            from converter import main as converter_main
+            # Check if it's v327 wrapper by looking for j2j_v3_converter import
+            import converter as conv_module
+            if hasattr(conv_module, 'JPKConverter'):
+                converter_version = 'v327'
+            elif 'j2j' in str(conv_module.__file__):
+                converter_version = 'v327'
+            else:
+                # Check the file content
+                import inspect
+                source = inspect.getsource(conv_module)
+                if 'j2j_v3_converter' in source or 'JPKConverter' in source:
+                    converter_version = 'v327'
+                else:
+                    converter_version = 'v130'
+        except Exception as e:
+            converter_version = f'error: {e}'
+
         health_status = {
             'status': 'healthy',
             'timestamp': datetime.utcnow().isoformat(),
             'service': 'JPK to JSON Converter',
             'version': 'async-v1.0',
+            'converter_version': converter_version,
+            'deploy_id': '2024-12-24-v327-force',
             'thread_pool_size': executor._max_workers,
             'active_jobs': len(conversion_status),
             'checks': {}
         }
-        
+
         # Check converter module import
         try:
             sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'jpk2json'))
             from converter import main as converter_main
-            health_status['checks']['converter_import'] = {'status': 'pass', 'message': 'Converter module imported successfully'}
+            health_status['checks']['converter_import'] = {'status': 'pass', 'message': f'Converter module imported successfully ({converter_version})'}
         except Exception as e:
             health_status['checks']['converter_import'] = {'status': 'fail', 'message': f'Converter import failed: {e}'}
             health_status['status'] = 'unhealthy'
